@@ -1,3 +1,76 @@
 .footer {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: (1/16)*100vh;
+
+  .brushes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    z-index: 1;
+  }
+
+  .grid__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__contacts {
+    @include screen('tablet', max) {
+      width: 14 * $grid-col-width;
+    }
+  }
+
+  &__logo {
+    @include screen('desktop-small', max) {
+      width: 8 * $grid-col-width;
+    }
+
+    @include screen('tablet', max) {
+      width: 0;
+    }
+  }
+
+  &__empty {
+    @include screen('tablet', max) {
+      width: 14 * $grid-col-width;
+    }
+  }
+
+  &__addus {
+    @include screen('desktop-small', max) {
+      width: 6 * $grid-col-width;
+    }
+
+    @include screen('tablet', max) {
+      width: 0;
+    }
+  }
+
+  &__copyright {
+    @include screen('desktop-small', max) {
+      width: 9 * $grid-col-width;
+    }
+
+    @include screen('tablet', max) {
+      width: 14 * $grid-col-width;
+    }
+  }
+
+  .logo,
+  .navigation-link {
+    @include screen('tablet', max) {
+      display: none;
+    }
+  }
+
+  .container {
+    z-index: 2;
+  }
 }

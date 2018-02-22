@@ -2,20 +2,6 @@
   display: block;
   padding-top: (1/16) * 100vh;
 
-  &__link {
-    font-size: 20px;
-    line-height: 1;
-    letter-spacing: .075em;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-left: 12px;
-
-    @include screen('tablet') {
-      margin-left: 0;
-      margin-right: 12px;
-    }
-  }
-
   &__logo {
     @include screen('tablet', max) {
       width: 10 * $grid-col-width;
@@ -75,7 +61,7 @@
 
   &_mobile-logo {
     .search-button,
-    .header__link,
+    .navigation-link,
     .socials {
 
       @include screen('tablet', max) {
