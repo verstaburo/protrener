@@ -3,22 +3,25 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 960px; // Максимальная ширина контейнера контента
-$container-padding: 20px; // Отступы слева и справа у контейнера
+  //$container-width: 960px; // Максимальная ширина контейнера контента
+  //$container-padding: 20px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
-$grid-cols: 12; // Количество колонок в сетке
-$grid-gap: 20px; // Расстояние между колонками
-$grid-gap-vertical: 20px; // Расстояние между строками в сетке
+$grid-cols: 32; // Количество колонок в сетке
+$grid-gap: 45px; // Расстояние между колонками
+  //$grid-gap-vertical: 20px; // Расстояние между строками в сетке
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 // ##########
 // Цвета
 // ##########
-$color-basic: black; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
-$color-main: #2252d8; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-basic: #fff; // Основной цвет текста (применяется к body)
+$color-placeholder: rgba($color-basic, .36); // Основной цвет для placeholder
+$color-input: rgba($color-basic, .12); // Основной цвет input, select и textarea
+$color-main: #161616; // Основной фирменный цвет
+$color-red: #d80e1c; //Основной красный
+$color-gray: #292929; //Основной серый
+$color-gray-2: #1f1f1f; //Серый цвет кисти
+$color-border: rgba($color-basic, .12); // Основной цвет границ таблиц, секций
 
 // ##########
 // Transitions
@@ -28,5 +31,17 @@ $ease-main: .3s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: 'PFDinTextCompPro', sans-serif; // Основной шрифт сайта
+
+// Размеры шрифтов
+$size-huge: 193px;
+$size-larger: 70px;
+$size-large: 60px;
+$size-bigger: 40px;
+$size-big: 30px;
+$size-normal-big: 28px;
+$size-normal: 26px;
+$size-normal-small: 22px;
+$size-small: 20px;
+$size-smaller: 18px;
+$size-smallest: 16px;

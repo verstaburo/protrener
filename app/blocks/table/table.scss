@@ -15,7 +15,7 @@
   }
 
   td {
-    padding: $grid-gap/2 $grid-gap $grid-gap/2 0;
+    padding: (45/2)*1px 45px (45/2)*1px 0;
     vertical-align: top;
 
     &:last-child { padding-right: 0; }

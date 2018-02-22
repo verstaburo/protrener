@@ -15,8 +15,10 @@ button::-moz-focus-inner {
 ########## */
 
 ::selection {
-  background: $color-main;
-  color: white;
+  background: $color-red;
+  color: $color-basic;
+  font-weight: 300;
+  letter-spacing: .019em;
 }
 
 /* ##########
@@ -56,8 +58,9 @@ html, body {
 
 body {
   font-family: $font-main; // Задаем основной шрифт
-  font-size: 16px; // Убираем проблему с отступами между inline-элементами
+  font-size: $size-normal; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
+  background-color: $color-main;
 }
 
 img {
@@ -99,7 +102,7 @@ a, input, button, select, textarea {
 button { cursor: pointer; }
 
 select, input, textarea, button {
-  color: $color-input;
+  color: $color-basic;
   margin: 0;
   padding: 0;
   border: 0;

@@ -1,0 +1,33 @@
+.search-button {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all $ease-main;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &__text {
+    font-size: 0;
+    line-height: 20px;
+    letter-spacing: .075em;
+    font-weight: 400;
+    color: $color-basic;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include screen('tablet') {
+      margin-right: 12px;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $color-basic;
+  }
+}

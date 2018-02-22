@@ -1,0 +1,13 @@
+mixin header(logo)
+  - var addClass = ""
+  - if (logo) {addClass = "_mobile-logo" } else { addClass = "" }
+  +b(class="header" + addClass)&attributes(attributes)
+    +container
+      +col(7).header__logo
+        +logo
+      +col(12).header__search
+        +search-button
+      +col(4).header__news
+        +link._white.header__link(href="news.html") НОВОСТИ
+      +col(7).header__socials
+        +socials

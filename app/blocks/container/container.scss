@@ -1,0 +1,19 @@
+.container {
+  width: 100vw;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  &__padding.grid__col_one {
+    @include screen('tablet', max) {
+      width: 2*$grid-col-width;
+    }
+  }
+
+  &__main.grid__col__thirty {
+    @include screen('tablet', max) {
+      width: 60*$grid-col-width;
+    }
+  }
+}

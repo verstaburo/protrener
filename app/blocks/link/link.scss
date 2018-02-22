@@ -26,7 +26,11 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px;
-    fill: $color-main;
+    fill: $color-red;
+  }
+
+  &_white &__text {
+    @include link-white;
   }
 
   &.disabled {

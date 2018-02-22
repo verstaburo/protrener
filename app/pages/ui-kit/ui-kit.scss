@@ -1,3 +1,10 @@
 .ui-kit {
   display: block;
 }
+
+.ui-kit-demo {
+
+  .grid__col {
+    box-shadow: inset 0 0 2px $color-red;
+  }
+}

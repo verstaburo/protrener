@@ -4,12 +4,15 @@ mixin ui-kit()
 
 mixin ui-kit-head()
   +e.SECTION.head&attributes(attributes)
-    .container
-      block
+    +container
+      +col(30).contianer__main
+        block
 
 mixin ui-section()
   +e.SECTION.section&attributes(attributes)
-    block
+    +container
+      +col(30).contianer__main
+        block
 
 //- Описание какого-то блока
 mixin ui-description()
@@ -52,13 +55,8 @@ mixin ui-gradient(colorvar, dark)
 
 mixin ui-section-head()
   +e.section-head&attributes(attributes)
-    .container
-      block
+    block
 
 mixin ui-section-content(container)
   +e.section-content
-    if !container
-      .container  
-        block
-    else
-      block
+    block

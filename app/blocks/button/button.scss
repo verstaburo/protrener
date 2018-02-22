@@ -1,15 +1,16 @@
 .button {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $color-border;
+  border: 2px solid $color-red;
   vertical-align: middle;
   box-sizing: border-box;
   color: $color-basic;
   background-color: transparent;
   transition: opacity $ease-main;
   cursor: pointer;
-
-  @include text;
+  font-size: $size-small;
+  letter-spacing: .075em;
+  text-transform: uppercase;
 
   &:disabled,
   &.is-disabled {
