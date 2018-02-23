@@ -4,6 +4,10 @@
   padding: 0 10px;
   box-sizing: border-box;
 
+  @include screen('phone', max) {
+    width: 220px;
+  }
+
   @include screen('tablet') {
     padding: 0 45px;
   }
@@ -22,9 +26,12 @@
     caret-color: $color-red;
     min-height: 104px;
 
+    @include screen('phone') {
+      min-height: 0;
+    }
+
     @include screen('tablet') {
       font-size: $size-larger;
-      min-height: 0;
     }
 
     &::placeholder {
@@ -33,7 +40,7 @@
       white-space: pre-line;
       color: rgba($color-basic, .2);
 
-      @include screen('tablet') {
+      @include screen('phone') {
         top: 0;
       }
     }

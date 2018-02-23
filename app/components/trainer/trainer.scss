@@ -1,3 +1,73 @@
 .trainer {
-  display: block;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: none;
+  color: $color-basic;
+  width: 100%;
+
+  &:hover {
+
+    .trainer {
+
+      &__brand {
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+    }
+  }
+
+  &__wall {
+    position: relative;
+    width: 100%;
+    padding-top: 57%;
+    background: $color-gray;
+
+    &::before {
+      @include pseudo;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($color-main, .2);
+      z-index: 3;
+    }
+  }
+
+  &__brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    transition: all $ease-main;
+    transform: scale3d(1, 1, 1);
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__avatar {
+    margin: -27px 20px 0;
+  }
+
+  &__price {
+    display: block;
+    width: 100%;
+    font-size: $size-normal-small;
+    letter-spacing: .077em;
+    text-align: right;
+  }
+
+  &__fullname {
+    @include heading-2;
+    text-align: left;
+    text-transform: none;
+  }
+
+  &__name,
+  &__surname {
+    display: block;
+  }
 }

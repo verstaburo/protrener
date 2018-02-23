@@ -8,6 +8,20 @@
     }
   }
 
+  &__result {
+    width: 100%;
+  }
+
+  &__trainers {
+    display: none;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+
+    @include screen('phone') {
+      width: 75vw;
+    }
+  }
+
   &__not-found {
     display: none;
     text-align: center;

@@ -33,8 +33,8 @@ export default function search() {
         } else {
           $('.loading').hide();
           $('.search-popup__not-found').slideUp();
-          if (!$('.search-popup__trainer-list').is(':visible')) {
-            $('.search-popup__trainer-list').slideDown();
+          if (!$('.search-popup__trainers').is(':visible')) {
+            $('.search-popup__trainers').slideDown();
           }
         }
       }, 500);

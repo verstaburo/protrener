@@ -1,3 +1,10 @@
-mixin trainer()
-  +b.trainer&attributes(attributes)
-    block
+mixin trainer(ava, brand, price, name, surname)
+  +b.A.trainer&attributes(attributes)
+    +e.DIV.wall
+      +e.brand
+        +e.IMG(src=brand).image
+    +avatar(ava).__avatar
+    +e.price!= price
+    +e.fullname
+      +e.SPAN.name!= name
+      +e.SPAN.surname!= surname
