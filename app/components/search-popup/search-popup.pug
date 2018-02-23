@@ -1,0 +1,12 @@
+mixin search-popup()
+  +popup('Нажмите ENTER для поиска или ESC для закрытия').search-popup__&attributes(attributes)
+    +search.__form
+    +e.result
+      +loading
+      +e.not-found
+        +e.icon
+          +icon('search')
+        +e.P Ничего не&nbsp;найдено,
+          +e.BR
+          | попробуйте изменить запрос
+      +e.UL.trainer-list

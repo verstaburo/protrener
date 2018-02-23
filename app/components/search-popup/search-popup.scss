@@ -1,0 +1,41 @@
+.search-popup {
+
+  &__form {
+    margin: auto 0;
+
+    &.is-focused {
+      margin: 223px 0 0;
+    }
+  }
+
+  &__not-found {
+    display: none;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 110px;
+
+    @include text;
+    font-weight: 300;
+    letter-spacing: .02em;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: rgba($color-basic, .36);
+    }
+  }
+
+  .is-focused ~ .popup__info {
+    color: $color-warm-gray;
+  }
+}

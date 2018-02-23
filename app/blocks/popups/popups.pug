@@ -2,6 +2,9 @@ mixin popups()
   +b.popups&attributes(attributes)
     block
 
-mixin popup()
+mixin popup(text)
   +b.popup&attributes(attributes)
-    block
+    .popup__content
+      block
+      .popup__info
+        +e.P!= text

@@ -20,8 +20,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
+
+  &_onescreen {
+    height: 100vh;
+  }
 }
 
 

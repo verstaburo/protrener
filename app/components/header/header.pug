@@ -6,7 +6,7 @@ mixin header(logo)
       +col(7).header__logo
         +logo
       +col(12).header__search
-        +search-button
+        +search-button.js-fancybox(href="#search" data-src="#search")
       +col(4).header__news
         +navigation-link(href="news.html") НОВОСТИ
       +col(7).header__socials

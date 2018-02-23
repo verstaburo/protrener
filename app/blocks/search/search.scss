@@ -1,0 +1,41 @@
+.search {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  @include screen('tablet') {
+    padding: 0 45px;
+  }
+
+  @include screen('desktop-wide') {
+    padding: 0 60px;
+  }
+
+  .input {
+    display: block;
+    font-size: $size-bigger;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: none;
+    caret-color: $color-red;
+    min-height: 104px;
+
+    @include screen('tablet') {
+      font-size: $size-larger;
+      min-height: 0;
+    }
+
+    &::placeholder {
+      position: relative;
+      top: -22px;
+      white-space: pre-line;
+      color: rgba($color-basic, .2);
+
+      @include screen('tablet') {
+        top: 0;
+      }
+    }
+  }
+}

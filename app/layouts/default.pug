@@ -5,8 +5,11 @@ doctype html
 html(lang='ru')
   include head
   body
-    +header
-    block content
-    +footer
+    .wrapper
+      +header
+      block content
+      +footer
+    +popups
+      +search-popup#search
     script(src='assets/scripts/app.min.js')
     script(src='assets/scripts/main.js')

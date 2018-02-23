@@ -4,6 +4,158 @@
   display: none;
 }
 
+.popup {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    pointer-events: none;
+    border: 1.5em solid rgba($color-black, .4);
+    transition: transform 0.3s;
+
+    @include screen('tablet') {
+      width: calc(100% + 36px);
+      height: calc(100% + 36px);
+    }
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    transform: translate3d(-10px, -10px, 0);
+
+    @include screen('tablet') {
+      transform: translate3d(-36px, -36px, 0);
+    }
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    transform: translate3d(10px, 10px, 0);
+
+    @include screen('tablet') {
+      transform: translate3d(36px, 36px, 0);
+    }
+
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: fs;
+    align-items: center;
+    margin: 10px auto;
+    background: $color-main;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 2;
+    pointer-events: all;
+    box-sizing: border-box;
+
+    @include screen('tablet') {
+      margin: 36px auto;
+      width: calc(100% - 72px);
+      height: calc(100% - 72px);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 43px;
+    left: 0;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    transition: all $ease-main;
+
+    p {
+      transition: all $ease-main;
+    }
+
+    @include text-small;
+
+    @include screen('tablet', max) {
+      display: none;
+    }
+  }
+
+  &.is-open {
+    &::before,
+    &::after {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.fancybox-container {
+  font-family: $font-main;
+}
+
+.fancybox-bg {
+  background: rgba($color-black, 0);
+}
+
+.fancybox-close-small {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 34px;
+  right: 34px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  z-index: 10;
+  cursor: pointer;
+
+  @include screen('tablet') {
+    right: 60px;
+    top: 60px;
+  }
+
+  svg {
+    transition: all $ease-main;
+    fill: $color-basic;
+    width: 17.5px;
+    height: 17.5px;
+  }
+
+  &:hover {
+
+    svg {
+      opacity: .8;
+    }
+  }
+}
+
+.fancybox-close-small:after {
+  display: none;
+}
+
+.fancybox-slide > * {
+  margin: 0;
+  padding: 0;
+}
+
 .fancybox-close-small:focus::after { outline: none; }
 
 .fancybox-enabled { overflow: initial; }
