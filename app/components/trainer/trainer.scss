@@ -48,8 +48,14 @@
     @include fill-img;
   }
 
+  &__describe {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
   &__avatar {
-    margin: -27px 20px 0;
+    margin: -27px 0 0;
   }
 
   &__price {
@@ -62,6 +68,7 @@
 
   &__fullname {
     @include heading-2;
+    line-height: 1;
     text-align: left;
     text-transform: none;
   }

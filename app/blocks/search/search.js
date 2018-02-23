@@ -14,30 +14,26 @@ export default function search() {
   /*
   imitation
   */
-  let searchIs = false;
   $(document).on('input', '.search__input', (evt) => {
     const self = evt.target;
-
-    if (!searchIs) {
-      searchIs = true;
+    const searchLine = $(self).val();
+    if (searchLine !== '') {
+      $('.search-popup__result').slideDown();
       $('.loading').show();
       setTimeout(() => {
-        searchIs = false;
-        const searchLine = $(self).val();
         $('.loading').hide();
+      }, 200);
+      setTimeout(() => {
         if (searchLine === ' ' || searchLine == null) {
-          $('.search-popup__trainer-list').slideUp();
-          if (!$('.search-popup__not-found').is(':visible')) {
-            $('.search-popup__not-found').slideDown();
-          }
+          $('.search-popup__trainers').hide();
+          $('.search-popup__not-found').show();
         } else {
-          $('.loading').hide();
-          $('.search-popup__not-found').slideUp();
-          if (!$('.search-popup__trainers').is(':visible')) {
-            $('.search-popup__trainers').slideDown();
-          }
+          $('.search-popup__not-found').hide();
+          $('.search-popup__trainers').show();
         }
-      }, 500);
+      }, 110);
+    } else {
+      $('.search-popup__result').slideUp();
     }
   });
 }
