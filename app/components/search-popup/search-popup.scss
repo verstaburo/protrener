@@ -4,10 +4,36 @@
 
   }
 
+  .popup__content {
+    padding: 35px 0;
+
+    @include screen('phone') {
+      padding: calc(25vh - 36px) 0;
+    }
+  }
+
   &__result {
+    position: relative;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 32px;
+    margin-bottom: auto;
+
+    @include screen('phone') {
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &.active {
+      z-index: 10;
+    }
   }
 
   &__trainers {

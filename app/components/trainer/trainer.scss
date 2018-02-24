@@ -18,8 +18,12 @@
   &__wall {
     position: relative;
     width: 100%;
-    padding-top: 57%;
+    padding-top: 48%;
     background: $color-gray;
+
+    @include screen('tablet') {
+      padding-top: 57%;
+    }
 
     &::before {
       @include pseudo;
@@ -67,10 +71,15 @@
   }
 
   &__fullname {
-    @include heading-2;
+    @include heading-2-text;
     line-height: 1;
     text-align: left;
     text-transform: none;
+    margin-top: -8px;
+
+    @include screen('tablet') {
+      margin-top: 0;
+    }
   }
 
   &__name,

@@ -11,7 +11,17 @@
 }
 
 .loading {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all $ease-main;
+  background-color: $color-main;
+
+  &.active {
+    opacity: 1;
+  }
 
   &__ico {
     position: relative;

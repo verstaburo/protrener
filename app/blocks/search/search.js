@@ -19,9 +19,9 @@ export default function search() {
     const searchLine = $(self).val();
     if (searchLine !== '') {
       $('.search-popup__result').slideDown();
-      $('.loading').show();
+      $('.loading').addClass('active');
       setTimeout(() => {
-        $('.loading').hide();
+        $('.loading').removeClass('active');
       }, 200);
       setTimeout(() => {
         if (searchLine === ' ' || searchLine == null) {
