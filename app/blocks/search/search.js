@@ -1,3 +1,4 @@
+/* eslint-disable no-lonely-if */
 const $ = window.$;
 
 export default function search() {
@@ -22,18 +23,32 @@ export default function search() {
       $('.loading').addClass('active');
       setTimeout(() => {
         $('.loading').removeClass('active');
+        setTimeout(() => {
+          if (searchLine === ' ' || searchLine == null) {
+            if ($('.search-popup__trainers').is(':visible')) {
+              $('.search-popup__trainers').fadeOut(() => {
+                $('.search-popup__not-found').fadeIn();
+              });
+            } else {
+              $('.search-popup__not-found').fadeIn();
+            }
+          } else {
+            if ($('.search-popup__not-found').is(':visible')) {
+              $('.search-popup__not-found').fadeOut(() => {
+                $('.search-popup__trainers').fadeIn();
+              });
+            } else {
+              $('.search-popup__trainers').fadeIn();
+            }
+          }
+        }, 200);
       }, 200);
-      setTimeout(() => {
-        if (searchLine === ' ' || searchLine == null) {
-          $('.search-popup__trainers').hide();
-          $('.search-popup__not-found').show();
-        } else {
-          $('.search-popup__not-found').hide();
-          $('.search-popup__trainers').show();
-        }
-      }, 110);
     } else {
-      $('.search-popup__result').slideUp();
+      $('.search-popup__result').slideUp(() => {
+        $('.search-popup__trainers').fadeOut();
+        $('.search-popup__not-found').fadeOut();
+      });
     }
   });
 }
+/* eslint-enable no-lonely-if */
