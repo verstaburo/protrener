@@ -1,3 +1,15 @@
 .user-describe {
   display: block;
+
+  &__navigation {
+    @include screen('tablet', max) {
+      display: none;
+    }
+  }
+
+  &__content {
+    @include screen('tablet', max) {
+      width: 28*$grid-col-width;
+    }
+  }
 }

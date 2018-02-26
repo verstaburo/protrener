@@ -1,3 +1,30 @@
 .link-list {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include screen('tablet', max) {
+    display: none;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .link__text {
+      @include heading-2-text;
+      text-transform: uppercase;
+      color: rgba($color-basic, .24);
+    }
+
+    &.active {
+
+      .link__text {
+        color: $color-red;
+      }
+    }
+  }
 }

@@ -29,6 +29,16 @@
   text-transform: uppercase;
 }
 
+@mixin heading-2m {
+  font-size: $size-small;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @include screen('tablet') {
+    font-size: $size-big;
+  }
+}
+
 @mixin heading-2-text {
   font-size: $size-normal-big;
   line-height: 1.2;

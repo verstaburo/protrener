@@ -1,3 +1,14 @@
-mixin text-section()
-  +b.text-section&attributes(attributes)
-    block
+mixin text-section(title)
+  +b.SECTION.text-section&attributes(attributes)
+    +e.H3.title
+      +e.SPAN!= title
+    +e.content
+      block
+
+mixin text-section-icon(title, ico)
+  +b.SECTION.text-section&attributes(attributes)
+    +e.H3.title
+      +e.SPAN!= title
+      +icon(ico).icon
+    +e.content
+      block

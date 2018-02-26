@@ -1,3 +1,5 @@
-mixin link-list()
-  +b.link-list&attributes(attributes)
-    block
+mixin link-list(data)
+  +b.UL.link-list&attributes(attributes)
+    each item in data
+      +e.LI.item
+        +link(href=item.link)!= item.name

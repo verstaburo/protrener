@@ -1,0 +1,22 @@
+{
+  "section1" : {
+    "name" : "Регалии",
+    "link" : "#regalia"
+  },
+  "section2" : {
+    "name" : "достижения",
+    "link" : "#achievments"
+  },
+  "section3" : {
+    "name" : "опыт работы",
+    "link" : "#experience"
+  },
+  "section4" : {
+    "name" : "воспитанники",
+    "link" : "#inmates"
+  },
+  "section5" : {
+    "name" : "образование",
+    "link" : "#education"
+  }
+}

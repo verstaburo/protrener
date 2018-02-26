@@ -1,3 +1,45 @@
 .text-section {
   display: block;
+  margin-bottom: 40px;
+  width: 100%;
+
+  @include screen('tablet') {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    @include text-big;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @include screen('tablet') {
+      margin-bottom: 40px;
+    }
+
+    span {
+      margin-right: 20px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: $color-red;
+    margin-left: auto;
+  }
+
+  &__content {
+    @include text;
+    font-weight: 300;
+    width: 100%;
+
+    p {
+      width: 100%;
+    }
+  }
 }
