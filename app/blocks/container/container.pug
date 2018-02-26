@@ -4,3 +4,10 @@ mixin container()
       +col(1).container__padding
       block
       +col(1).contaner__padding
+
+mixin container-narrow()
+  .container&attributes(attributes)
+    +grid
+      +col(4).container__padding.container__padding_wide
+      block
+      +col(4).contaner__padding.container__padding_wide

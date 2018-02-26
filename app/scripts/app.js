@@ -14,6 +14,7 @@ import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import search from '../blocks/search/search';
+import phoneShow from '../blocks/phone/phone';
 
 const $ = window.$;
 
@@ -35,4 +36,5 @@ $(() => {
   maps();
   scrollanimation();
   search();
+  phoneShow();
 });

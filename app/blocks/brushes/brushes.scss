@@ -4,6 +4,7 @@
 
   &__item {
     position: relative;
+    overflow: hidden;
 
     &_bottom {
       position: absolute;
@@ -14,7 +15,6 @@
       background: url('../images/grey_brush.svg') calc(100% - (1/16)*100vw) 0 no-repeat;
       background-size: contain contain;
       z-index: 1;
-      overflow: hidden;
 
       @include screen('tablet-small') {
         width: 64%;
@@ -36,7 +36,6 @@
       z-index: 10;
       background: url('../images/red_brush.svg') (1/16)*100vw 0 no-repeat;
       background-size: contain contain;
-      overflow: hidden;
 
       @include screen('tablet-small') {
         width: 68%;
@@ -46,6 +45,35 @@
 
       @include screen(desktop) {
         background-size: 100% auto;
+      }
+    }
+  }
+
+  &_full {
+    padding-top: 203px;
+
+    @include screen('desktop') {
+      padding-top: 14.1%;
+    }
+
+    .brushes {
+
+      &__item {
+        overflow: visible;
+
+        &_top {
+          @include screen('desktop') {
+            padding-top: 7.2%;
+            height: auto;
+          }
+        }
+
+        &_bottom {
+          @include screen('desktop') {
+            padding-top: 14.1%;
+            height: auto;
+          }
+        }
       }
     }
   }

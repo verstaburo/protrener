@@ -18,6 +18,7 @@
   opacity: 0;
   transition: all $ease-main;
   background-color: $color-main;
+  pointer-events: none;
 
   &.active {
     opacity: 1;

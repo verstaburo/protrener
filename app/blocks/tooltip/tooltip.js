@@ -10,6 +10,9 @@ export default function tooltips() {
     delay: 0,
     side: 'top',
     theme: 'tooltipster-borderless',
+    trigger: 'click',
+    distance: 22,
+    maxWidth: 276,
   });
 }
 /* eslint-enable no-unused-vars */

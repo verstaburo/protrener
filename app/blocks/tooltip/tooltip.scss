@@ -2,9 +2,11 @@
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
   border: none;
-  background: $color-basic;
-  font-size: 12px;
-  line-height: 1.4;
+  background: $color-gray;
+  @include text-small;
+  letter-spacing: .035em;
+  color: $color-basic;
+  text-align: center;
   border-radius: 0;
 }
 
@@ -46,19 +48,19 @@
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border {
-  border-bottom-color: $color-basic;
+  border-bottom-color: $color-gray;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border {
-  border-left-color: $color-basic;
+  border-left-color: $color-gray;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border {
-  border-right-color: $color-basic;
+  border-right-color: $color-gray;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: $color-basic;
+  border-top-color: $color-gray;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-uncropped {
@@ -67,6 +69,10 @@
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-uncropped {
   left: -8px;
+}
+
+.tooltipster-sidetip .tooltipster-content {
+  padding: 25px 30px;
 }
 
 // Анимации

@@ -4,6 +4,7 @@
   text-transform: none;
   color: $color-basic;
   width: 100%;
+  cursor: pointer;
 
   &:hover {
 
@@ -20,6 +21,8 @@
     width: 100%;
     padding-top: 48%;
     background: $color-gray;
+    overflow: hidden;
+    z-index: 1;
 
     @include screen('tablet') {
       padding-top: 57%;
@@ -60,6 +63,7 @@
 
   &__avatar {
     margin: -27px 0 0;
+    z-index: 2;
   }
 
   &__price {

@@ -1,0 +1,35 @@
+mixin user-info()
+  +b.SECTION.user-info&attributes(attributes)
+    +e.wall
+      +e.IMG.image(src="assets/images/brand_wall_full.jpg")
+    +e.header
+      +brushes._full
+      +container-narrow
+        +col(24).container__inner
+          +e.avatar
+            +avatar('assets/images/avatar_7.jpg')._big
+          +e.content
+            +e.H1.title
+              +e.SPAN.name Милана
+              +e.SPAN.surname Шнайдер
+              +e.SPAN.sport Теннис
+    +e.data
+      +container-narrow
+        +col(24).container__inner
+          +e.UL.data-list
+            +e.LI.data-item_sport
+              +data-block('Спорт')
+                +e.SPAN Теннис
+            +e.LI.data-item_location
+              +data-block('Локация')
+                +e.SPAN САО
+                +e.info.js-tooltip(title="САО, Подмосковье, Вся Москва желательно Рублево-Успенское шоссе. Возможен выезд")
+                  +icon('plus').icon
+            +e.LI.data-item_price
+              +data-block('Цена в час')
+                +e.SPAN 1490 Р
+            +e.LI.data-item_socials
+              +data-block('Соц. сети')._notitle
+                +socials
+            +e.LI.data-item_phone
+              +phone

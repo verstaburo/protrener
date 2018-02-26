@@ -11,6 +11,17 @@
   }
 }
 
+@mixin heading-1-small {
+  font-size: $size-bigger;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include screen('tablet') {
+    font-size: $size-larger;
+  }
+}
+
 @mixin heading-2 {
   font-size: $size-big;
   line-height: 1.2;
@@ -50,6 +61,16 @@
   font-size: $size-smallest;
   line-height: 1.6;
   font-weight: 500;
+}
+
+@mixin text-big {
+  font-size: $size-big;
+  font-weight: 400;
+  line-height: 1;
+
+  @include screen('tablet') {
+    font-size: $size-bigger;
+  }
 }
 
 @mixin text {

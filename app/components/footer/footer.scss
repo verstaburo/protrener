@@ -75,4 +75,14 @@
   .container {
     z-index: 2;
   }
+
+  &_mcontacts {
+
+    .footer {
+      &__logo, &__addus, &__copyright {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
 }

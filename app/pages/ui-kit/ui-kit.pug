@@ -441,6 +441,21 @@ block content
           +button.js-dropdown-toggle bottom
           +dropdown content
 
+    //- Карточка тренера в каталоге
+    +ui-section
+      +ui-section-head
+        h2 Карточка тренера в каталоге
+        p Компонент components/trainer/trainer
+      +ui-section-content()
+        +trainer('assets/images/avatar_7.jpg', 'assets/images/brand_wall_1.jpg', '1490&nbsp;Р', 'Милана', 'Шнайдер')(href="user.html")
+    //- Социальный сети
+    +ui-section
+      +ui-section-head
+        h2 Социальные сети
+        p Блок blocks/socials/socials
+      +ui-section-content()
+        +socials
+
   script
     |
     | $('.ui-kit__section').each(function (i) {

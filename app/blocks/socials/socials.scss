@@ -1,23 +1,40 @@
 .socials {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   font-size: 0;
 
-  @include screen('tablet') {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 29px;
+  &_vertical {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-      @include screen('tablet') {
-        margin-right: 29px;
-        margin-bottom: 0;
+    @include screen('tablet') {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .socials {
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 29px;
+          margin-right: 0;
+
+          @include screen('tablet') {
+            margin-right: 29px;
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }

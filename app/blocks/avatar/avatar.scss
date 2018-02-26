@@ -9,10 +9,16 @@
 
   &__image {
     @include fill-img;
+    border-radius: 50%;
   }
 
   &_big {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
+
+    @include screen('phone') {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
