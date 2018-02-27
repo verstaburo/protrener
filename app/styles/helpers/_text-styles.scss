@@ -30,12 +30,12 @@
 }
 
 @mixin heading-2m {
-  font-size: $size-small;
+  font-size: $size-normal-big;
   line-height: 1.2;
   font-weight: 500;
 
   @include screen('tablet') {
-    font-size: $size-big;
+    font-size: $size-bigger;
   }
 }
 

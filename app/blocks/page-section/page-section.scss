@@ -1,3 +1,35 @@
 .page-section {
   display: block;
+
+  &:not(:first-child) {
+    padding-top: 40px;
+
+    @include screen('tablet') {
+      padding-top: 66px;
+    }
+
+    @include screen('desktop') {
+      padding-top: 50px;
+    }
+
+    @include screen('desktop-wide') {
+      padding-top: 60px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 40px;
+
+    @include screen('tablet') {
+      margin-bottom: 30px;
+    }
+
+    @include screen('desktop') {
+      margin-bottom: 56px;
+    }
+
+    @include screen('desktop-wide') {
+      margin-bottom: 96px;
+    }
+  }
 }

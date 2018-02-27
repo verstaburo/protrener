@@ -77,4 +77,11 @@
       }
     }
   }
+
+  &_nodesktop {
+
+    @include screen('desktop') {
+      display: none;
+    }
+  }
 }

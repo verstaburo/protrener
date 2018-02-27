@@ -9,7 +9,7 @@ export default function highlightMenu() {
 
     $(sections).each((i, el) => {
       const divPosition = $(el).offset().top;
-      if (divPosition - 1 < currentScroll) {
+      if (divPosition - 55 < currentScroll) {
         currentSection = $(el);
         const id = $(currentSection).attr('id');
         $('a').removeClass('active');

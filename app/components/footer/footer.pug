@@ -2,12 +2,14 @@ mixin footer(nobrush)
   +b.footer&attributes(attributes)
     - if(!nobrush) {
       +brushes
+    - } else {
+      +brushes._nodesktop
     - }
     +container
       +col(7).footer__contacts
         +contacts
       +col(12).footer__logo
-        +logo
+        +logo._footer
       +col(4).footer__addus
         +navigation-link(href="addtrainer.html") Стать трейнером
       +col(7).footer__copyright
@@ -17,12 +19,14 @@ mixin footer-contacts(nobrush)
   +b.footer_mcontacts&attributes(attributes)
     - if(!nobrush) {
       +brushes
+    - } else {
+      +brushes._nodesktop
     - }
     +container
       +col(7).footer__contacts
         +contacts
       +col(12).footer__logo
-        +logo
+        +logo._footer
       +col(4).footer__addus
         +navigation-link(href="addtrainer.html") Стать трейнером
       +col(7).footer__copyright

@@ -31,27 +31,29 @@
 
   &__logo {
     @include screen('desktop-small', max) {
-      width: 8 * $grid-col-width;
+      width: 9 * $grid-col-width;
     }
 
     @include screen('tablet', max) {
       width: 0;
     }
-  }
 
-  &__empty {
-    @include screen('tablet', max) {
-      width: 14 * $grid-col-width;
+    @include screen('desktop-wide') {
+      width: 9 * $grid-col-width;
     }
   }
 
   &__addus {
     @include screen('desktop-small', max) {
-      width: 6 * $grid-col-width;
+      width: 5 * $grid-col-width;
     }
 
     @include screen('tablet', max) {
       width: 0;
+    }
+
+    @include screen('desktop-wide') {
+      width: 7 * $grid-col-width;
     }
   }
 

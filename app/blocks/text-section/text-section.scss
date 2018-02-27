@@ -1,10 +1,10 @@
 .text-section {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   width: 100%;
 
   @include screen('tablet') {
-    margin-bottom: 60px;
+    margin-bottom: 54px;
   }
 
   &__title {
@@ -12,10 +12,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    @include text-big;
+    @include heading-2m;
     font-weight: 500;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
     @include screen('tablet') {
       margin-bottom: 40px;
@@ -24,11 +24,19 @@
     span {
       margin-right: auto;
     }
+
+    &_icon {
+      margin-bottom: 12px;
+
+      @include screen('tablet') {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     fill: $color-red;
     margin-left: 20px;
   }
@@ -37,6 +45,8 @@
     @include text;
     font-weight: 300;
     width: 100%;
+    line-height: 1.42;
+    letter-spacing: .02em;
 
     p {
       width: 100%;

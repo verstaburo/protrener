@@ -1,14 +1,14 @@
 .copyright {
   display: block;
-  font-size: 18px;
+  font-size: $size-smaller;
   letter-spacing: .033em;
-  padding-left: 12px;
   width: 100%;
   text-align: right;
 
   &__text {
     display: inline-block;
     color: $color-warm-gray;
+    margin-left: 3px;
 
     &_mhidden {
       @include screen('tablet', max) {
