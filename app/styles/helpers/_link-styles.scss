@@ -12,6 +12,16 @@
   border-color: $color-basic;
 }
 
+@mixin link-gray {
+  color: rgba($color-basic, .24);
+  transition: color $ease-main;
+
+  &:hover {
+    opacity: 1;
+    color: rgba($color-basic, .5);
+  }
+}
+
 @mixin link-disabled {
   color: $color-border;
 }

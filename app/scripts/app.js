@@ -15,6 +15,8 @@ import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import search from '../blocks/search/search';
 import phoneShow from '../blocks/phone/phone';
+import sidebar from '../blocks/js-functions/sidebar';
+import highlightMenu from '../blocks/js-functions/highlightmenu';
 
 const $ = window.$;
 
@@ -37,4 +39,6 @@ $(() => {
   scrollanimation();
   search();
   phoneShow();
+  sidebar();
+  highlightMenu();
 });

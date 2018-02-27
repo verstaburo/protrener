@@ -1,5 +1,6 @@
-mixin link-list(data)
+mixin link-list(data, gray)
+  -var addClass = (gray) ? "_gray" : "_white"
   +b.UL.link-list&attributes(attributes)
     each item in data
       +e.LI.item
-        +link(href=item.link)!= item.name
+        +link(href=item.link class=addClass + item.class + " js-anchor")!= item.name

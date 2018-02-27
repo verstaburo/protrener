@@ -1,5 +1,8 @@
 .user-describe {
+  position: relative;
   display: block;
+  background: $color-main;
+  z-index: 2;
 
   &__navigation {
     @include screen('tablet', max) {

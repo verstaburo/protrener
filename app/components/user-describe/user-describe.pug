@@ -1,11 +1,13 @@
 mixin user-describe()
   +page-section.user-describe__&attributes(attributes)
     +col(8).user-describe__navigation
-      +link-list(getData('sections'))
+      .js-sidebar
+        .js-sidebar-inner
+          +link-list(getData('sections'), true)
     +col(16).user-describe__content
-      +text-section-icon('Регалии', 'laurel')(id="#regalia")
+      +text-section-icon('Регалии', 'laurel')(id="regalia")
         +e.P Действующий профессиональный спортсмен, мастер спорта. Лучший рейтинг АТР (965- в&nbsp;парном разряде)
-      +text-section('Достижения')(id="#achievments")
+      +text-section('Достижения')(id="achievments")
         +e.P Победитель и&nbsp;призер Всероссийских и&nbsp;международных турниров, среди которых:
           +e.BR
           | 1-е место на&nbsp;Чемпионате Москвы в&nbsp;парном разряде(2008, 2017&nbsp;гг.),
@@ -13,9 +15,9 @@ mixin user-describe()
           | 2-е место на&nbsp;Кубке России (в&nbsp;парном разряде 2013&nbsp;г)
           +e.BR
           | и&nbsp;3-е в&nbsp;смешанном (2012&nbsp;г)
-      +text-section('Опыт работы')(id="#experience")
+      +text-section('Опыт работы')(id="experience")
         +e.P Большой опыт работы с&nbsp;детьми разного возраста (более 12&nbsp;лет), а&nbsp;также более 5&nbsp;лет совместной работы с&nbsp;заслуженным тренером России Виктором Николаевичем Янчуком при подготовке спортсменов и&nbsp;детей самого высокого уровня.
-      +text-section('Воспитанники')(id="#inmates")
+      +text-section('Воспитанники')(id="inmates")
         +e.P Тренер-спарринг Дарьи Гавриловой( 1й&nbsp;номер в&nbsp;рейтинге ITF), спарринг-партнер Анны Чакветадзе( 5й&nbsp;номер WTA), Анны Лапушенковой( 93й номер WTA), Веры Душевиной( 31й номер WTA), Яны Бучиной( 11й номер ITF, финалистка US&nbsp;OPEN juniors). Среди воспитанников Евгений Елистратов- действующий мастер спорта, входящий в&nbsp;состав резервной сборной России. На&nbsp;данным момент и&nbsp;на&nbsp;протяжении уже 5&nbsp;лет веду Ярославу Барташевич 1-й номер 13&nbsp;лет и&nbsp;моложе в&nbsp;рейтинге России.
-      +text-section('Образование')(id="#education")
+      +text-section('Образование')(id="education")
         +e.P Два высших образования. 1-е МИСИС, инженер в&nbsp;области автоматизации процессов цветной металлургии , окончание 2010 год и&nbsp;2-е высшее Спортивное образование МГАФК, тренер по&nbsp;теннису , окончание 2017 год

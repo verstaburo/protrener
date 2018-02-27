@@ -33,6 +33,10 @@
     @include link-white;
   }
 
+  &_gray &__text {
+    @include link-gray;
+  }
+
   &.disabled {
     pointer-events: none;
 

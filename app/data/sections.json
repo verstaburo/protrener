@@ -1,22 +1,27 @@
 {
   "section1" : {
     "name" : "Регалии",
-    "link" : "#regalia"
+    "link" : "#regalia",
+    "class" : " active"
   },
   "section2" : {
     "name" : "достижения",
-    "link" : "#achievments"
+    "link" : "#achievments",
+    "class" : ""
   },
   "section3" : {
     "name" : "опыт работы",
-    "link" : "#experience"
+    "link" : "#experience",
+    "class" : ""
   },
   "section4" : {
     "name" : "воспитанники",
-    "link" : "#inmates"
+    "link" : "#inmates",
+    "class" : ""
   },
   "section5" : {
     "name" : "образование",
-    "link" : "#education"
+    "link" : "#education",
+    "class" : ""
   }
 }
