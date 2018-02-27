@@ -1,3 +1,6 @@
-mixin page-title()
-  +b.page-title&attributes(attributes)
-    block
+mixin page-title(title)
+  +b.SECTION.page-title&attributes(attributes)
+    +container-title
+      +col(28).container__inner
+        +e.H1.text!=title
+        block

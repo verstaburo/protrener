@@ -8,6 +8,13 @@ mixin container()
 mixin container-narrow()
   .container&attributes(attributes)
     +grid
-      +col(4).container__padding.container__padding_wide
+      +col(4).container__padding
       block
-      +col(4).contaner__padding.container__padding_wide
+      +col(4).contaner__padding
+
+mixin container-title()
+  .container&attributes(attributes)
+    +grid
+      +col(2).container__padding
+      block
+      +col(2).contaner__padding

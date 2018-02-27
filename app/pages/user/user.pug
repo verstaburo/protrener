@@ -3,6 +3,13 @@ extends ../../layouts/absoluteheader
 block head
   - var pageTitle = 'ProTrener - страница тренера'
 
+block up
+  +up-button
+
 block content
   +user-info
   +user-describe
+  +b.user-banner
+    +container-narrow
+      +col(24).container__inner
+        +banner._small

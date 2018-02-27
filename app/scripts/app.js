@@ -17,6 +17,7 @@ import search from '../blocks/search/search';
 import phoneShow from '../blocks/phone/phone';
 import sidebar from '../blocks/js-functions/sidebar';
 import highlightMenu from '../blocks/js-functions/highlightmenu';
+import upShow from '../blocks/up-button/up-button';
 
 const $ = window.$;
 
@@ -41,4 +42,5 @@ $(() => {
   phoneShow();
   sidebar();
   highlightMenu();
+  upShow();
 });

@@ -5,25 +5,18 @@
   max-width: 100%;
   box-sizing: border-box;
 
-  &__padding.grid__col_one {
+  &__padding.grid__col_one,
+  &__padding.grid__col_four,
+  &__padding.grid__col_two
+  {
     @include screen('tablet', max) {
       width: 2*$grid-col-width;
     }
   }
 
-  &__padding_wide.grid__col_four {
-    @include screen('tablet', max) {
-      width: 2*$grid-col-width;
-    }
-  }
-
-  &__main.grid__col_thirty {
-    @include screen('tablet', max) {
-      width: 28*$grid-col-width;
-    }
-  }
-
-  &__inner.grid__col_twenty-four {
+  &__main.grid__col_thirty,
+  &__inner.grid__col_twenty-four,
+  &__inner.grid__col_twenty-eight {
     @include screen('tablet', max) {
       width: 28*$grid-col-width;
     }
