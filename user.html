@@ -166,36 +166,40 @@
                     <div class="grid">
                         <div class="grid__col grid__col_four container__padding container__padding_wide"></div>
                         <div class="grid__col grid__col_eight user-describe__navigation">
-                            <ul class="link-list">
-                                <li class="link-list__item">
-                                    <a class="link" href="#regalia">
-                                        <span class="link__text">Регалии</span>
-                                    </a>
-                                </li>
-                                <li class="link-list__item">
-                                    <a class="link" href="#achievments">
-                                        <span class="link__text">достижения</span>
-                                    </a>
-                                </li>
-                                <li class="link-list__item">
-                                    <a class="link" href="#experience">
-                                        <span class="link__text">опыт работы</span>
-                                    </a>
-                                </li>
-                                <li class="link-list__item">
-                                    <a class="link" href="#inmates">
-                                        <span class="link__text">воспитанники</span>
-                                    </a>
-                                </li>
-                                <li class="link-list__item">
-                                    <a class="link" href="#education">
-                                        <span class="link__text">образование</span>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="js-sidebar">
+                                <div class="js-sidebar-inner">
+                                    <ul class="link-list">
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="#regalia">
+                                                <span class="link__text">Регалии</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="#achievments">
+                                                <span class="link__text">достижения</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="#experience">
+                                                <span class="link__text">опыт работы</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="#inmates">
+                                                <span class="link__text">воспитанники</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="#education">
+                                                <span class="link__text">образование</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid__col grid__col_sixteen user-describe__content">
-                            <section class="text-section" id="#regalia">
+                            <section class="text-section" id="regalia">
                                 <h3 class="text-section__title">
                                     <span>Регалии</span>
                                     <svg class="text-section__icon"><use xlink:href="assets/images/icon.svg#icon_laurel"></use></svg>
@@ -204,7 +208,7 @@
                                     <p>Действующий профессиональный спортсмен, мастер спорта. Лучший рейтинг АТР (965- в&nbsp;парном разряде)</p>
                                 </div>
                             </section>
-                            <section class="text-section" id="#achievments">
+                            <section class="text-section" id="achievments">
                                 <h3 class="text-section__title">
                                     <span>Достижения</span>
                                 </h3>
@@ -215,7 +219,7 @@
                                         <br/>и&nbsp;3-е в&nbsp;смешанном (2012&nbsp;г)</p>
                                 </div>
                             </section>
-                            <section class="text-section" id="#experience">
+                            <section class="text-section" id="experience">
                                 <h3 class="text-section__title">
                                     <span>Опыт работы</span>
                                 </h3>
@@ -224,7 +228,7 @@
                                         самого высокого уровня.</p>
                                 </div>
                             </section>
-                            <section class="text-section" id="#inmates">
+                            <section class="text-section" id="inmates">
                                 <h3 class="text-section__title">
                                     <span>Воспитанники</span>
                                 </h3>
@@ -234,7 +238,7 @@
                                         веду Ярославу Барташевич 1-й номер 13&nbsp;лет и&nbsp;моложе в&nbsp;рейтинге России.</p>
                                 </div>
                             </section>
-                            <section class="text-section" id="#education">
+                            <section class="text-section" id="education">
                                 <h3 class="text-section__title">
                                     <span>Образование</span>
                                 </h3>
@@ -351,6 +355,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/scripts/libs/ResizeSensor.js"></script>
     <script src="assets/scripts/app.min.js"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
