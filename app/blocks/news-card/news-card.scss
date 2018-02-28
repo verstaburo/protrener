@@ -1,0 +1,92 @@
+.news-card {
+  display: block;
+  text-decoration: none;
+  color: $color-basic;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @include screen('phone') {
+      margin-bottom: 84px;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    width: 100%;
+    padding-top: 48.6%;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    @include screen('tablet') {
+      padding-top: 57%;
+    }
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($color-main, .2);
+      z-index: 2;
+    }
+  }
+
+  &__image {
+    @include fill-img;
+    transform: scale(1);
+    transition: all $ease-main;
+    z-index: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__date {
+    @include text-smaller;
+    text-align: left;
+    letter-spacing: .033em;
+    color: $color-warm-gray;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__title {
+    @include heading-2;
+    text-align: left;
+    text-transform: uppercase;
+    opacity: 1;
+    line-height: 1.05;
+    transition: all $ease-main;
+    width: 100%;
+  }
+
+  &:hover {
+
+    .news-card {
+
+      &__image {
+        transform: scale(1.1);
+      }
+
+      &__title {
+        opacity: .5;
+      }
+    }
+  }
+
+  &_noimage {
+
+    .news-card__content {
+      box-sizing: border-box;
+      padding-top: 20px;
+      border-top: 3px solid $color-red;
+    }
+  }
+}

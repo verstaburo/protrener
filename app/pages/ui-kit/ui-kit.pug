@@ -9,8 +9,17 @@ block content
       +e.navigation-burger
       +e.UL.navigation__list
 
+    +page-title('Тайтл страницы - /blocks/page-title/page-title')
+
+    +page-section
+      +col(24).container__inner
+        +content-zone
+          +e.P Cекция страницы - /blocks/page-section/page-section
+
+
     +ui-kit-head
       +e.logo Логотип
+        +e.BR
         +logo
       +e.name Protrener
 
@@ -447,7 +456,32 @@ block content
         h2 Карточка тренера в каталоге
         p Компонент components/trainer/trainer
       +ui-section-content()
-        +trainer('assets/images/avatar_7.jpg', 'assets/images/brand_wall_1.jpg', '1490&nbsp;Р', 'Милана', 'Шнайдер')(href="user.html")
+        +grid-list
+          +e.LI.item
+            +trainer('assets/images/avatar_7.jpg', 'assets/images/brand_wall_1.jpg', '1490&nbsp;Р', 'Милана', 'Шнайдер')(href="user.html")
+    //- Карточка новости
+    +ui-section
+      +ui-section-head
+        h2 Карточка новости
+        p Компонент blocks/news-card/news-card
+        p Модификатор для карточки без изображения ._noimage
+      +ui-section-content()
+        +grid-list
+          +e.LI.item
+            +news-card('', '12.05.17')(href="news-page.html")._noimage Эквадорский игрок из&nbsp;&laquo;Зенита&raquo; шокирован российскими морозами и&nbsp;снегом
+          +e.LI.item
+            +news-card('assets/images/brand_wall_2.jpg', '03.05.17')(href="news-page.html") Стартует Кубок шести наций по регби
+
+    //- Карточка аватар
+    +ui-section
+      +ui-section-head
+        h2 Аватар
+        p Компонент blocks/avatar/avatar
+        p Модификатор для большого аватара ._big
+      +ui-section-content()
+        +avatar('assets/images/avatar_1.jpg')
+        +avatar('assets/images/avatar_3.jpg')._big
+
     //- Социальный сети
     +ui-section
       +ui-section-head

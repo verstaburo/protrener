@@ -5,10 +5,6 @@
     padding-top: 40px;
 
     @include screen('tablet') {
-      padding-top: 66px;
-    }
-
-    @include screen('desktop') {
       padding-top: 50px;
     }
 

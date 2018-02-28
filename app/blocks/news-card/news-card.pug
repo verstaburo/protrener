@@ -1,0 +1,10 @@
+mixin news-card(image, date)
+  +b.A.news-card&attributes(attributes)
+    - if (image) {
+      +e.DIV.promo
+        +e.IMG(src=image).image
+    - }
+    +e.DIV.content
+      +e.TIME.date!= date
+      +e.H3.title
+        block

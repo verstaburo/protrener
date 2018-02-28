@@ -1,3 +1,17 @@
 .news {
   display: block;
+
+  &:not(:first-child) {
+    @include screen('tablet', max) {
+      padding-top: 36px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 70px;
+
+    @include screen('tablet') {
+      margin-bottom: 122px;
+    }
+  }
 }

@@ -18,6 +18,7 @@ import phoneShow from '../blocks/phone/phone';
 import sidebar from '../blocks/js-functions/sidebar';
 import highlightMenu from '../blocks/js-functions/highlightmenu';
 import upShow from '../blocks/up-button/up-button';
+import mixContent from '../blocks/grid-list/grid-list';
 
 const $ = window.$;
 
@@ -43,4 +44,5 @@ $(() => {
   sidebar();
   highlightMenu();
   upShow();
+  mixContent();
 });

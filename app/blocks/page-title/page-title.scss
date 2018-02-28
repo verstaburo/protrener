@@ -1,7 +1,30 @@
 .page-title {
   display: block;
+  margin-top: calc((3/16)*100vh - 4px);
+
+
+  @include screen('tablet') {
+    margin-top: calc(25vh - 8px);
+    margin-bottom: 0;
+  }
+
+  @include screen('desktop') {
+    margin-bottom: 24px;
+  }
+
+  @include screen('desktop-wide') {
+    margin-bottom: 46px;
+  }
 
   &__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
     @include heading-1;
+
+    @include screen('tablet', max) {
+      min-height: 138px;
+    }
   }
 }
