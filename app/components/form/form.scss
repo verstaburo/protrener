@@ -1,0 +1,93 @@
+.form {
+  display: block;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__label {
+    width: 100%;
+
+    @include screen('tablet') {
+      width: (2/7)*100%;
+    }
+
+    &_desktop {
+      @include screen('tablet', max) {
+        display: none;
+      }
+    }
+
+    &_nohide {
+      display: block;
+    }
+
+    &_mobile {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      box-sizing: border-box;
+
+      @include screen('tablet') {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    display: inline-block;
+    padding: 15px 0 12px;
+    padding-right: 30px;
+
+    @include text-small;
+    line-height: 1.5;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    width: 100%;
+
+    @include screen('tablet') {
+      width: (5/7)*100%;
+    }
+  }
+
+  &__field {
+    position: relative;
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__mark {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  &__icon {
+    width: 12px;
+    height: 18px;
+    fill: $color-red;
+  }
+}

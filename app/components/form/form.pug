@@ -1,0 +1,150 @@
+mixin form()
+  +b.FORM.form&attributes(attributes)
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Фамилия
+      +e.wrapper
+        +e.field
+          +input(type="text" placeholder="Иванов" required)
+          +e.label_mobile
+            +e.SPAN.text Фамилия
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text имя
+      +e.wrapper
+        +e.field
+          +input(type="text" placeholder="Иван" required)
+          +e.label_mobile
+            +e.SPAN.text имя
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Вид спорта
+      +e.wrapper
+        +e.field
+          +select(placeholder="Выберите вид спорта" required)
+            +e.OPTION(placeholder)  Выберите вид спорта
+            +e.OPTION(value="1") Йога
+            +e.OPTION(value="2") Единоборства
+            +e.OPTION(value="3") Фитнес
+            +e.OPTION(value="4") Бокс
+            +e.OPTION(value="5") Танцы
+            +e.OPTION(value="6") Кроссфит
+            +e.OPTION(value="7") Пилатес
+            +e.OPTION(value="8") Теннис
+            +e.OPTION(value="9") Микс-файт
+            +e.OPTION(value="10") Плавание
+          +e.label_mobile
+            +e.SPAN.text Вид спорта
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Место
+          +e.BR
+          | проведения
+          +e.BR
+          | занятий
+      +e.wrapper
+        +e.field
+          +select(placeholder="Выберите район")
+            +e.OPTION(placeholder)  Выберите район
+            +e.OPTION(value="1") САО
+            +e.OPTION(value="2") ЮАО
+            +e.OPTION(value="3") ВАО
+            +e.OPTION(value="4") ЗАО
+          +e.label_mobile
+            +e.SPAN.text Место проведения занятий
+        +e.field
+          +textarea(placeholder="Предпочтения (Пример: Удобнее всего на Динамо)")
+          +e.label_mobile
+            +e.SPAN.text Предпочтения (Пример: Удобнее всего на Динамо)
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Стоимость
+      +e.wrapper
+        +e.field
+          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required)
+          +e.mark
+            +icon('rub').icon
+          +e.label_mobile
+            +e.SPAN.text Стоимость
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Регалии
+      +e.wrapper
+        +e.field
+          +textarea(placeholder="Опишите свои регалии")
+          +e.label_mobile
+            +e.SPAN.text Регалии
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text достижения
+      +e.wrapper
+        +e.field
+          +textarea(placeholder="Опишите свои достижениях" required)
+          +e.label_mobile
+            +e.SPAN.text достижения
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Опыт работы
+      +e.wrapper
+        +e.field
+          +textarea(placeholder="Опишите свой опыт работы тренером" required)
+          +e.label_mobile
+            +e.SPAN.text Опыт работы
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Воспитанники
+      +e.wrapper
+        +e.field
+          +textarea(placeholder="Расскажите о своих воспитанниках")
+          +e.label_mobile
+            +e.SPAN.text Воспитанники
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Образование
+      +e.wrapper
+        +e.field
+          +textarea(placeholder="Ваше образование")
+          +e.label_mobile
+            +e.SPAN.text Образование
+    +e.row
+      +e.label_desktop
+        +e.SPAN.text Контакты
+      +e.wrapper
+        +e.field
+          +input(type="tel" data-type="tel" placeholder="Телефон" required)
+          +e.label_mobile
+            +e.SPAN.text Телефон
+        +e.field
+          +input(type="email" placeholder="E-mail" required)
+          +e.label_mobile
+            +e.SPAN.text E-mail
+        +e.field
+          +input(type="url" placeholder="Ссылка на профиль Vkontakte")
+          +e.label_mobile
+            +e.SPAN.text Ссылка на профиль Vkontakte
+        +e.field
+          +input(type="url" placeholder="Ссылка на профиль Facebook")
+          +e.label_mobile
+            +e.SPAN.text Ссылка на профиль Facebook
+        +e.field
+          +input(type="url" placeholder="Ссылка на профиль Instagram")
+          +e.label_mobile
+            +e.SPAN.text Ссылка на профиль Instagram
+    +e.row
+      +e.label_desktop._nohide
+        +e.SPAN.text Аватар
+      +e.wrapper
+        +upload('4000000', '[240, 240]')._round
+          +e.SPAN(data-error="resolution") Разрешение не меньше 240х240 px
+          +e.SPAN(data-error="filesize") Размер не больше 500 кб
+    +e.row
+      +e.label_desktop._nohide
+        +e.SPAN.text Брендволл
+      +e.wrapper
+        +upload('4000000', '[1440, 690]')
+          +e.SPAN(data-error="resolution") Разрешение не меньше 1440х690 px
+          +e.SPAN(data-error="filesize") Размер не больше 500 кб
+    +e.row
+      +e.label_desktop
+      +e.wrapper
+        +button('button')(type="submit" data-src="#success-popup").form__button.js-fancybox отправить анкету

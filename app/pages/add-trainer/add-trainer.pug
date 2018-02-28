@@ -5,3 +5,23 @@ block head
 
 block content
   +page-title('Стать тренером')
+  +page-section.add-trainer__
+    +col(24).container__inner
+      +e.SECTION.request
+        +e.H3.title Заполните
+          +e.BR
+          | анкету
+        +form
+      +e.SECTION.conditions
+        +e.H3.title Условия
+          +e.BR
+          | размещения
+        +content-zone
+          +e.P Вы&nbsp;платите один раз в&nbsp;месяц абонентскую плату: Первый месяц&nbsp;&mdash; 1&nbsp;рубль, последующие месяцы&nbsp;&mdash; 2000 рублей
+          +e.P Ваша анкета будет размещена в&nbsp;течение 1-3 дней после оплаты (перед оплатой с&nbsp;вами свяжется наш менеджер)
+          +e.P Если не&nbsp;получается заполнить анкету автоматически&nbsp;Вы можете отправить информацию о&nbsp;себе вместе с&nbsp;фото и&nbsp;др. материалами на
+            +e.A(href="mailto:hello@protrener.net") hello@protrener.net
+  +error-banner
+
+block popup
+  +success-popup#success-popup

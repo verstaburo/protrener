@@ -1,3 +1,50 @@
 .add-trainer {
   display: block;
+
+  .container__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    @include heading-2m;
+    margin-bottom: 20px;
+
+    line-height: 1;
+
+    br {
+      @include screen('tablet', max) {
+        display: none;
+      }
+    }
+
+    @include screen('tablet') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__request {
+    width: 100%;
+    order: 2;
+
+    @include screen('tablet') {
+      width: (7/12)*100%;
+      order: 1;
+    }
+  }
+
+  &__conditions {
+    width: 100%;
+    box-sizing: border-box;
+    order: 1;
+
+    @include screen('tablet') {
+      padding-left: (1/12)*100%;
+      width: (5/12)*100%;
+      order: 2;
+    }
+  }
 }

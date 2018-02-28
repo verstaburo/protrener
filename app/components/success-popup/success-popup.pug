@@ -1,0 +1,7 @@
+mixin success-popup()
+  +popup('Нажмите ESC для закрытия').success-popup__&attributes(attributes)
+    +e.message
+      +e.decoration
+        +e.P.text Ваша анкета отправлена. В ближайшее время с вами свяжется наш менеджер
+      +e.P.text Остались вопросы? Пиши на
+        +link(href='mailto:hello@protrener.net') hello@protrener.net

@@ -159,6 +159,15 @@
     }
   }
 
+  &__placeholder {
+    font-weight: 300;
+    letter-spacing: .019em;
+    font-size: $size-normal;
+    line-height: 1.35;
+    color: $color-placeholder;
+    opacity: 1;
+  }
+
   &__list {
     border-color: $color-gray;
 
@@ -183,8 +192,13 @@
       width: calc(100% + 48px);
       transform: translateX(-24px);
 
+      .choices__list {
+        width: calc(100% + 22px);
+        max-height: 334px;
+      }
+
       .choices__item {
-        padding: 9px 18px 16px;
+        padding: 9px 28px 16px 18px;
         font-size: $size-normal;
         font-weight: 300;
         letter-spacing: .019em;

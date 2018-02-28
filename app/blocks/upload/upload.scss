@@ -1,0 +1,70 @@
+.upload {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .input[type="file"] {
+    display: none;
+  }
+
+  &__dropzone {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: $color-gray;
+    cursor: pointer;
+    margin-right: 30px;
+    min-width: 249px;
+    height: 120px;
+
+    @include screen('tablet') {
+      min-width: 249px;
+      height: 120px;
+    }
+  }
+
+  &__mark {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20.4px;
+    fill: $color-red;
+  }
+
+  &__conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 8px 30px 8px 0;
+    @include text-smaller;
+    line-height: 1.44;
+    letter-spacing: .033em;
+    color: $color-placeholder;
+  }
+
+  &_round {
+
+    .upload {
+
+      &__dropzone {
+        min-width: 0;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
