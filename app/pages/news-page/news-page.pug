@@ -1,7 +1,10 @@
-extends ../../layouts/default
+extends ../../layouts/memptyheader
 
 block head
   - var pageTitle = 'Protrener - Возняцки победила Халеп в финале Australia Open'
 
+block up
+  +up-button
+
 block content
-  +b.news-page
+  +article

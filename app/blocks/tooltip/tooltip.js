@@ -89,7 +89,7 @@ export default function tooltips() {
   */
 
   $('.js-tooltip').tooltipster({
-    animation: '',
+    animation: 'fade',
     delay: 0,
     side: 'top',
     theme: 'tooltipster-borderless',

@@ -5,11 +5,12 @@ doctype html
 html(lang='ru')
   include head
   body
-    .wrapper.wrapper_onescreen
-      +header._abs
+    .wrapper
+      block up
+      +header(true)._abs
       main.page-content
         block content
-      +footer-contacts
+      +footer
     +popups
       +search-popup#search
     script(src='assets/scripts/libs/ResizeSensor.js')

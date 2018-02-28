@@ -57,7 +57,11 @@
   p {
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+
+      @include screen('tablet') {
+        margin-bottom: 35px;
+      }
     }
 
     small {
@@ -67,6 +71,9 @@
     }
 
     @include text;
+    font-weight: 300;
+    letter-spacing: .02em;
+    line-height: 1.45;
   }
 
   blockquote {

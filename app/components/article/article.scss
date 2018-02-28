@@ -1,0 +1,131 @@
+.article {
+  display: block;
+  width: 100%;
+  margin-top: 23vh;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+
+  @include screen('tablet') {
+    margin-top: 20vh;
+    margin-bottom: 115px;
+  }
+
+  @include screen('desktop') {
+    margin-top: 18vh;
+  }
+
+  @include screen('desktop-wide') {
+    margin-top: 20vh;
+  }
+
+  &__media,
+  &__content {
+    box-sizing: border-box;
+  }
+
+  &__media {
+    margin-bottom: 32px;
+
+    @include screen('tablet', max) {
+      .container__padding {
+        width: 0;
+      }
+
+      .container__inner {
+        width: 100%;
+      }
+    }
+
+    @include screen('tablet') {
+      margin-bottom: 40px;
+    }
+
+    @include screen('desktop') {
+      margin-bottom: 74px;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    width: 100%;
+    padding-top: 61.25%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include screen('tablet') {
+      padding-top: 37%;
+    }
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+
+    @include screen('tablet') {
+      margin-bottom: 54px;
+    }
+
+    @include screen('desktop') {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    margin-bottom: 6px;
+
+    @include screen('tablet') {
+      width: (1/6)*100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__main {
+    box-sizing: border-box;
+    width: 100%;
+
+    @include screen('tablet') {
+      padding-right: (1/6)*100%;
+      width: (5/6)*100%;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    @include text-smaller;
+    letter-spacing: .033em;
+    box-sizing: border-box;
+
+    @include screen('tablet') {
+      padding-top: 4px;
+      @include text-small;
+      letter-spacing: .075em;
+    }
+
+  }
+
+  &__title {
+    width: 100%;
+    @include heading-1-small;
+    line-height: 1;
+  }
+
+  &__text {
+    box-sizing: border-box;
+    box-sizing: border-box;
+
+    @include screen('tablet') {
+      padding-left: (1/3)*100%;
+    }
+  }
+}
