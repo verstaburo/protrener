@@ -15,7 +15,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="header">
+        <div class="header header_abs">
             <div class="container">
                 <div class="grid">
                     <div class="grid__col grid__col_one container__padding"></div>
@@ -64,12 +64,37 @@
                     <div class="ui-kit__navigation-burger"></div>
                     <ul class="ui-kit__navigation__list"></ul>
                 </div>
+                <section class="page-title">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_two container__padding"></div>
+                            <div class="grid__col grid__col_twenty-eight container__inner">
+                                <h1 class="page-title__text">Тайтл страницы - /blocks/page-title/page-title</h1>
+                            </div>
+                            <div class="grid__col grid__col_two contaner__padding"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page-section">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_four container__padding"></div>
+                            <div class="grid__col grid__col_twenty-four container__inner">
+                                <div class="content-zone">
+                                    <p>Cекция страницы - /blocks/page-section/page-section</p>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col_four contaner__padding"></div>
+                        </div>
+                    </div>
+                </section>
                 <section class="ui-kit__head">
                     <div class="container">
                         <div class="grid">
                             <div class="grid__col grid__col_one container__padding"></div>
                             <div class="grid__col grid__col_thirty container__main">
                                 <div class="ui-kit__logo">Логотип
+                                    <br/>
                                     <a class="logo" href="index.html">
                                         <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
                                     </a>
@@ -875,23 +900,88 @@
                                     <p>Компонент components/trainer/trainer</p>
                                 </div>
                                 <div class="ui-kit__section-content">
-                                    <a class="trainer" href="user.html">
-                                        <div class="trainer__wall">
-                                            <div class="trainer__brand">
-                                                <img class="trainer__image" src="assets/images/brand_wall_1.jpg" alt="" role="presentation" />
-                                            </div>
-                                        </div>
-                                        <div class="trainer__describe">
-                                            <div class="avatar trainer__avatar">
-                                                <img class="avatar__image" src="assets/images/avatar_7.jpg" alt="" role="presentation" />
-                                            </div>
-                                            <div class="trainer__price">1490&nbsp;Р</div>
-                                            <div class="trainer__fullname">
-                                                <span class="trainer__name">Милана</span>
-                                                <span class="trainer__surname">Шнайдер</span>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    <ul class="grid-list">
+                                        <li class="grid-list__item">
+                                            <a class="trainer" href="user.html">
+                                                <div class="trainer__wall">
+                                                    <div class="trainer__brand">
+                                                        <img class="trainer__image" src="assets/images/brand_wall_1.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                </div>
+                                                <div class="trainer__describe">
+                                                    <div class="avatar trainer__avatar">
+                                                        <img class="avatar__image" src="assets/images/avatar_7.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                    <div class="trainer__price">1490&nbsp;Р</div>
+                                                    <div class="trainer__fullname">
+                                                        <span class="trainer__name">Милана</span>
+                                                        <span class="trainer__surname">Шнайдер</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col_one contaner__padding"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ui-kit__section">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_one container__padding"></div>
+                            <div class="grid__col grid__col_thirty container__main">
+                                <div class="ui-kit__section-head">
+                                    <h2>Карточка новости</h2>
+                                    <p>Компонент blocks/news-card/news-card</p>
+                                    <p>Модификатор для карточки без изображения ._noimage</p>
+                                </div>
+                                <div class="ui-kit__section-content">
+                                    <ul class="grid-list">
+                                        <li class="grid-list__item">
+                                            <a class="news-card news-card_noimage" href="news-page.html">
+                                                <div class="news-card__content">
+                                                    <time class="news-card__date">12.05.17</time>
+                                                    <h3 class="news-card__title">Эквадорский игрок из&nbsp;&laquo;Зенита&raquo; шокирован российскими морозами и&nbsp;снегом</h3>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="grid-list__item">
+                                            <a class="news-card" href="news-page.html">
+                                                <div class="news-card__promo">
+                                                    <img class="news-card__image" src="assets/images/brand_wall_2.jpg" alt="" role="presentation" />
+                                                </div>
+                                                <div class="news-card__content">
+                                                    <time class="news-card__date">03.05.17</time>
+                                                    <h3 class="news-card__title">Стартует Кубок шести наций по регби</h3>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col_one contaner__padding"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ui-kit__section">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_one container__padding"></div>
+                            <div class="grid__col grid__col_thirty container__main">
+                                <div class="ui-kit__section-head">
+                                    <h2>Аватар</h2>
+                                    <p>Компонент blocks/avatar/avatar</p>
+                                    <p>Модификатор для большого аватара ._big</p>
+                                </div>
+                                <div class="ui-kit__section-content">
+                                    <div class="avatar">
+                                        <img class="avatar__image" src="assets/images/avatar_1.jpg" alt="" role="presentation" />
+                                    </div>
+                                    <div class="avatar avatar_big">
+                                        <img class="avatar__image" src="assets/images/avatar_3.jpg" alt="" role="presentation" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="grid__col grid__col_one contaner__padding"></div>
