@@ -70,6 +70,276 @@
                     </div>
                 </div>
             </section>
+            <section class="page-section add-trainer">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_four container__padding"></div>
+                        <div class="grid__col grid__col_twenty-four container__inner">
+                            <section class="add-trainer__request">
+                                <h3 class="add-trainer__title">Заполните
+                                    <br/>анкету</h3>
+                                <form class="form">
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Фамилия</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <input class="input" type="text" placeholder="Иванов" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Фамилия</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">имя</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <input class="input" type="text" placeholder="Иван" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">имя</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Вид спорта</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <select class="select js-select" placeholder="Выберите вид спорта" required="required">
+                                                    <option placeholder="placeholder"> Выберите вид спорта</option>
+                                                    <option value="1">Йога</option>
+                                                    <option value="2">Единоборства</option>
+                                                    <option value="3">Фитнес</option>
+                                                    <option value="4">Бокс</option>
+                                                    <option value="5">Танцы</option>
+                                                    <option value="6">Кроссфит</option>
+                                                    <option value="7">Пилатес</option>
+                                                    <option value="8">Теннис</option>
+                                                    <option value="9">Микс-файт</option>
+                                                    <option value="10">Плавание</option>
+                                                </select>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Вид спорта</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Место
+                                                <br/>проведения
+                                                <br/>занятий</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <select class="select js-select" placeholder="Выберите район">
+                                                    <option placeholder="placeholder"> Выберите район</option>
+                                                    <option value="1">САО</option>
+                                                    <option value="2">ЮАО</option>
+                                                    <option value="3">ВАО</option>
+                                                    <option value="4">ЗАО</option>
+                                                </select>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Место проведения занятий</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Предпочтения (Пример: Удобнее всего на Динамо)"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Предпочтения (Пример: Удобнее всего на Динамо)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Стоимость</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <input class="input" type="text" placeholder="Стоимость 1-ого занятия в час" required="required" />
+                                                <div class="form__mark">
+                                                    <svg class="form__icon"><use xlink:href="assets/images/icon.svg#icon_rub"></use></svg>
+                                                </div>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Стоимость</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Регалии</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Опишите свои регалии"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Регалии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">достижения</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Опишите свои достижениях" required="required"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">достижения</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Опыт работы</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Опишите свой опыт работы тренером" required="required"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Опыт работы</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Воспитанники</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Расскажите о своих воспитанниках"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Воспитанники</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Образование</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <textarea class="textarea" placeholder="Ваше образование"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Образование</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Контакты</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field">
+                                                <input class="input" type="tel" data-type="tel" placeholder="Телефон" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Телефон</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field">
+                                                <input class="input" type="email" placeholder="E-mail" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">E-mail</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Vkontakte" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Vkontakte</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Facebook" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Facebook</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Instagram" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Instagram</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop form__label_nohide">
+                                            <span class="form__text">Аватар</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="upload upload_round">
+                                                <label class="upload__dropzone">
+                                                    <span class="upload__mark">
+                                                        <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                                    </span>
+                                                    <input class="input" type="file" name="file[]" data-correct-size="4000000" data-correct-resolution="[240, 240]" />
+                                                </label>
+                                                <div class="upload__conditions">
+                                                    <span data-error="resolution">Разрешение не меньше 240х240 px</span>
+                                                    <span data-error="filesize">Размер не больше 500 кб</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop form__label_nohide">
+                                            <span class="form__text">Брендволл</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="upload">
+                                                <label class="upload__dropzone">
+                                                    <span class="upload__mark">
+                                                        <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                                    </span>
+                                                    <input class="input" type="file" name="file[]" data-correct-size="4000000" data-correct-resolution="[1440, 690]" />
+                                                </label>
+                                                <div class="upload__conditions">
+                                                    <span data-error="resolution">Разрешение не меньше 1440х690 px</span>
+                                                    <span data-error="filesize">Размер не больше 500 кб</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop"></div>
+                                        <div class="form__wrapper">
+                                            <button class="button form__button js-fancybox" type="submit" data-src="#success-popup">отправить анкету</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <section class="add-trainer__conditions">
+                                <h3 class="add-trainer__title">Условия
+                                    <br/>размещения</h3>
+                                <div class="content-zone">
+                                    <p>Вы&nbsp;платите один раз в&nbsp;месяц абонентскую плату: Первый месяц&nbsp;&mdash; 1&nbsp;рубль, последующие месяцы&nbsp;&mdash; 2000 рублей</p>
+                                    <p>Ваша анкета будет размещена в&nbsp;течение 1-3 дней после оплаты (перед оплатой с&nbsp;вами свяжется наш менеджер)</p>
+                                    <p>Если не&nbsp;получается заполнить анкету автоматически&nbsp;Вы можете отправить информацию о&nbsp;себе вместе с&nbsp;фото и&nbsp;др. материалами на
+                                        <a href="mailto:hello@protrener.net">hello@protrener.net</a>
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="grid__col grid__col_four contaner__padding"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="error-banner">
+                <div class="error-banner__text">Пожалуйста заполните поля выделенные красным</div>
+            </div>
         </main>
         <div class="footer">
             <div class="brushes">
@@ -93,7 +363,7 @@
                         </a>
                     </div>
                     <div class="grid__col grid__col_four footer__addus">
-                        <a class="link link_white navigation-link" href="addtrainer.html">
+                        <a class="link link_white navigation-link" href="add-trainer.html">
                             <span class="link__text">Стать трейнером</span>
                         </a>
                     </div>
@@ -170,6 +440,23 @@
                 </div>
                 <div class="popup__info">
                     <p>Нажмите ENTER для поиска или ESC для закрытия</p>
+                </div>
+            </div>
+        </div>
+        <div class="popup success-popup" id="success-popup">
+            <div class="popup__content">
+                <div class="success-popup__message">
+                    <div class="success-popup__decoration">
+                        <p class="success-popup__text">Ваша анкета отправлена. В ближайшее время с вами свяжется наш менеджер</p>
+                    </div>
+                    <p class="success-popup__text">Остались вопросы? Пиши на
+                        <a class="link" href="mailto:hello@protrener.net">
+                            <span class="link__text">hello@protrener.net</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="popup__info">
+                    <p>Нажмите ESC для закрытия</p>
                 </div>
             </div>
         </div>
