@@ -8,6 +8,21 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include screen('tablet') {
+        margin-bottom: 36px;
+      }
+    }
+
+    &.error-label {
+
+      .form__label_desktop .form__text {
+        color: $color-red;
+      }
+    }
   }
 
   &__label {
@@ -25,6 +40,10 @@
 
     &_nohide {
       display: block;
+
+      @include screen('tablet', max) {
+        margin-bottom: 20px;
+      }
     }
 
     &_mobile {
@@ -40,19 +59,24 @@
       @include screen('tablet') {
         display: none;
       }
+
+      .form__text {
+        @include ellipsis(100%);
+      }
     }
   }
 
   &__text {
     width: 100%;
     display: inline-block;
-    padding: 15px 0 12px;
+    padding-top: 9px;
     padding-right: 30px;
 
     @include text-small;
-    line-height: 1.5;
+    line-height: 1.2;
     letter-spacing: .075em;
     text-transform: uppercase;
+    transition: color $ease-main;
   }
 
   &__wrapper {
@@ -66,28 +90,87 @@
   &__field {
     position: relative;
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include screen('tablet') {
+        margin-bottom: 36px;
+      }
+    }
+
+    &.js-floating-label {
+
+      .form__label {
+        transition: all $ease-main;
+      }
+    }
+
+    &.is-top {
+      .form__label {
+        transform: translateY(-25px);
+      }
+
+      .form__text {
+        @include text-smallest;
+      }
+
+      .input, .textarea, .choices__inner {
+        border-color: $color-basic;
+      }
+    }
+
+    &.error {
+
+      .input, .textarea, .choices__inner {
+        border-color: $color-red;
+      }
+
+      .form__label_mobile .form__text {
+        color: $color-red;
+      }
+    }
   }
 
   &__button {
+    margin-top: 18px;
     width: 100%;
   }
 
   &__mark {
     position: absolute;
     display: flex;
-    top: 50%;
+    top: 0;
+    bottom: 12px;
     right: 0;
     width: 24px;
     height: 24px;
+    margin: auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: translateY(-50%);
   }
 
   &__icon {
     width: 12px;
     height: 18px;
     fill: $color-red;
+  }
+
+  .input {
+    padding-right: 32px;
+  }
+
+  .textarea {
+    padding-right: 0;
+  }
+
+  .input, .textarea {
+
+    &::placeholder, .choices__placeholder {
+      @include screen('tablet', max) {
+        color: transparent;
+      }
+    }
   }
 }

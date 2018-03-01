@@ -1,5 +1,5 @@
 .input {
-  padding: 12px 0;
+  padding: 0 0 12px;
   border: 0;
   border-bottom: 2px solid $color-border;
   width: 100%;
@@ -24,8 +24,8 @@
 .textarea {
   @extend .input;
 
-  padding-top: 12px;
   padding-bottom: 12px;
+  min-height: 49px;
   resize: vertical;
 }
 
@@ -128,6 +128,7 @@
 }
 
 .choices {
+  margin-bottom: 0;
 
   &__inner, &[data-type*='select-one'] &__inner {
     @extend .select;
@@ -138,13 +139,13 @@
   &[data-type*='select-one'] {
 
     .choices__inner {
-      padding: 12px 0;
+      padding: 0 0 12px;
     }
 
     &::after {
-      border-width: 8px 6px 0;
+      border-width: 6px 4px 0;
       top: 0;
-      bottom: 0;
+      bottom: 12px;
       right: 8px;
       margin: auto;
       transform: rotate(0) translate3d(0, 0, 0);
@@ -212,6 +213,15 @@
           }
         }
       }
+
+      &::after {
+        @include pseudo;
+        height: 100%;
+        width: 6px;
+        top: 0;
+        right: 0;
+        background-color: $color-gray;
+      }
     }
   }
 
@@ -221,6 +231,16 @@
 
     &__list {
       &--dropdown { border-color: $color-border; }
+    }
+
+    &__inner, &[data-type*='select-one'] &__inner {
+      border-color: transparent;
+    }
+  }
+
+  &.is-open.is-focused & {
+    &__inner, &[data-type*='select-one'] &__inner {
+      border-color: transparent;
     }
   }
 }

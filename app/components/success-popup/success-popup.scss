@@ -2,6 +2,58 @@
   display: block;
 
   &__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include text;
     text-align: center;
+    font-weight: 300;
+    letter-spacing: .02em;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include screen('phone') {
+      width: calc(100% - 60px);
+    }
+  }
+
+  &__decoration {
+    position: relative;
+    width: auto;
+    padding: 20px;
+    max-width: 562px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 35px;
+
+    @include screen('phone') {
+      padding: 20px 40px;
+    }
+
+    @include screen('tablet') {
+      padding: 50px 80px;
+    }
+  }
+
+  &__contacts {
+    padding: 0 20px;
+    max-width: 562px;
+    box-sizing: border-box;
+
+    @include screen('phone') {
+      padding: 0 40px;
+    }
+
+    @include screen('tablet') {
+      padding: 0 50px;
+    }
+  }
+
+  &__image {
+    @include fill-img;
+    z-index: -1;
   }
 }

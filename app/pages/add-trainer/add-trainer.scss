@@ -1,5 +1,22 @@
 .add-trainer {
   display: block;
+  margin-bottom: 80px;
+
+  @include screen('tablet') {
+    margin-bottom: 117px;
+  }
+
+  &:not(:first-child) {
+    padding-top: 25px;
+
+    @include screen('tablet') {
+      padding-top: 35px;
+    }
+
+    @include screen('desktop-wide') {
+      padding-top: 5px;
+    }
+  }
 
   .container__inner {
     display: flex;
@@ -13,16 +30,16 @@
     @include heading-2m;
     margin-bottom: 20px;
 
+    @include screen('tablet') {
+      margin-bottom: 45px;
+    }
+
     line-height: 1;
 
     br {
       @include screen('tablet', max) {
         display: none;
       }
-    }
-
-    @include screen('tablet') {
-      margin-bottom: 40px;
     }
   }
 
@@ -34,14 +51,22 @@
       width: (7/12)*100%;
       order: 1;
     }
+
+    .form {
+      @include screen('tablet', max) {
+        margin-top: 45px;
+      }
+    }
   }
 
   &__conditions {
     width: 100%;
     box-sizing: border-box;
     order: 1;
+    margin-bottom: 46px;
 
     @include screen('tablet') {
+      margin-bottom: 0;
       padding-left: (1/12)*100%;
       width: (5/12)*100%;
       order: 2;

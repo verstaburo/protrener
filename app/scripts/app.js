@@ -19,6 +19,8 @@ import sidebar from '../blocks/js-functions/sidebar';
 import highlightMenu from '../blocks/js-functions/highlightmenu';
 import upShow from '../blocks/up-button/up-button';
 import mixContent from '../blocks/grid-list/grid-list';
+import { floatingLabels, validation } from '../components/form/form';
+import uploadFile from '../blocks/upload/upload';
 
 const $ = window.$;
 
@@ -45,4 +47,7 @@ $(() => {
   highlightMenu();
   upShow();
   mixContent();
+  floatingLabels();
+  validation();
+  uploadFile();
 });
