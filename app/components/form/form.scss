@@ -166,6 +166,10 @@
   }
 
   .input, .textarea {
+    &:invalid {
+      outline: none;
+      box-shadow: none;
+    }
 
     &::placeholder, .choices__placeholder {
       @include screen('tablet', max) {

@@ -24,6 +24,7 @@
     margin-right: 30px;
     width: 249px;
     height: 120px;
+    transition: all $ease-main;
     overflow: hidden;
 
     &::before {
@@ -41,6 +42,10 @@
       @include fill-img;
       display: none;
       z-index: 1;
+    }
+
+    &.dragover {
+      opacity: .5;
     }
   }
 
