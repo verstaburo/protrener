@@ -15,86 +15,183 @@
 
 <body>
     <div class="wrapper wrapper_onescreen">
-        <div class="header header_abs">
-            <div class="container">
-                <div class="grid">
-                    <div class="grid__col grid__col_one container__padding"></div>
-                    <div class="grid__col grid__col_seven header__logo">
-                        <a class="logo" href="index.html">
-                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
-                        </a>
+        <div class="video-bg">
+            <video class="video-bg__video" poster="video_poster.jpg" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+                <source src="assets/video/opt_video.mp4" type="video/mp4" />
+            </video>
+            <img class="video-bg__poster" src="assets/images/video_poster.jpg" alt="" role="presentation" />
+        </div>
+        <main class="page-content page-content_onescreen">
+            <div class="header header_abs">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_one container__padding"></div>
+                        <div class="grid__col grid__col_seven header__logo">
+                            <a class="logo" href="index.html">
+                                <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
+                            </a>
+                        </div>
+                        <div class="grid__col grid__col_twelve header__search">
+                            <a class="search-button js-fancybox" href="#search" data-src="#search">
+                                <span class="search-button__text">Поиск</span>
+                                <svg class="search-button__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
+                            </a>
+                        </div>
+                        <div class="grid__col grid__col_four header__news">
+                            <a class="link link_white navigation-link" href="news.html">
+                                <span class="link__text">НОВОСТИ</span>
+                            </a>
+                        </div>
+                        <div class="grid__col grid__col_seven header__socials">
+                            <ul class="socials socials_vertical">
+                                <li class="socials__item">
+                                    <a class="social" href="https://www.vk.com" title="ВКонтакте">
+                                        <svg class="social__icon social__icon_vk"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="social" href="https://www.facebook.com" title="Facebook">
+                                        <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="social" href="https://www.instagramm.com" title="Instagramm">
+                                        <svg class="social__icon social__icon_instagramm"><use xlink:href="assets/images/icon.svg#icon_instagramm"></use></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid__col grid__col_one contaner__padding"></div>
                     </div>
-                    <div class="grid__col grid__col_twelve header__search">
-                        <a class="search-button js-fancybox" href="#search" data-src="#search">
-                            <span class="search-button__text">Поиск</span>
-                            <svg class="search-button__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
-                        </a>
-                    </div>
-                    <div class="grid__col grid__col_four header__news">
-                        <a class="link link_white navigation-link" href="news.html">
-                            <span class="link__text">НОВОСТИ</span>
-                        </a>
-                    </div>
-                    <div class="grid__col grid__col_seven header__socials">
-                        <ul class="socials socials_vertical">
-                            <li class="socials__item">
-                                <a class="social" href="https://www.vk.com" title="ВКонтакте">
-                                    <svg class="social__icon social__icon_vk"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a class="social" href="https://www.facebook.com" title="Facebook">
-                                    <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
-                                </a>
-                            </li>
-                            <li class="socials__item">
-                                <a class="social" href="https://www.instagramm.com" title="Instagramm">
-                                    <svg class="social__icon social__icon_instagramm"><use xlink:href="assets/images/icon.svg#icon_instagramm"></use></svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="grid__col grid__col_one contaner__padding"></div>
                 </div>
             </div>
-        </div>
-        <main class="page-content"></main>
-        <div class="footer footer_mcontacts">
-            <div class="brushes">
+            <a class="banner banner_fixed" href="add-trainer.html">
+                <div class="banner__bg">
+                    <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                </div>
+                <div class="banner__content">
+                    <span class="banner__text">Стать
+                        <br/>тренером</span>
+                    <svg class="banner__icon"><use xlink:href="assets/images/icon.svg#icon_pluslg"></use></svg>
+                </div>
+            </a>
+            <div class="index">
+                <section class="page-section">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_four container__padding"></div>
+                            <div class="grid__col grid__col_twenty-four container__inner">
+                                <div class="sport-navigation">
+                                    <div class="sport-navigation__describe">
+                                        <div class="sport-navigation__title">Найди своего
+                                            <br/>тренера</div>
+                                    </div>
+                                    <div class="sport-navigation__navigation js-scrollbar">
+                                        <ul class="link-list link-list_big sport-navigation__links">
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="29">
+                                                    <span class="link__text">Йога</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="5">
+                                                    <span class="link__text">Единоборства</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="15">
+                                                    <span class="link__text">Фитнес</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="50">
+                                                    <span class="link__text">Бокс</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="10">
+                                                    <span class="link__text">Танцы</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="0">
+                                                    <span class="link__text">Кроссфит</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="48">
+                                                    <span class="link__text">Пилатес</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="29">
+                                                    <span class="link__text">Теннис</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="5">
+                                                    <span class="link__text">Микс-файт</span>
+                                                </a>
+                                            </li>
+                                            <li class="link-list__item">
+                                                <a class="link link_white js-link-info js-link-hover" href="catalog.html" data-trainer-count="7">
+                                                    <span class="link__text">Плавание</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sport-navigation__info">
+                                        <div class="sport-navigation__number" data-target="trainers-count"></div>
+                                        <div class="sport-navigation__text">Тренеров</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col_four contaner__padding"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="brushes brushes_layers">
                 <div class="brushes__item brushes__item_bottom"></div>
                 <div class="brushes__item brushes__item_top"></div>
             </div>
-            <div class="container">
-                <div class="grid">
-                    <div class="grid__col grid__col_one container__padding"></div>
-                    <div class="grid__col grid__col_seven footer__contacts">
-                        <div class="contacts">
-                            <div class="contacts__text">Связь &mdash;</div>
-                            <a class="link link_white contacts__link" href="mailto:Hello@protrener.net">
-                                <span class="link__text">Hello@protrener.net</span>
+            <div class="footer footer_mcontacts footer_fixed">
+                <div class="brushes brushes_notablet">
+                    <div class="brushes__item brushes__item_bottom"></div>
+                    <div class="brushes__item brushes__item_top"></div>
+                </div>
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_one container__padding"></div>
+                        <div class="grid__col grid__col_seven footer__contacts">
+                            <div class="contacts">
+                                <div class="contacts__text">Связь &mdash;</div>
+                                <a class="link link_white contacts__link" href="mailto:Hello@protrener.net">
+                                    <span class="link__text">Hello@protrener.net</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_twelve footer__logo">
+                            <a class="logo logo_footer" href="index.html">
+                                <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
                             </a>
                         </div>
-                    </div>
-                    <div class="grid__col grid__col_twelve footer__logo">
-                        <a class="logo logo_footer" href="index.html">
-                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
-                        </a>
-                    </div>
-                    <div class="grid__col grid__col_four footer__addus">
-                        <a class="link link_white navigation-link" href="add-trainer.html">
-                            <span class="link__text">Стать трейнером</span>
-                        </a>
-                    </div>
-                    <div class="grid__col grid__col_seven footer__copyright">
-                        <div class="copyright">
-                            <div class="copyright__text">&copy;&nbsp;2018&nbsp;ProTrener.</div>
-                            <div class="copyright__text copyright__text_mhidden">Все права защищены.</div>
+                        <div class="grid__col grid__col_four footer__addus">
+                            <a class="link link_white navigation-link" href="add-trainer.html">
+                                <span class="link__text">Стать трейнером</span>
+                            </a>
                         </div>
+                        <div class="grid__col grid__col_seven footer__copyright">
+                            <div class="copyright">
+                                <div class="copyright__text">&copy;&nbsp;2018&nbsp;ProTrener.</div>
+                                <div class="copyright__text copyright__text_mhidden">Все права защищены.</div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_one contaner__padding"></div>
                     </div>
-                    <div class="grid__col grid__col_one contaner__padding"></div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
     <div class="popups">
         <div class="popup search-popup" id="search">
