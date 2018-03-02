@@ -21,6 +21,7 @@ import upShow from '../blocks/up-button/up-button';
 import mixContent from '../blocks/grid-list/grid-list';
 import { floatingLabels, validation } from '../components/form/form';
 import uploadFile from '../blocks/upload/upload';
+import { linkHover, showLinkInfo } from '../components/sport-navigation/sport-navigation';
 
 const $ = window.$;
 
@@ -50,4 +51,6 @@ $(() => {
   floatingLabels();
   validation();
   uploadFile();
+  linkHover();
+  showLinkInfo();
 });

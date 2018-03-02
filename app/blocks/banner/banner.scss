@@ -45,6 +45,15 @@
     background-color: rgba($color-main, .2);
   }
 
+  &__text {
+    margin-right: auto;
+
+    @include screen('phone') {
+      margin-left: auto;
+      margin-right: 74px;
+    }
+  }
+
   &__icon {
     min-width: 19px;
     width: 19px;
@@ -67,12 +76,71 @@
     @include screen('tablet') {
       display: none;
     }
+  }
+
+  &_fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 72px;
+    padding-top: 0;
+
+    @include screen('tablet', max) {
+      z-index: 15;
+    }
+
+    @include screen('tablet') {
+      width: (1/4)*100vw;
+      height: 28vh;
+    }
 
     .banner {
 
+      &__content {
+        padding: 0 (1/16)*100vw;
+        background: rgba($color-black, .1);
+        align-items: center;
+
+        @include screen('tablet') {
+          padding: (1/32)*100vw (1/32)*100vw calc((1/32)*100vw + 19px);
+          flex-direction: column-reverse;
+          justify-content: flex-end;
+          align-items: flex-end;
+        }
+      }
+
       &__text {
-        margin-left: auto;
-        margin-right: 74px;
+        @include text-small;
+        display: inline-block;
+        font-weight: 500;
+
+        @include screen('tablet') {
+          @include heading-2;
+
+          line-height: 1.1;
+          margin-top: auto;
+          margin-right: 0;
+          margin-left: 0;
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+
+        @include screen('desktop') {
+          margin-left: 50%;
+          margin-right: auto;
+          margin-bottom: auto;
+        }
+
+        @include screen('desktop-wide') {
+          padding-left: 14px;
+        }
+
+        br {
+          @include screen('tablet', max) {
+            display: none;
+          }
+        }
       }
     }
   }

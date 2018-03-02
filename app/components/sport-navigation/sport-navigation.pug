@@ -1,0 +1,11 @@
+mixin sport-navigation()
+  +b.sport-navigation&attributes(attributes)
+    +e.describe
+      +e.title Найди своего
+        +e.BR
+        | тренера
+    +e.navigation.js-scrollbar
+      +link-list-big(getData('sports'), false).__links
+    +e.info
+      +e.number(data-target="trainers-count")
+      +e.text Тренеров

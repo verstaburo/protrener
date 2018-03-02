@@ -1,2 +1,14 @@
 .index {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+
+  @include screen('tablet', max) {
+    margin-bottom: 100px;
+  }
+
+  .page-section {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }

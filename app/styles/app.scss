@@ -33,6 +33,23 @@
 
 .page-content {
   width: 100%;
+
+  &_onescreen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-bottom: 72px;
+
+    @include screen('tablet') {
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .js-sidebar{

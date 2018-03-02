@@ -6,10 +6,12 @@ html(lang='ru')
   include head
   body
     .wrapper.wrapper_onescreen
-      +header._abs
-      main.page-content
+      +video-bg
+      main.page-content.page-content_onescreen
+        +header._abs
         block content
-      +footer-contacts
+        +brushes._layers
+        +footer-contacts(true)._fixed
     +popups
       +search-popup#search
     script(src='assets/scripts/libs/ResizeSensor.js')

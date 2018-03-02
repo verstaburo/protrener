@@ -78,6 +78,21 @@
     z-index: 2;
   }
 
+  &_fixed {
+    pointer-events: none;
+    position: relative;
+
+    @include screen('tablet') {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .contacts {
+      pointer-events: all;
+    }
+  }
+
   &_mcontacts {
 
     .footer {

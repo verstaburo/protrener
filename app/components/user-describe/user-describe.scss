@@ -24,6 +24,12 @@
     @include screen('tablet', max) {
       display: none;
     }
+
+    .link-list {
+      @include screen('tablet', max) {
+        display: none;
+      }
+    }
   }
 
   &__content {

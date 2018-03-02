@@ -117,21 +117,21 @@
 }
 
 .scroll-element .scroll-element_track {
-  background-color: rgba($color-basic, .05);
+  background-color: rgba($color-basic, .005);
 }
 
 .scroll-element .scroll-bar {
-  background-color: $color-border;
+  background-color: rgba($color-border, 0);
   transition: background-color $ease-main;
 }
 
 .scroll-element:hover .scroll-bar {
-  background-color: $color-main;
+  background-color: rgba($color-main, .01);
   cursor: pointer;
 }
 
 .scroll-element.scroll-draggable .scroll-bar {
-  background-color: #919191;
+  background-color: rgba($color-main, .005);
 }
 
 // Стили для случая, когда видны оба скроллбара

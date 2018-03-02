@@ -4,10 +4,6 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  @include screen('tablet', max) {
-    display: none;
-  }
-
   &__item {
 
     &:not(:last-child) {
@@ -23,6 +19,31 @@
 
       .link__text {
         color: $color-red;
+      }
+    }
+  }
+
+  &_big {
+
+    .link-list {
+
+      &__item {
+        width: 100%;
+        box-sizing: border-box;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        .link {
+          max-width: 100%;
+        }
+
+        .link__text {
+          display: inline-block;
+          @include ellipsis(100%);
+          @include heading-1;
+        }
       }
     }
   }

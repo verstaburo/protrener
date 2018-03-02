@@ -1,6 +1,7 @@
 .brushes {
   display: block;
   width: 100%;
+  pointer-events: none;
 
   &__item {
     position: relative;
@@ -14,7 +15,7 @@
       height: 203px;
       background: url('../images/grey_brush.svg') calc(100% - (1/16)*100vw) 0 no-repeat;
       background-size: contain contain;
-      z-index: 1;
+      z-index: -1;
 
       @include screen('tablet-small') {
         width: 64%;
@@ -79,8 +80,24 @@
   }
 
   &_nodesktop {
-
     @include screen('desktop') {
+      display: none;
+    }
+  }
+
+  &_notablet {
+    @include screen('tablet') {
+      display: none;
+    }
+  }
+
+  &_layers {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+
+    @include screen('tablet', max) {
       display: none;
     }
   }

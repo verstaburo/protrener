@@ -1,42 +1,53 @@
 {
   "section1": {
     "name" : "Йога",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "29"
   },
   "section2": {
     "name" : "Единоборства",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "5"
+
   },
   "section3": {
     "name" : "Фитнес",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "15"
   },
   "section4": {
     "name" : "Бокс",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "50"
   },
   "section5": {
     "name" : "Танцы",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "10"
   },
   "section6": {
     "name" : "Кроссфит",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "0"
   },
   "section7": {
     "name" : "Пилатес",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "48"
   },
   "section8": {
     "name" : "Теннис",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "29"
   },
   "section9": {
     "name" : "Микс-файт",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "5"
   },
   "section10": {
     "name" : "Плавание",
-    "link" : "catalog.html"
+    "link" : "catalog.html",
+    "count" : "7"
   }
 }
