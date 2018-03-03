@@ -51,8 +51,11 @@
     }
   }
 
-  &_search & {
+  &__search {
     justify-content: center;
+  }
+
+  &_search & {
 
     &__item {
 
