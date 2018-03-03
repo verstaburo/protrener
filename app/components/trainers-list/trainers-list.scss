@@ -1,7 +1,7 @@
 .trainers-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   font-size: 0;
@@ -22,28 +22,63 @@
     margin: 0;
     padding-top: 45px;
 
-    @include screen('phone', max) {
-
-      &:not(:first-child) {
-        display: none;
-      }
-    }
-
     @include screen('phone') {
       width: 50%;
       padding: 45px 22.5px 0;
     }
 
-    @include screen('tablet') {
-      width: 33.33%;
-    }
-
     @include screen('desktop') {
-      width: 25%;
+      width: 33.33%;
     }
 
     @include screen('desktop-wide') {
       padding: 60px 30px 0;
+    }
+  }
+
+  &_short & {
+
+    &__item {
+
+      @include screen('phone') {
+        width: 50%;
+        padding: 45px 22.5px 0;
+      }
+
+      @include screen('desktop-wide') {
+        padding: 60px 30px 0;
+      }
+    }
+  }
+
+  &_search & {
+    justify-content: center;
+
+    &__item {
+
+      @include screen('phone', max) {
+
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+
+      @include screen('phone') {
+        width: 50%;
+        padding: 45px 22.5px 0;
+      }
+
+      @include screen('tablet') {
+        width: 33.33%;
+      }
+
+      @include screen('desktop') {
+        width: 25%;
+      }
+
+      @include screen('desktop-wide') {
+        padding: 60px 30px 0;
+      }
     }
   }
 }

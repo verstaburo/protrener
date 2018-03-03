@@ -1,0 +1,47 @@
+$grid-inner-col-width: (1/12)*100%;
+
+.grid-inner {
+  font-size: 0;
+  display: block; // fallback для старых браузеров
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -(45/2)*1px;
+  margin-right: -(45/2)*1px;
+
+  @include screen('desktop-wide') {
+    margin-left: -(60/2)*1px;
+    margin-right: -(60/2)*1px;
+  }
+
+  &:first-of-type {
+    margin-top: -45px;
+
+    @include screen('desktop-wide') {
+      margin-top: -60px;
+    }
+  }
+
+  &__col {
+    display: inline-block; // fallback для старых браузеров
+    box-sizing: border-box;
+    padding: 45px (1/2)*45px 0;
+    margin: 0;
+
+    @include screen('desktop-wide') {
+      padding: 60px (1/2)*60px 0;
+    }
+
+    &_one { width: 1 * $grid-inner-col-width; }
+    &_two { width: 2 * $grid-inner-col-width; }
+    &_three { width: 3 * $grid-inner-col-width; }
+    &_four { width: 4 * $grid-inner-col-width; }
+    &_five { width: 5 * $grid-inner-col-width; }
+    &_six { width: 6 * $grid-inner-col-width; }
+    &_seven { width: 7 * $grid-inner-col-width; }
+    &_eight { width: 8 * $grid-inner-col-width; }
+    &_nine { width: 9 * $grid-inner-col-width; }
+    &_ten { width: 10 * $grid-inner-col-width; }
+    &_eleven { width: 11 * $grid-inner-col-width; }
+    &_twelve { width: 12 * $grid-inner-col-width; }
+  }
+}

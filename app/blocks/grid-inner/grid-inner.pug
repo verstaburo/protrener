@@ -1,0 +1,33 @@
+mixin grid-inner()
+  .grid-inner&attributes(attributes)
+    block
+
+mixin gi-col(number)
+  - var colnumber = "one";
+  - if (number === 1)
+    - colnumber = 'one';
+  - if (number === 2)
+    - colnumber = 'two';
+  - if (number === 3)
+    - colnumber = 'three';
+  - if (number === 4)
+    - colnumber = 'four';
+  - if (number === 5)
+    - colnumber = 'five';
+  - if (number === 6)
+    - colnumber = 'six';
+  - if (number === 7)
+    - colnumber = 'seven';
+  - if (number === 8)
+    - colnumber = 'eight';
+  - if (number === 9)
+    - colnumber = 'nine';
+  - if (number === 10)
+    - colnumber = 'ten';
+  - if (number === 11)
+    - colnumber = 'eleven';
+  - if (number === 12)
+    - colnumber = 'twelve';
+
+  .grid-inner__col(class="grid-inner__col_" + colnumber)&attributes(attributes)
+    block

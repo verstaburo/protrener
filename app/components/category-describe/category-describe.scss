@@ -1,0 +1,17 @@
+.category-describe {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &__count {
+    display: none;
+
+    @include screen(tablet) {
+      display: inline-block;
+      @include heading-1;
+      color: $color-red;
+      margin-right: auto;
+    }
+  }
+}

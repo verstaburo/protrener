@@ -2,52 +2,62 @@
   "section1": {
     "name" : "Йога",
     "link" : "catalog.html",
-    "count" : "29"
+    "count" : "29",
+    "class" : " "
   },
   "section2": {
     "name" : "Единоборства",
     "link" : "catalog.html",
-    "count" : "5"
+    "count" : "5",
+    "class" : " "
 
   },
   "section3": {
     "name" : "Фитнес",
     "link" : "catalog.html",
-    "count" : "15"
+    "count" : "15",
+    "class" : " "
   },
   "section4": {
     "name" : "Бокс",
     "link" : "catalog.html",
-    "count" : "50"
+    "count" : "50",
+    "class" : " "
   },
   "section5": {
     "name" : "Танцы",
     "link" : "catalog.html",
-    "count" : "10"
+    "count" : "10",
+    "class" : " "
   },
   "section6": {
     "name" : "Кроссфит",
     "link" : "catalog.html",
-    "count" : "0"
+    "count" : "0",
+    "class" : " "
   },
   "section7": {
     "name" : "Пилатес",
     "link" : "catalog.html",
-    "count" : "48"
+    "count" : "48",
+    "class" : " "
   },
   "section8": {
     "name" : "Теннис",
     "link" : "catalog.html",
-    "count" : "29"
+    "count" : "29",
+    "class" : " "
   },
   "section9": {
     "name" : "Микс-файт",
     "link" : "catalog.html",
-    "count" : "5"
+    "count" : "5",
+    "class" : " "
   },
   "section10": {
     "name" : "Плавание",
     "link" : "catalog.html",
-    "count" : "7"
+    "count" : "7",
+    "class" : " "
   }
 }

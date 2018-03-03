@@ -1,3 +1,3 @@
-mixin grid-list()
-  +b.UL.grid-list&attributes(attributes)
+mixin grid-list(tag)
+  +b('ul' || tag).grid-list&attributes(attributes)
     block

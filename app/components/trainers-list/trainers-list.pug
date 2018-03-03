@@ -1,6 +1,27 @@
 mixin trainers-list()
-  +b.UL.trainers-list&attributes(attributes)
+  +b.UL.trainers-list_search&attributes(attributes)
     +e.LI.item
       +trainer('assets/images/avatar_7.jpg', 'assets/images/brand_wall_1.jpg', '1490&nbsp;Р', 'Милана', 'Шнайдер')(href="user.html")
     +e.LI.item
       +trainer('assets/images/avatar_3.jpg', 'assets/images/brand_wall_3.jpg', '1590&nbsp;Р', 'Михаил', 'Волков')(href="user.html")
+
+mixin trainer-list-square()
+  +b.UL.trainers-list_short&attributes(attributes)
+    +e.LI.item
+      +trainer('assets/images/avatar_7.jpg', 'assets/images/brand_wall_1.jpg', '1490&nbsp;Р', 'Милана', 'Шнайдер')(href="user.html")
+    +e.LI.item
+      +trainer('assets/images/avatar_1.jpg', 'assets/images/brand_wall_2.jpg', '1550&nbsp;Р', 'Влад', 'Дронов')(href="user.html")
+    +e.LI.item
+      +trainer('assets/images/avatar_3.jpg', 'assets/images/brand_wall_3.jpg', '1590&nbsp;Р', 'Михаил', 'Волков')(href="user.html")
+    +e.LI.item
+      +trainer('assets/images/avatar_4.jpg', 'assets/images/brand_wall_4.jpg', '1800&nbsp;Р', 'Кристина', 'Дружинина')(href="user.html")
+
+mixin trainer-list-long()
+  +b.UL.trainers-list&attributes(attributes)
+    +e.LI.item
+      +trainer('assets/images/avatar_2.jpg', 'assets/images/brand_wall_5.jpg', '1890&nbsp;Р', 'Глеб', 'Корявцев')(href="user.html")
+    +e.LI.item
+      +trainer('assets/images/avatar_6.jpg', 'assets/images/brand_wall_6.jpg', '2500&nbsp;Р', 'Валерия', 'Дорожная')(href="user.html")
+    +e.LI.item
+      +trainer('assets/images/avatar_5.jpg', 'assets/images/brand_wall_7.jpg', '1750&nbsp;Р', 'Александр', 'Святозар')(href="user.html")
+

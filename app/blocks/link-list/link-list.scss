@@ -20,6 +20,12 @@
       .link__text {
         color: $color-red;
       }
+
+      &:hover {
+        .link__text {
+          color: rgba($color-red, .8);
+        }
+      }
     }
   }
 
