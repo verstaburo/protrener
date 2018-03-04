@@ -7,3 +7,16 @@ mixin banner()
         +e.BR
         | тренером
       +icon('pluslg').icon
+
+mixin banner-vert()
+  +b.A.banner_vertical(href="add-trainer.html")&attributes(attributes)
+    +e.DIV.bg
+      +e.PICTURE.image
+        +e.SOURCE(srcset='assets/images/banner_hor.jpg' media="(max-width: 1439px)")
+        +e.SOURCE(srcset='assets/images/banner_vert.jpg' media="(min-width: 1440px)")
+        +e.IMG(src='assets/images/banner_hor.jpg').image
+    +e.DIV.content
+      +e.SPAN.text Стать
+        +e.BR
+        | тренером
+      +icon('pluslg').icon

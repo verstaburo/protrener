@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import picturefill from 'picturefill';
 import objectFitImages from 'object-fit-images';
 import anchor from '../blocks/js-functions/anchor';
 import { freezebuttons } from '../blocks/js-functions/freeze';
@@ -26,7 +27,9 @@ import { linkHover, showLinkInfo } from '../components/sport-navigation/sport-na
 const $ = window.$;
 
 $(() => {
+  document.createElement('picture');
   svg4everybody();
+  picturefill();
   objectFitImages();
   anchor();
   freezebuttons();

@@ -14,7 +14,11 @@ $grid-inner-col-width: (1/12)*100%;
   }
 
   &:first-of-type {
-    margin-top: -45px;
+    margin-top: -28px;
+
+    @include screen('tablet') {
+      margin-top: -45px;
+    }
 
     @include screen('desktop-wide') {
       margin-top: -60px;
@@ -24,8 +28,12 @@ $grid-inner-col-width: (1/12)*100%;
   &__col {
     display: inline-block; // fallback для старых браузеров
     box-sizing: border-box;
-    padding: 45px (1/2)*45px 0;
+    padding: 28px (1/2)*45px 0;
     margin: 0;
+
+    @include screen('tablet') {
+      padding: 45px (1/2)*45px 0;
+    }
 
     @include screen('desktop-wide') {
       padding: 60px (1/2)*60px 0;

@@ -7,23 +7,24 @@ block content
   +page-title('Теннис')._catalog
     +e.addition
       +grid-inner
-        +gi-col(3)
-        +gi-col(9)
+        +gi-col(3).page-title__addition-col-left
+        +gi-col(9).page-title__addition-col-right
           +category-describe
   +page-section.catalog
     +col(24).container__inner
       +grid-inner
-        +gi-col(3)
+        +gi-col(3).catalog__navigation
           +link-list(getData('sports'), true)
-        +gi-col(9)
+        +gi-col(9).catalog__content
           +grid-inner.catalog__banner-section
-            +gi-col(8)
+            +gi-col(8).catalog__short-list
               +trainer-list-square
-            +gi-col(4)
-              +banner._vertical
+            +gi-col(4).catalog__banner
+              +banner-vert
           +trainer-list-long.catalog__main-list
-          .content-zone.content-zone_gray.content-zone_small
+          .content-zone.content-zone_gray.content-zone_small.catalog__text
             +e.H3 Теннис (Seo-Text)
             +e.P SEO-копирайтинг&nbsp;&mdash; это определенная техника создания и&nbsp;редактирования текстов для web-сайтов таким образом, чтобы, во-первых, пользователь мог легко прочитать и&nbsp;понять текст, и&nbsp;во-вторых, чтобы при этом текст содержал необходимые для поискового продвижения ключевые слова в&nbsp;нужных местах и&nbsp;необходимых пропорциях. Основной задачей SEO копирайтинга является повышение рейтинга сайта в&nbsp;результатах выдачи поисковых машин при осуществлении поиска по&nbsp;целевым ключевым запросам.
             +e.P Такое определение SEO-копирайтингу дает Фил Крэвен в&nbsp;своей статье &laquo;SEO copywriting&raquo;. К&nbsp;этому необходимо добавить третье необходимое требование к&nbsp;текстам для сайтов&nbsp;&mdash; собственно свойство копирайтинга воздействовать на&nbsp;покупательскую активность рекламными текстами.
+          +banner._small.catalog__mbanner
 

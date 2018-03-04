@@ -78,6 +78,35 @@
     }
   }
 
+  &_vertical & {
+
+    &__content {
+
+      @include screen('tablet') {
+        padding: 0 32px 36px;
+      }
+
+      @include screen('desktop') {
+        padding: 0 35px 36px;
+      }
+
+      @include screen('desktop-wide') {
+        padding: 0 48px 40px;
+      }
+    }
+
+    &__text {
+      @include screen('tablet') {
+        margin-right: 68px;
+      }
+
+      @include screen('desktop') {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
   &_fixed {
     position: fixed;
     bottom: 0;

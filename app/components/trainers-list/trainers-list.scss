@@ -5,14 +5,14 @@
   align-items: flex-start;
   flex-wrap: wrap;
   font-size: 0;
-  margin-top: -45px;
+  margin-top: -28px;
 
   @include screen('phone') {
-    margin: -45px -22.5px 0;
+    margin: -48px -22.5px 0;
   }
 
   @include screen('desktop-wide') {
-    margin: -60px -30px 0;
+    margin: -48px -30px 0;
   }
 
   &__item {
@@ -20,11 +20,11 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding-top: 45px;
+    padding-top: 28px;
 
     @include screen('phone') {
       width: 50%;
-      padding: 45px 22.5px 0;
+      padding: 48px 22.5px 0;
     }
 
     @include screen('desktop') {
@@ -32,7 +32,7 @@
     }
 
     @include screen('desktop-wide') {
-      padding: 60px 30px 0;
+      padding: 48px 30px 0;
     }
   }
 
@@ -42,17 +42,25 @@
 
       @include screen('phone') {
         width: 50%;
-        padding: 45px 22.5px 0;
+        padding: 48px 22.5px 0;
       }
 
       @include screen('desktop-wide') {
-        padding: 60px 30px 0;
+        padding: 48px 30px 0;
       }
     }
   }
 
   &_search {
     justify-content: center;
+
+    @include screen('phone') {
+      margin: -48px -22.5px 0;
+    }
+
+    @include screen('desktop-wide') {
+      margin: -60px -30px 0;
+    }
   }
 
   &_search & {
@@ -68,7 +76,7 @@
 
       @include screen('phone') {
         width: 50%;
-        padding: 45px 22.5px 0;
+        padding: 48px 22.5px 0;
       }
 
       @include screen('tablet') {

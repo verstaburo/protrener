@@ -68,6 +68,7 @@
       display: block;
 
       @include text-small;
+      font-weight: 300;
     }
 
     @include text;
@@ -117,4 +118,36 @@
   ol { @include ollist; }
 
   a { @include link; }
+
+  &_gray {
+    color: rgba($color-basic, .4);
+
+    h1, h2, h3, h4, h5, h6 {
+
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+
+      color: rgba($color-basic, .5);
+    }
+  }
+
+  &_small{
+
+    p {
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+
+      small {
+        @include text-smaller;
+      }
+
+      @include text-small;
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: .02em;
+    }
+  }
 }
