@@ -67,8 +67,8 @@
                             <h1 class="page-title__text">Теннис</h1>
                             <div class="page-title__addition">
                                 <div class="grid-inner">
-                                    <div class="grid-inner__col grid-inner__col_three"></div>
-                                    <div class="grid-inner__col grid-inner__col_nine">
+                                    <div class="grid-inner__col grid-inner__col_three page-title__addition-col-left"></div>
+                                    <div class="grid-inner__col grid-inner__col_nine page-title__addition-col-right">
                                         <div class="category-describe">
                                             <div class="category-describe__count">29</div>
                                             <div class="stylized-select"></div>
@@ -87,7 +87,7 @@
                         <div class="grid__col grid__col_four container__padding"></div>
                         <div class="grid__col grid__col_twenty-four container__inner">
                             <div class="grid-inner">
-                                <div class="grid-inner__col grid-inner__col_three">
+                                <div class="grid-inner__col grid-inner__col_three catalog__navigation">
                                     <ul class="link-list">
                                         <li class="link-list__item">
                                             <a class="link link_gray js-anchor" href="catalog.html">
@@ -141,9 +141,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="grid-inner__col grid-inner__col_nine">
+                                <div class="grid-inner__col grid-inner__col_nine catalog__content">
                                     <div class="grid-inner catalog__banner-section">
-                                        <div class="grid-inner__col grid-inner__col_eight">
+                                        <div class="grid-inner__col grid-inner__col_eight catalog__short-list">
                                             <ul class="trainers-list trainers-list_short">
                                                 <li class="trainers-list__item">
                                                     <a class="trainer" href="user.html">
@@ -223,10 +223,14 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="grid-inner__col grid-inner__col_four">
+                                        <div class="grid-inner__col grid-inner__col_four catalog__banner">
                                             <a class="banner banner_vertical" href="add-trainer.html">
                                                 <div class="banner__bg">
-                                                    <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                                                    <picture class="banner__image">
+                                                        <source srcset="assets/images/banner_hor.jpg" media="(max-width: 1439px)" />
+                                                        <source srcset="assets/images/banner_vert.jpg" media="(min-width: 1440px)" />
+                                                        <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                                                    </picture>
                                                 </div>
                                                 <div class="banner__content">
                                                     <span class="banner__text">Стать
@@ -295,7 +299,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="content-zone content-zone_gray content-zone_small">
+                                    <div class="content-zone content-zone_gray content-zone_small catalog__text">
                                         <h3>Теннис (Seo-Text)</h3>
                                         <p>SEO-копирайтинг&nbsp;&mdash; это определенная техника создания и&nbsp;редактирования текстов для web-сайтов таким образом, чтобы, во-первых, пользователь мог легко прочитать и&nbsp;понять текст, и&nbsp;во-вторых,
                                             чтобы при этом текст содержал необходимые для поискового продвижения ключевые слова в&nbsp;нужных местах и&nbsp;необходимых пропорциях. Основной задачей SEO копирайтинга является повышение рейтинга сайта в&nbsp;результатах
@@ -303,6 +307,16 @@
                                         <p>Такое определение SEO-копирайтингу дает Фил Крэвен в&nbsp;своей статье &laquo;SEO copywriting&raquo;. К&nbsp;этому необходимо добавить третье необходимое требование к&nbsp;текстам для сайтов&nbsp;&mdash; собственно
                                             свойство копирайтинга воздействовать на&nbsp;покупательскую активность рекламными текстами.</p>
                                     </div>
+                                    <a class="banner banner_small catalog__mbanner" href="add-trainer.html">
+                                        <div class="banner__bg">
+                                            <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="banner__content">
+                                            <span class="banner__text">Стать
+                                                <br/>тренером</span>
+                                            <svg class="banner__icon"><use xlink:href="assets/images/icon.svg#icon_pluslg"></use></svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
