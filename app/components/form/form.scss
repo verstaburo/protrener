@@ -10,9 +10,13 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       @include screen('tablet') {
+        margin-bottom: 32px;
+      }
+
+      @include screen('desktop') {
         margin-bottom: 36px;
       }
     }
@@ -61,7 +65,9 @@
       }
 
       .form__text {
-        @include ellipsis(100%);
+        @include screen('tablet', max) {
+          @include ellipsis(100%);
+        }
       }
     }
   }
@@ -77,9 +83,19 @@
     letter-spacing: .075em;
     text-transform: uppercase;
     transition: color $ease-main;
+
+    @include screen('tablet') {
+      padding-top: 12px;
+    }
+
+    @include screen('desktop') {
+      padding-top: 8px;
+    }
   }
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 
     @include screen('tablet') {
@@ -90,16 +106,34 @@
   &__field {
     position: relative;
     width: 100%;
+    box-sizing: border-box;
+
+    @include screen('tablet') {
+      padding-left: 10px;
+    }
+
+    @include screen('desktop') {
+      padding-left: 0;
+    }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       @include screen('tablet') {
+        margin-bottom: 32px;
+      }
+
+      @include screen('desktop') {
         margin-bottom: 36px;
       }
     }
 
     &.js-floating-label {
+      @include screen('tablet', max) {
+        margin-top: 0;
+        transition: margin $ease-main;
+        transition-delay: .15s;
+      }
 
       .form__label {
         transition: all $ease-main;
@@ -107,8 +141,12 @@
     }
 
     &.is-top {
+      @include screen('tablet', max) {
+        margin-top: 25px;
+      }
+
       .form__label {
-        transform: translateY(-25px);
+        transform: translateY(-25px) translateZ(0);
       }
 
       .form__text {
@@ -174,6 +212,14 @@
     &::placeholder, .choices__placeholder {
       @include screen('tablet', max) {
         color: transparent;
+      }
+    }
+  }
+
+  .textarea {
+    &::placeholder {
+      @include screen('tablet', max) {
+        font-size: 0;
       }
     }
   }

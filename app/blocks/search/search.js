@@ -12,6 +12,12 @@ export default function search() {
     $(self).closest('.search').removeClass('is-focused');
   });
 
+  $(document).on('keyup', '.search__input', (evt) => {
+    if (evt.keyCode === 27) {
+      $.fancybox.close();
+    }
+  });
+
   /*
   imitation
   */

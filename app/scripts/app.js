@@ -20,9 +20,10 @@ import sidebar from '../blocks/js-functions/sidebar';
 import highlightMenu from '../blocks/js-functions/highlightmenu';
 import upShow from '../blocks/up-button/up-button';
 import mixContent from '../blocks/grid-list/grid-list';
-import { floatingLabels, validation } from '../components/form/form';
+import { floatingLabels, validation, autosizeTextarea } from '../components/form/form';
 import uploadFile from '../blocks/upload/upload';
 import { linkHover, showLinkInfo } from '../components/sport-navigation/sport-navigation';
+import locationPopup from '../components/location-popup/location-popup';
 
 const $ = window.$;
 
@@ -56,4 +57,6 @@ $(() => {
   uploadFile();
   linkHover();
   showLinkInfo();
+  autosizeTextarea();
+  locationPopup();
 });

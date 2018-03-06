@@ -1,0 +1,42 @@
+{
+  "section1": {
+    "name" : "Центральный",
+    "count" : "6"
+  },
+  "section4": {
+    "name" : "Юго-Восточный",
+    "count" : "5"
+  },
+  "section7": {
+    "name" : "Западный",
+    "count" : "2"
+  },
+  "section8": {
+    "name" : "Северный",
+    "count" : "4"
+  },
+  "section5": {
+    "name" : "Южный",
+    "count" : "1"
+  },
+  "section9": {
+    "name" : "Северо-Западный",
+    "count" : "2"
+  },
+  "section2": {
+    "name" : "Северо-Восточный",
+    "count" : "2"
+  },
+  "section6": {
+    "name" : "Юго-Западный",
+    "count" : "2"
+  },
+  "section10": {
+    "name" : "Зеленоградский",
+    "count" : "2"
+  },
+  "section3": {
+    "name" : "Восточный",
+    "count" : "3"
+  }
+}

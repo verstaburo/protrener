@@ -5,7 +5,7 @@ mixin form()
         +e.SPAN.text Фамилия
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Иванов" required)
+          +input(type="text" placeholder="Иванов" required data-type="char")
           +e.label_mobile
             +e.SPAN.text Фамилия
     +e.row
@@ -13,7 +13,7 @@ mixin form()
         +e.SPAN.text имя
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Иван" required)
+          +input(type="text" placeholder="Иван" required data-type="char")
           +e.label_mobile
             +e.SPAN.text имя
     +e.row
@@ -61,7 +61,7 @@ mixin form()
         +e.SPAN.text Стоимость
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required)
+          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required data-type="number")
           +e.mark
             +icon('rub').icon
           +e.label_mobile

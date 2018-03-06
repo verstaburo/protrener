@@ -1,3 +1,50 @@
 .stylized-select {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 510;
+
+  &__text {
+    @include heading-2;
+    color: $color-red;
+    transition: color $ease-main;
+    margin-right: 6px;
+
+    @include screen('tablet') {
+      color: $color-basic;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    transition: all $ease-main;
+    transform: rotate(0);
+  }
+
+  &__icon {
+    width: 8px;
+    height: 6px;
+    fill: $color-red;
+  }
+
+  &.is-open {
+
+    .stylized-select {
+
+      &__text {
+        color: $color-basic;
+      }
+
+      &__toggle {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

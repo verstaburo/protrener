@@ -34,6 +34,10 @@
       margin-bottom: 45px;
     }
 
+    @include screen('desktop-wide') {
+      margin-bottom: 50px;
+    }
+
     line-height: 1;
 
     br {
@@ -45,16 +49,22 @@
 
   &__request {
     width: 100%;
+    box-sizing: border-box;
     order: 2;
 
     @include screen('tablet') {
       width: (7/12)*100%;
+      padding-right: 32px;
       order: 1;
+    }
+
+    @include screen('desktop') {
+      padding-right: 0;
     }
 
     .form {
       @include screen('tablet', max) {
-        margin-top: 45px;
+        margin-top: 20px;
       }
     }
   }
@@ -70,6 +80,16 @@
       padding-left: (1/12)*100%;
       width: (5/12)*100%;
       order: 2;
+    }
+
+    .content-zone {
+      @include screen('tablet') {
+        padding-top: 5px;
+      }
+
+      @include screen('desktop') {
+        padding-top: 0;
+      }
     }
   }
 }

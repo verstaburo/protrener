@@ -1,5 +1,5 @@
 .input {
-  padding: 0 0 12px;
+  padding: 6px 0 8px;
   border: 0;
   border-bottom: 2px solid $color-border;
   width: 100%;
@@ -11,6 +11,14 @@
   background-color: transparent;
   font-weight: 300;
   letter-spacing: .019em;
+
+  @include screen('tablet') {
+    padding: 6px 0 10px;
+  }
+
+  @include screen('desktop') {
+    padding: 0 0 12px;
+  }
 
   &:focus, &:hover {
     border-color: $color-basic;
@@ -24,9 +32,22 @@
 .textarea {
   @extend .input;
 
-  padding-bottom: 12px;
-  min-height: 49px;
-  resize: vertical;
+  padding-top: 6px;
+  padding-bottom: 8px;
+
+  @include screen('tablet') {
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+
+  @include screen('desktop') {
+    padding-top: 0;
+    padding-bottom: 12px;
+  }
+
+  min-height: 50px;
+  resize: none;
+  overflow: hidden;
 }
 
 .checkradio {
@@ -139,18 +160,36 @@
   &[data-type*='select-one'] {
 
     .choices__inner {
-      padding: 0 0 12px;
+      padding: 6px 0 8px;
+
+      @include screen('tablet') {
+        padding: 6px 0 10px;
+      }
+
+      @include screen('desktop') {
+        padding: 0 0 12px;
+      }
     }
 
     &::after {
       border-width: 6px 4px 0;
       top: 0;
-      bottom: 12px;
+      bottom: 14px;
       right: 8px;
       margin: auto;
       transform: rotate(0) translate3d(0, 0, 0);
       transition: transform $ease-main;
       border-color: $color-red transparent transparent;
+
+      @include screen('tablet') {
+        top: 0;
+        bottom: 8px;
+      }
+
+      @include screen('desktop') {
+        top: 0;
+        bottom: 12px;
+      }
     }
 
     &.is-open::after {

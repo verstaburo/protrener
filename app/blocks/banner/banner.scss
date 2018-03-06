@@ -67,6 +67,7 @@
     .banner {
 
       &__image {
+        transform-origin: left;
         transform: scale(1.1);
       }
     }

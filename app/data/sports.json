@@ -1,8 +1,14 @@
 {
   "section1": {
-    "name" : "Йога",
+    "name" : "Теннис",
     "link" : "catalog.html",
     "count" : "29",
+    "class" : " "
+  },
+  "section8": {
+    "name" : "Йога",
+    "link" : "catalog.html",
+    "count" : "290",
     "class" : " "
   },
   "section2": {
@@ -40,12 +46,6 @@
     "name" : "Пилатес",
     "link" : "catalog.html",
     "count" : "48",
-    "class" : " "
-  },
-  "section8": {
-    "name" : "Теннис",
-    "link" : "catalog.html",
-    "count" : "29",
     "class" : " "
   },
   "section9": {

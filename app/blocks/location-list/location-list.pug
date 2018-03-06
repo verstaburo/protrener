@@ -1,0 +1,5 @@
+mixin location-list(data)
+  +b.UL.location-list&attributes(attributes)
+    each item in data
+      +e.LI.item
+        +location-link(item.count)(href="#" data-value=item.name + ',' + item.count).js-location-select= item.name

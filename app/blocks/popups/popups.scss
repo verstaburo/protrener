@@ -11,47 +11,6 @@
   overflow: hidden;
   background: transparent;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    pointer-events: none;
-    border: 1.5em solid rgba($color-black, .4);
-    transition: transform 0.3s;
-
-    @include screen('tablet') {
-      width: calc(100% + 36px);
-      height: calc(100% + 36px);
-    }
-  }
-
-  &::before {
-    top: 0;
-    left: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    transform: translate3d(-10px, -10px, 0);
-
-    @include screen('tablet') {
-      transform: translate3d(-36px, -36px, 0);
-    }
-  }
-
-  &::after {
-    right: 0;
-    bottom: 0;
-    border-top-width: 0;
-    border-left-width: 0;
-    transform: translate3d(10px, 10px, 0);
-
-    @include screen('tablet') {
-      transform: translate3d(36px, 36px, 0);
-    }
-
-  }
-
   &__content {
     position: relative;
     display: flex;
@@ -92,13 +51,6 @@
       display: none;
     }
   }
-
-  &.is-open {
-    &::before,
-    &::after {
-      transform: translate3d(0, 0, 0);
-    }
-  }
 }
 
 .fancybox-container {
@@ -106,7 +58,7 @@
 }
 
 .fancybox-bg {
-  background: rgba($color-black, 0);
+  background: rgba($color-black, .4);
 }
 
 .fancybox-close-small {

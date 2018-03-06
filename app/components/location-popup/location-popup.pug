@@ -1,0 +1,11 @@
+mixin location-popup()
+  +b.location-popup&attributes(attributes)
+    +e.overlay
+    +e.content
+      +grid-inner
+        +gi-col(3).location-popup__selected
+          +location-link(29)._big Москва
+        +gi-col(9).location-popup__regions
+          +e.wrapper.js-scrollbar
+            +location-list(getData('location'))
+      +e.angle

@@ -1,0 +1,69 @@
+.location-link {
+  @include text-small;
+  font-weight: 400;
+  letter-spacing: .075em;
+  color: $color-basic;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity $ease-main;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &__text {
+    @include ellipsis(80%);
+
+    @include screen('desktop') {
+      @include ellipsis(70%);
+    }
+
+    @include screen('desktop-wide') {
+      @include ellipsis(60%);
+    }
+  }
+
+  &__number {
+    color: rgba($color-basic, .65);
+
+    @include screen('tablet') {
+      margin: 0 24px 0 12px;
+    }
+
+    @include screen('desktop') {
+      margin: 0 34px 0 12px;
+    }
+
+    @include screen('desktop-wide') {
+      margin: 0 114px 0 12px;
+    }
+  }
+
+  &_big {
+    @include heading-2;
+    font-weight: 500;
+    letter-spacing: .033em;
+
+    .location-link {
+
+      &__number {
+        font-weight: 400;
+
+        @include screen('tablet') {
+          margin: 0 8px;
+        }
+
+        @include screen('desktop') {
+          margin: 0 34px 0 12px;
+        }
+
+        @include screen('desktop-wide') {
+          margin: 0 114px 0 12px;
+        }
+      }
+    }
+  }
+}

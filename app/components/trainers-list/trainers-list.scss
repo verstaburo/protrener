@@ -67,13 +67,6 @@
 
     &__item {
 
-      @include screen('phone', max) {
-
-        &:not(:first-child) {
-          display: none;
-        }
-      }
-
       @include screen('phone') {
         width: 50%;
         padding: 48px 22.5px 0;

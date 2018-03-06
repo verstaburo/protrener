@@ -3,15 +3,21 @@
   display: block;
   padding-top: (1/16) * 100vh;
   width: 100%;
+  pointer-events: none;
   z-index: 10;
 
   &__logo {
+    pointer-events: all;
+
     @include screen('tablet', max) {
       width: 10 * $grid-col-width;
     }
   }
 
   &__search {
+    transition: opacity $ease-main;
+    pointer-events: all;
+
     @include screen('tablet', max) {
       display: flex;
       flex-direction: row;
@@ -22,6 +28,8 @@
   }
 
   &__news {
+    pointer-events: all;
+
     @include screen('tablet', max) {
       text-align: right;
       width: 10 * $grid-col-width;
@@ -29,6 +37,8 @@
   }
 
   &__socials {
+    pointer-events: all;
+
     @include screen('tablet', max) {
       position: relative;
       width: 0;
