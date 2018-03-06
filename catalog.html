@@ -59,6 +59,86 @@
             </div>
         </div>
         <main class="page-content">
+            <div class="location-popup">
+                <div class="location-popup__overlay"></div>
+                <div class="location-popup__content">
+                    <div class="grid-inner">
+                        <div class="grid-inner__col grid-inner__col_three location-popup__selected">
+                            <a class="location-link location-link_big">
+                                <span class="location-link__text">Москва</span>
+                                <span class="location-link__number">29</span>
+                            </a>
+                        </div>
+                        <div class="grid-inner__col grid-inner__col_nine location-popup__regions">
+                            <div class="location-popup__wrapper js-scrollbar">
+                                <ul class="location-list">
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Центральный,6">
+                                            <span class="location-link__text">Центральный</span>
+                                            <span class="location-link__number">6</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Юго-Восточный,5">
+                                            <span class="location-link__text">Юго-Восточный</span>
+                                            <span class="location-link__number">5</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Западный,2">
+                                            <span class="location-link__text">Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северный,4">
+                                            <span class="location-link__text">Северный</span>
+                                            <span class="location-link__number">4</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Южный,1">
+                                            <span class="location-link__text">Южный</span>
+                                            <span class="location-link__number">1</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северо-Западный,2">
+                                            <span class="location-link__text">Северо-Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северо-Восточный,2">
+                                            <span class="location-link__text">Северо-Восточный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Юго-Западный,2">
+                                            <span class="location-link__text">Юго-Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Зеленоградский,2">
+                                            <span class="location-link__text">Зеленоградский</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Восточный,3">
+                                            <span class="location-link__text">Восточный</span>
+                                            <span class="location-link__number">3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-popup__angle"></div>
+                </div>
+            </div>
             <section class="page-title page-title_catalog">
                 <div class="container">
                     <div class="grid">
@@ -71,7 +151,12 @@
                                     <div class="grid-inner__col grid-inner__col_nine page-title__addition-col-right">
                                         <div class="category-describe">
                                             <div class="category-describe__count">29</div>
-                                            <div class="stylized-select"></div>
+                                            <div class="stylized-select js-location">
+                                                <div class="stylized-select__text">Москва</div>
+                                                <div class="stylized-select__toggle">
+                                                    <svg class="stylized-select__icon"><use xlink:href="assets/images/icon.svg#icon_triangle"></use></svg>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,6 +174,11 @@
                             <div class="grid-inner">
                                 <div class="grid-inner__col grid-inner__col_three catalog__navigation">
                                     <ul class="link-list">
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Теннис</span>
+                                            </a>
+                                        </li>
                                         <li class="link-list__item">
                                             <a class="link link_gray js-anchor" href="catalog.html">
                                                 <span class="link__text">Йога</span>
@@ -122,11 +212,6 @@
                                         <li class="link-list__item">
                                             <a class="link link_gray js-anchor" href="catalog.html">
                                                 <span class="link__text">Пилатес</span>
-                                            </a>
-                                        </li>
-                                        <li class="link-list__item">
-                                            <a class="link link_gray js-anchor" href="catalog.html">
-                                                <span class="link__text">Теннис</span>
                                             </a>
                                         </li>
                                         <li class="link-list__item">
