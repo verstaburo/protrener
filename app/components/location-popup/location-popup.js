@@ -16,11 +16,13 @@ export default function locationPopup() {
     }
   }
 
-  anglePositon();
-
-  $(window).on('resize', () => {
+  if ($('.location-popup').length > 0) {
     anglePositon();
-  });
+
+    $(window).on('resize', () => {
+      anglePositon();
+    });
+  }
 
   $(document).on('click', '.js-location', (evt) => {
     const self = $(evt.target).hasClass('.js-location') ? $(evt.target) : $(evt.target).closest('.js-location');

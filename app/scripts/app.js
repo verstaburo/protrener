@@ -24,6 +24,7 @@ import { floatingLabels, validation, autosizeTextarea } from '../components/form
 import uploadFile from '../blocks/upload/upload';
 import { linkHover, showLinkInfo } from '../components/sport-navigation/sport-navigation';
 import locationPopup from '../components/location-popup/location-popup';
+import mainPageAnimation from '../blocks/animations/animations';
 
 const $ = window.$;
 
@@ -59,4 +60,5 @@ $(() => {
   showLinkInfo();
   autosizeTextarea();
   locationPopup();
+  mainPageAnimation();
 });
