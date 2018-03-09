@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -11,6 +11,9 @@
     <link href="favicon.ico" rel="shortcut icon">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
 </head>
 
 <body>
@@ -21,6 +24,7 @@
             </video>
             <img class="video-bg__poster" src="assets/images/video_poster.jpg" alt="" role="presentation" />
         </div>
+        <div class="valve"></div>
         <main class="page-content page-content_onescreen">
             <div class="header header_abs">
                 <div class="container">
