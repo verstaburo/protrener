@@ -2,11 +2,12 @@ include _externalIncludes
 include _internalIncludes
 
 doctype html
-html(lang='ru')
+html.no-js(lang='ru')
   include head
   body
     .wrapper.wrapper_onescreen
       +video-bg
+      .valve
       main.page-content.page-content_onescreen
         +header(false, true)._abs
         block content
