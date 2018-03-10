@@ -50,7 +50,11 @@
   }
 
   &__wrapper {
-    max-height: 370px !important;
+    max-height: 50vh !important;
+
+    @include screen('tablet-small') {
+      max-height: 370px !important;
+    }
 
     @include screen('tablet') {
       max-height: 150px !important;

@@ -32,23 +32,83 @@
   }
 
   .socials_big & {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
+
+    @include screen('tablet') {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include screen('desktop') {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include screen('desktop-wide') {
+      width: 28px;
+      height: 28px;
+    }
 
     &__icon {
       &_vk {
-        width: 28px;
-        height: 16px;
+        width: 22px;
+        height: 12px;
+
+        @include screen('tablet') {
+          width: 28px;
+          height: 16px;
+        }
+
+        @include screen('desktop') {
+          width: 22px;
+          height: 12px;
+        }
+
+        @include screen('desktop-wide') {
+          width: 28px;
+          height: 16px;
+        }
       }
 
       &_fb {
-        width: 12px;
-        height: 26px;
+        width: 9px;
+        height: 19px;
+
+        @include screen('tablet') {
+          width: 12px;
+          height: 26px;
+        }
+
+        @include screen('desktop') {
+          width: 9px;
+          height: 19px;
+        }
+
+        @include screen('desktop-wide') {
+          width: 12px;
+          height: 26px;
+        }
       }
 
       &_instagramm {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
+
+        @include screen('tablet') {
+          width: 24px;
+          height: 24px;
+        }
+
+        @include screen('desktop') {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include screen('desktop-wide') {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }

@@ -6,14 +6,10 @@
   width: 100%;
   background: $color-main;
 
-  @include screen('desktop-small') {
-    height: 100vh;
-  }
-
   &__wall {
     position: relative;
     width: 100%;
-    padding-top: 49.6%;
+    padding-top: 49.6vw;
     min-height: 333px;
     box-sizing: border-box;
     overflow: hidden;
@@ -22,8 +18,12 @@
       min-height: 0;
     }
 
+    @include screen('desktop-small') {
+      padding-top: 46vw;
+    }
+
     @include screen('desktop-wide') {
-      padding-top: 43.5%;
+      padding-top: 41.7vw;
     }
 
     &::before {
