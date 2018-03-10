@@ -24,36 +24,47 @@ export default function search() {
   $(document).on('input', '.search__input', (evt) => {
     const self = evt.target;
     const searchLine = $(self).val();
-    if (searchLine !== '') {
-      $('.search-popup__result').slideDown();
-      $('.loading').addClass('active');
-      setTimeout(() => {
-        $('.loading').removeClass('active');
+    let isSearch = true;
+    if (isSearch) {
+      if (searchLine !== '') {
+        $('.search-popup__form').addClass('is-moved');
+        $('.search-popup__result').addClass('is-visible');
+        $('.loading').addClass('active');
+        isSearch = false;
         setTimeout(() => {
+          $('.loading').removeClass('active');
           if (searchLine === ' ' || searchLine == null) {
             if ($('.search-popup__trainers').is(':visible')) {
-              $('.search-popup__trainers').fadeOut(() => {
-                $('.search-popup__not-found').fadeIn();
+              $('.search-popup__trainers').fadeOut(250, () => {
+                $('.search-popup__not-found').fadeIn(250);
               });
             } else {
-              $('.search-popup__not-found').fadeIn();
+              $('.search-popup__not-found').fadeIn(250);
             }
           } else {
-            if ($('.search-popup__not-found').is(':visible')) {
-              $('.search-popup__not-found').fadeOut(() => {
-                $('.search-popup__trainers').fadeIn();
-              });
+            if ($('.trainers-list_search .trainers-list__item').length > 1) {
+              if ($('.search-popup__not-found').is(':visible')) {
+                $('.search-popup__not-found').fadeOut(250, () => {
+                  $('.search-popup__trainers').fadeIn(250);
+                });
+              } else {
+                $('.search-popup__trainers').fadeIn(250);
+              }
+              $('.trainers-list_search .trainers-list__item:last-child').remove();
             } else {
-              $('.search-popup__trainers').fadeIn();
+              $('.search-popup__trainers').fadeOut(250, () => {
+                $('.search-popup__not-found').fadeIn(250);
+              });
             }
           }
-        }, 200);
-      }, 200);
-    } else {
-      $('.search-popup__result').slideUp(() => {
-        $('.search-popup__trainers').fadeOut();
-        $('.search-popup__not-found').fadeOut();
-      });
+          isSearch = true;
+        }, 250);
+      } else {
+        $('.search-popup__result').removeClass('is-visible');
+        $('.search-popup__trainers').fadeOut(250);
+        $('.search-popup__not-found').fadeOut(250);
+        $('.search-popup__form').removeClass('is-moved');
+      }
     }
   });
 }

@@ -16,16 +16,17 @@
     padding: 0 60px;
   }
 
-  .input {
+  &__input {
     display: block;
-    padding: 12px 0;
     font-size: $size-bigger;
+    padding: 0;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
     border-bottom: none;
     caret-color: $color-red;
-    min-height: 104px;
+    line-height: 1;
+    min-height: 90px;
 
     @include screen('phone') {
       min-height: 0;
@@ -33,6 +34,10 @@
 
     @include screen('tablet') {
       font-size: $size-larger;
+    }
+
+    @include screen('desktop') {
+      padding: 0;
     }
 
     &::placeholder {

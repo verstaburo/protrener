@@ -1,7 +1,7 @@
 mixin search-popup()
   +popup('Нажмите ENTER для поиска или ESC для закрытия').search-popup__&attributes(attributes)
     +search.__form
-    +e.result
+    +e.result.js-scrollbar
       +loading
       +e.not-found
         +e.icon

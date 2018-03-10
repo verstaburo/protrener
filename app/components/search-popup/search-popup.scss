@@ -2,22 +2,58 @@
 
   .popup__content {
     position: relative;
-    padding: 35px 0;
+    padding: 130px 0 35px;
 
-    @include screen('phone') {
-      padding: calc(25vh - 36px) 0;
+    @include screen('tablet') {
+      padding: 228px 0 100px;
+    }
+
+    @include screen('desktop') {
+      padding-top: 300px;
+    }
+
+    @include screen('desktop-wide') {
+      padding-top: 360px;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all .25s ease-in-out;
+    will-change: top, transform;
+
+    &.is-moved {
+      top: 40px;
+      transform: translate3d(-50%, 0, 0);
+
+      @include screen('tablet') {
+        top: 144px;
+      }
+
+      @include screen('desktop') {
+        top: 210px;
+      }
+
+      @include screen('desktop-wide') {
+        top: 276px;
+      }
     }
   }
 
   &__result {
     position: relative;
-    display: none;
     width: 100%;
-    min-height: 25vh;
+    min-height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease-main;
 
-    @include screen('phone') {
-      margin-top: 50px;
-      margin-bottom: 25px;
+    &.is-visible {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 
@@ -36,24 +72,48 @@
   &__trainers {
     display: none;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 44px;
     width: calc(100% - 20px);
     box-sizing: border-box;
 
+    @media only screen and (max-height: 479px) {
+      padding-top: 0;
+    }
+
     @include screen('phone') {
       width: 75vw;
+    }
+
+    @include screen('tablet') {
+      padding-top: 68px;
+    }
+
+    @include screen('desktop') {
+      padding-top: 60px;
+    }
+
+    @include screen('desktop-wide') {
+      padding-top: 64px;
     }
   }
 
   &__not-found {
     display: none;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 20px;
     box-sizing: border-box;
 
     @include text;
     font-weight: 300;
     letter-spacing: .02em;
+
+    @include screen('tablet') {
+      padding-top: 68px;
+    }
+
+    @include screen('desktop') {
+      padding-top: 94px;
+    }
   }
 
   &__icon {
