@@ -4,9 +4,21 @@
   justify-content: flex-start;
   align-items: flex-end;
   position: relative;
-  padding-bottom: (1/16)*100vh;
+  padding-bottom: 32px;
   width: 100%;
   margin-top: auto;
+
+  @include screen('tablet') {
+    padding-bottom: 44px;
+  }
+
+  @include screen('desktop') {
+    padding-bottom: 52px;
+  }
+
+  @include screen('desktop-wide') {
+    padding-bottom: 62px;
+  }
 
   .brushes {
     position: absolute;

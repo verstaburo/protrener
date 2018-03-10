@@ -5,7 +5,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: calc((3/16)*100vh + 122px);
+  padding-top: 212px;
   box-sizing: border-box;
 
   @include screen('tablet') {

@@ -1,10 +1,26 @@
 .header {
   position: relative;
   display: block;
-  padding-top: (1/16) * 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px;
   width: 100%;
   pointer-events: none;
   z-index: 10;
+
+  @include screen('tablet') {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  @include screen('desktop') {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  @include screen('desktop-wide') {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
   &__logo {
     pointer-events: all;
@@ -64,7 +80,7 @@
   .socials {
     @include screen('tablet', max) {
       position: absolute;
-      top: calc((1/8) * 100vh - 4px);
+      top: 54px;
       right: 0;
       margin-top: 0;
     }
@@ -73,8 +89,6 @@
   }
 
   &_mobile-logo {
-    .search-button,
-    .navigation-link,
     .socials {
 
       @include screen('tablet', max) {

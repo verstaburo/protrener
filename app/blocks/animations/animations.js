@@ -15,12 +15,6 @@ export default function mainPageAnimation() {
         duration: 250,
       })
       .add({
-        targets: '.video-bg',
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 2000,
-      })
-      .add({
         targets: '.link-list__item',
         translateX: ['-40px', 0],
         opacity: [0, 1],
@@ -29,6 +23,9 @@ export default function mainPageAnimation() {
         offset: 3500,
         delay(el, i, l) {
           return i * 150;
+        },
+        complete() {
+          $('.valve').addClass('no-click');
         },
       })
       .add({

@@ -38,4 +38,26 @@
       }
     }
   }
+
+  &_big {
+
+    .socials__item {
+
+      &:not(:last-child) {
+        margin-right: 29px;
+
+        @include screen('tablet') {
+          margin-right: 16px;
+        }
+
+        @include screen('desktop-small') {
+          margin-right: 29px;
+        }
+
+        @include screen('desktop-wide') {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
 }

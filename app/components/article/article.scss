@@ -1,21 +1,15 @@
 .article {
   display: block;
   width: 100%;
-  margin-top: 23vh;
   margin-bottom: 50px;
   box-sizing: border-box;
 
   @include screen('tablet') {
-    margin-top: 20vh;
     margin-bottom: 115px;
   }
 
-  @include screen('desktop') {
-    margin-top: 18vh;
-  }
-
   @include screen('desktop-wide') {
-    margin-top: 20vh;
+    margin-top: 36px;
   }
 
   &__media,
@@ -37,11 +31,11 @@
     }
 
     @include screen('tablet') {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     @include screen('desktop') {
-      margin-bottom: 74px;
+      margin-bottom: 70px;
     }
   }
 

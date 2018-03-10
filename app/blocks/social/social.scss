@@ -30,4 +30,26 @@
       height: 20px;
     }
   }
+
+  .socials_big & {
+    width: 28px;
+    height: 28px;
+
+    &__icon {
+      &_vk {
+        width: 28px;
+        height: 16px;
+      }
+
+      &_fb {
+        width: 12px;
+        height: 26px;
+      }
+
+      &_instagramm {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }

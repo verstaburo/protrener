@@ -51,7 +51,12 @@
 
     @include screen('tablet') {
       opacity: 1;
+      pointer-events: all;
     }
+  }
+
+  &.no-click {
+    pointer-events: none;
   }
 }
 
@@ -67,11 +72,14 @@
     height: 100vh;
     overflow: auto;
     box-sizing: border-box;
-    padding-bottom: 72px;
+
 
     @include screen('tablet') {
       overflow: hidden;
-      padding-bottom: 0;
+    }
+
+    @include screen('tablet', max) {
+      padding-bottom: 72px;
     }
   }
 }

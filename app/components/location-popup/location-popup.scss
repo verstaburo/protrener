@@ -2,7 +2,7 @@
   position: relative;
   display: none;
   width: 100vw;
-  margin-bottom: calc(-(3/16)*100vh - 4px);
+  margin-bottom: -92px;
   z-index: 500;
 
   @include screen('tablet') {
