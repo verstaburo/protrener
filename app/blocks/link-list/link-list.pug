@@ -9,4 +9,4 @@ mixin link-list-big(data)
   +b.UL.link-list_big&attributes(attributes)
     each item in data
       +e.LI.item
-        +link(href=item.link class="_white js-link-info js-link-hover" data-trainer-count=item.count)!= item.name
+        +link(href=item.link class="_white js-link-info js-link-hover js-link-load" data-trainer-count=item.count)!= item.name

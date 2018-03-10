@@ -25,6 +25,7 @@ import uploadFile from '../blocks/upload/upload';
 import { linkHover, showLinkInfo } from '../components/sport-navigation/sport-navigation';
 import locationPopup from '../components/location-popup/location-popup';
 import mainPageAnimation from '../blocks/animations/animations';
+import loadContent from '../pages/index/index';
 
 const $ = window.$;
 
@@ -61,4 +62,5 @@ $(() => {
   autosizeTextarea();
   locationPopup();
   mainPageAnimation();
+  loadContent();
 });

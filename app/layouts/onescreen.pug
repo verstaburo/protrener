@@ -10,7 +10,8 @@ html.no-js(lang='ru')
       .valve
       main.page-content.page-content_onescreen
         +header(false, true)._abs
-        block content
+        .content#content
+          block content
         +brushes._layers
         +footer-contacts(true)._fixed
     +popups
