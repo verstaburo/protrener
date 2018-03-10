@@ -5,7 +5,7 @@ import anime from 'animejs';
 const $ = window.$;
 
 export default function mainPageAnimation() {
-  if ($('.valve').length > 0 && $('.js').length > 0 && $(window).innerWidth() >= 1024) {
+  if ($('.valve').length > 0 && $('.js').length > 0 && $(window).innerWidth() >= 1024 && !$('.valve').hasClass('no-animate')) {
     const animationTimeline = anime.timeline();
     animationTimeline
       .add({
@@ -97,6 +97,7 @@ export default function mainPageAnimation() {
         duration: 2000,
         offset: 1000,
       });
+    $('.valve').addClass('no-animate');
   }
 }
 /* eslint-enable no-unused-vars */

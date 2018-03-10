@@ -19,6 +19,11 @@ export default function loadContent() {
       easing: 'easeOutExpo',
       duration: 250,
     });
+    $('.video-bg').hide(0);
+    $('.brushes_layers').hide(0);
+    $('.wrapper').removeClass('wrapper_onescreen');
+    $('.footer').removeClass('footer_mcontacts').removeClass('footer_fixed');
+    $('.page-content').removeClass('page-content_onescreen');
     $('#content').hide(300, () => {
       $('#content').load(linkToLoad, '', () => {
         $('#content').show(300, () => {
