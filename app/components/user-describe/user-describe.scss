@@ -3,6 +3,15 @@
   display: block;
   background: $color-main;
   z-index: 2;
+  margin-bottom: 28px;
+
+  @include screen('desktop') {
+    margin-bottom: 56px;
+  }
+
+  @include screen('desktop-wide') {
+    margin-bottom: 90px;
+  }
 
   &:not(:first-child) {
     padding-top: 40px;

@@ -171,6 +171,10 @@
       height: 25vh;
     }
 
+    @include screen('desktop-wide') {
+      padding-bottom: 5.9vh;
+    }
+
     .container, .grid {
       height: 100%;
     }
