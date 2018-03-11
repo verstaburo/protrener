@@ -98,6 +98,8 @@ export default function mainPageAnimation() {
         offset: 1000,
       });
     $('.valve').addClass('no-animate');
+  } else {
+    $('.valve').addClass('no-animate');
   }
 }
 /* eslint-enable no-unused-vars */
