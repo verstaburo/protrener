@@ -17,10 +17,11 @@ export default function loadContent() {
     $('.title-imitation').text($(self).find('.link__text').text());
     $('.title-imitation').css({ top: `${selfY}px`, left: `${selfX}px`, opacity: 1 });
     $('.header').addClass('js-z601');
-    $('.video-bg').hide(0);
-    $('.banner').hide(0);
-    $('.brushes_layers').hide(0);
+    $('.video-bg').fadeOut(0);
+    $('.banner').fadeOut(0);
+    $('.brushes_layers').fadeOut(0);
     $('.wrapper').removeClass('wrapper_onescreen');
+    $('.footer').css({ opacity: 0 }); // remove bug when fixed class remove
     $('.footer').removeClass('footer_mcontacts').removeClass('footer_fixed');
     $('.footer .brushes').removeClass('brushes_notablet');
     $('.page-content').removeClass('page-content_onescreen');
@@ -63,7 +64,9 @@ export default function loadContent() {
           $('#main-content').load(linkToLoad, '', () => {
             $('#main-content').show(300, () => {
               const valveMoveOut = anime.timeline();
+              // заменяет тайтл в загруженном каталоге, так как сейчас там всегда теннис
               $('.page-title__text').text($(self).find('.link__text').text());
+              $('.footer').css({ opacity: 1 }); // return opacity to footer
               valveMoveOut.add({
                 targets: '.valve',
                 opacity: 0,
@@ -102,45 +105,6 @@ export default function loadContent() {
         });
       },
     });
-
-    // load content
-    /*
-    $('#main-content').hide(300, () => {
-      $('#main-content').load(linkToLoad, '', () => {
-        $('#main-content').show(300, () => {
-          const valveMoveOut = anime.timeline();
-          valveMoveOut.add({
-            targets: '.valve',
-            opacity: 0,
-            translateX: '-100%',
-            easing: 'easeOutExpo',
-            duration: 300,
-          });
-
-          // location-popup angle
-          function anglePositon() {
-            const wW = $(window).innerWidth();
-            const tW = $('.js-location').width();
-            const tX = $('.js-location').offset().left;
-            if (wW >= 1024) {
-              $('.location-popup__angle').css({ left: `${(((tW * 0.5) + tX) - 36)}px` });
-            } else {
-              $('.location-popup__angle').css({ left: `${(((tW * 0.5) + tX) - 10)}px` });
-            }
-          }
-          if ($('.location-popup').length > 0) {
-            anglePositon();
-
-            $(window).on('resize', () => {
-              anglePositon();
-            });
-          }
-
-          history.pushState(null, null, $(self).attr('href'));
-        });
-      });
-    });
-    */
   });
 }
 /* eslint-enable no-unused-vars */
