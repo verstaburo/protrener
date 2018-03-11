@@ -27,7 +27,10 @@
   overflow: hidden;
 
   &_onescreen {
-    height: 100vh;
+
+    @include screen('tablet') {
+      height: 100vh;
+    }
   }
 }
 
@@ -73,7 +76,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
     overflow: auto;
     box-sizing: border-box;
     z-index: 1;
@@ -81,6 +83,7 @@
 
     @include screen('tablet') {
       overflow: hidden;
+      height: 100vh;
     }
 
     @include screen('tablet', max) {

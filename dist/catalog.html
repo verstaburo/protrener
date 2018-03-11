@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Protrener - Каталог</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header header_abs">
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col grid__col_one container__padding"></div>
+                    <div class="grid__col grid__col_seven header__logo">
+                        <a class="logo" href="index.html">
+                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_twelve header__search">
+                        <a class="search-button js-fancybox" href="#search" data-src="#search">
+                            <span class="search-button__text">Поиск</span>
+                            <svg class="search-button__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_four header__news">
+                        <a class="link link_white navigation-link" href="news.html">
+                            <span class="link__text">НОВОСТИ</span>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_seven header__socials">
+                        <ul class="socials socials_vertical">
+                            <li class="socials__item">
+                                <a class="social" href="https://www.vk.com" title="ВКонтакте">
+                                    <svg class="social__icon social__icon_vk"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social" href="https://www.facebook.com" title="Facebook">
+                                    <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social" href="https://www.instagramm.com" title="Instagramm">
+                                    <svg class="social__icon social__icon_instagramm"><use xlink:href="assets/images/icon.svg#icon_instagramm"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_one contaner__padding"></div>
+                </div>
+            </div>
+        </div>
+        <main class="page-content" id="content">
+            <div class="location-popup">
+                <div class="location-popup__overlay"></div>
+                <div class="location-popup__content">
+                    <div class="grid-inner">
+                        <div class="grid-inner__col grid-inner__col_three location-popup__selected">
+                            <a class="location-link location-link_big">
+                                <span class="location-link__text">Москва</span>
+                                <span class="location-link__number">29</span>
+                            </a>
+                        </div>
+                        <div class="grid-inner__col grid-inner__col_nine location-popup__regions">
+                            <div class="location-popup__wrapper js-scrollbar">
+                                <ul class="location-list">
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Центральный,6">
+                                            <span class="location-link__text">Центральный</span>
+                                            <span class="location-link__number">6</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Юго-Восточный,5">
+                                            <span class="location-link__text">Юго-Восточный</span>
+                                            <span class="location-link__number">5</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Западный,2">
+                                            <span class="location-link__text">Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северный,4">
+                                            <span class="location-link__text">Северный</span>
+                                            <span class="location-link__number">4</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Южный,1">
+                                            <span class="location-link__text">Южный</span>
+                                            <span class="location-link__number">1</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северо-Западный,2">
+                                            <span class="location-link__text">Северо-Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Северо-Восточный,2">
+                                            <span class="location-link__text">Северо-Восточный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Юго-Западный,2">
+                                            <span class="location-link__text">Юго-Западный</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Зеленоградский,2">
+                                            <span class="location-link__text">Зеленоградский</span>
+                                            <span class="location-link__number">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="location-list__item">
+                                        <a class="location-link js-location-select" href="#" data-value="Восточный,3">
+                                            <span class="location-link__text">Восточный</span>
+                                            <span class="location-link__number">3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-popup__angle"></div>
+                </div>
+            </div>
+            <section class="page-title page-title_catalog">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_two container__padding"></div>
+                        <div class="grid__col grid__col_twenty-eight container__inner">
+                            <h1 class="page-title__text">Теннис</h1>
+                            <div class="page-title__addition">
+                                <div class="grid-inner">
+                                    <div class="grid-inner__col grid-inner__col_three page-title__addition-col-left"></div>
+                                    <div class="grid-inner__col grid-inner__col_nine page-title__addition-col-right">
+                                        <div class="category-describe">
+                                            <div class="category-describe__count">29</div>
+                                            <div class="stylized-select js-location">
+                                                <div class="stylized-select__text">Москва</div>
+                                                <div class="stylized-select__toggle">
+                                                    <svg class="stylized-select__icon"><use xlink:href="assets/images/icon.svg#icon_triangle"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_two contaner__padding"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section catalog">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_four container__padding"></div>
+                        <div class="grid__col grid__col_twenty-four container__inner">
+                            <div class="grid-inner">
+                                <div class="grid-inner__col grid-inner__col_three catalog__navigation">
+                                    <ul class="link-list">
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Теннис</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Йога</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Единоборства</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Фитнес</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Бокс</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Танцы</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Кроссфит</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Пилатес</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Микс-файт</span>
+                                            </a>
+                                        </li>
+                                        <li class="link-list__item">
+                                            <a class="link link_gray js-anchor" href="catalog.html">
+                                                <span class="link__text">Плавание</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid-inner__col grid-inner__col_nine catalog__content">
+                                    <div class="grid-inner catalog__banner-section">
+                                        <div class="grid-inner__col grid-inner__col_eight catalog__short-list">
+                                            <ul class="trainers-list trainers-list_short">
+                                                <li class="trainers-list__item">
+                                                    <a class="trainer" href="user.html">
+                                                        <div class="trainer__wall">
+                                                            <div class="trainer__brand">
+                                                                <img class="trainer__image" src="assets/images/brand_wall_1.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="trainer__describe">
+                                                            <div class="avatar trainer__avatar">
+                                                                <img class="avatar__image" src="assets/images/avatar_7.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                            <div class="trainer__price">1490&nbsp;Р</div>
+                                                            <div class="trainer__fullname">
+                                                                <span class="trainer__name">Милана</span>
+                                                                <span class="trainer__surname">Шнайдер</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="trainers-list__item">
+                                                    <a class="trainer" href="user.html">
+                                                        <div class="trainer__wall">
+                                                            <div class="trainer__brand">
+                                                                <img class="trainer__image" src="assets/images/brand_wall_2.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="trainer__describe">
+                                                            <div class="avatar trainer__avatar">
+                                                                <img class="avatar__image" src="assets/images/avatar_1.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                            <div class="trainer__price">1550&nbsp;Р</div>
+                                                            <div class="trainer__fullname">
+                                                                <span class="trainer__name">Влад</span>
+                                                                <span class="trainer__surname">Дронов</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="trainers-list__item">
+                                                    <a class="trainer" href="user.html">
+                                                        <div class="trainer__wall">
+                                                            <div class="trainer__brand">
+                                                                <img class="trainer__image" src="assets/images/brand_wall_3.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="trainer__describe">
+                                                            <div class="avatar trainer__avatar">
+                                                                <img class="avatar__image" src="assets/images/avatar_3.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                            <div class="trainer__price">1590&nbsp;Р</div>
+                                                            <div class="trainer__fullname">
+                                                                <span class="trainer__name">Михаил</span>
+                                                                <span class="trainer__surname">Волков</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="trainers-list__item">
+                                                    <a class="trainer" href="user.html">
+                                                        <div class="trainer__wall">
+                                                            <div class="trainer__brand">
+                                                                <img class="trainer__image" src="assets/images/brand_wall_4.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="trainer__describe">
+                                                            <div class="avatar trainer__avatar">
+                                                                <img class="avatar__image" src="assets/images/avatar_4.jpg" alt="" role="presentation" />
+                                                            </div>
+                                                            <div class="trainer__price">1800&nbsp;Р</div>
+                                                            <div class="trainer__fullname">
+                                                                <span class="trainer__name">Кристина</span>
+                                                                <span class="trainer__surname">Дружинина</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="grid-inner__col grid-inner__col_four catalog__banner">
+                                            <a class="banner banner_vertical" href="add-trainer.html">
+                                                <div class="banner__bg">
+                                                    <picture class="banner__image">
+                                                        <source srcset="assets/images/banner_hor.jpg" media="(max-width: 1439px)" />
+                                                        <source srcset="assets/images/banner_vert.jpg" media="(min-width: 1440px)" />
+                                                        <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                                                    </picture>
+                                                </div>
+                                                <div class="banner__content">
+                                                    <span class="banner__text">Стать
+                                                        <br/>тренером</span>
+                                                    <svg class="banner__icon"><use xlink:href="assets/images/icon.svg#icon_pluslg"></use></svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="trainers-list catalog__main-list">
+                                        <li class="trainers-list__item">
+                                            <a class="trainer" href="user.html">
+                                                <div class="trainer__wall">
+                                                    <div class="trainer__brand">
+                                                        <img class="trainer__image" src="assets/images/brand_wall_5.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                </div>
+                                                <div class="trainer__describe">
+                                                    <div class="avatar trainer__avatar">
+                                                        <img class="avatar__image" src="assets/images/avatar_2.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                    <div class="trainer__price">1890&nbsp;Р</div>
+                                                    <div class="trainer__fullname">
+                                                        <span class="trainer__name">Глеб</span>
+                                                        <span class="trainer__surname">Корявцев</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="trainers-list__item">
+                                            <a class="trainer" href="user.html">
+                                                <div class="trainer__wall">
+                                                    <div class="trainer__brand">
+                                                        <img class="trainer__image" src="assets/images/brand_wall_6.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                </div>
+                                                <div class="trainer__describe">
+                                                    <div class="avatar trainer__avatar">
+                                                        <img class="avatar__image" src="assets/images/avatar_6.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                    <div class="trainer__price">2500&nbsp;Р</div>
+                                                    <div class="trainer__fullname">
+                                                        <span class="trainer__name">Валерия</span>
+                                                        <span class="trainer__surname">Дорожная</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="trainers-list__item">
+                                            <a class="trainer" href="user.html">
+                                                <div class="trainer__wall">
+                                                    <div class="trainer__brand">
+                                                        <img class="trainer__image" src="assets/images/brand_wall_7.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                </div>
+                                                <div class="trainer__describe">
+                                                    <div class="avatar trainer__avatar">
+                                                        <img class="avatar__image" src="assets/images/avatar_5.jpg" alt="" role="presentation" />
+                                                    </div>
+                                                    <div class="trainer__price">1750&nbsp;Р</div>
+                                                    <div class="trainer__fullname">
+                                                        <span class="trainer__name">Александр</span>
+                                                        <span class="trainer__surname">Святозар</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="content-zone content-zone_gray content-zone_small catalog__text">
+                                        <h3>Теннис (Seo-Text)</h3>
+                                        <p>SEO-копирайтинг&nbsp;&mdash; это определенная техника создания и&nbsp;редактирования текстов для web-сайтов таким образом, чтобы, во-первых, пользователь мог легко прочитать и&nbsp;понять текст, и&nbsp;во-вторых,
+                                            чтобы при этом текст содержал необходимые для поискового продвижения ключевые слова в&nbsp;нужных местах и&nbsp;необходимых пропорциях. Основной задачей SEO копирайтинга является повышение рейтинга сайта в&nbsp;результатах
+                                            выдачи поисковых машин при осуществлении поиска по&nbsp;целевым ключевым запросам.</p>
+                                        <p>Такое определение SEO-копирайтингу дает Фил Крэвен в&nbsp;своей статье &laquo;SEO copywriting&raquo;. К&nbsp;этому необходимо добавить третье необходимое требование к&nbsp;текстам для сайтов&nbsp;&mdash; собственно
+                                            свойство копирайтинга воздействовать на&nbsp;покупательскую активность рекламными текстами.</p>
+                                    </div>
+                                    <a class="banner banner_small catalog__mbanner" href="add-trainer.html">
+                                        <div class="banner__bg">
+                                            <img class="banner__image" src="assets/images/banner_hor.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="banner__content">
+                                            <span class="banner__text">Стать
+                                                <br/>тренером</span>
+                                            <svg class="banner__icon"><use xlink:href="assets/images/icon.svg#icon_pluslg"></use></svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_four contaner__padding"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="footer">
+            <div class="brushes">
+                <div class="brushes__item brushes__item_bottom"></div>
+                <div class="brushes__item brushes__item_top"></div>
+            </div>
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col grid__col_one container__padding"></div>
+                    <div class="grid__col grid__col_seven footer__contacts">
+                        <div class="contacts">
+                            <div class="contacts__text">Связь &mdash;</div>
+                            <a class="link link_white contacts__link" href="mailto:Hello@protrener.net">
+                                <span class="link__text">Hello@protrener.net</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_twelve footer__logo">
+                        <a class="logo logo_footer" href="index.html">
+                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_four footer__addus">
+                        <a class="link link_white navigation-link" href="add-trainer.html">
+                            <span class="link__text">Стать трейнером</span>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_seven footer__copyright">
+                        <div class="copyright">
+                            <div class="copyright__text">&copy;&nbsp;2018&nbsp;ProTrener.</div>
+                            <div class="copyright__text copyright__text_mhidden">Все права защищены.</div>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_one contaner__padding"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popup search-popup" id="search">
+            <div class="popup__content">
+                <form class="search search-popup__form">
+                    <input class="input search__input" placeholder="поиск по тренерам" type="search" />
+                </form>
+                <div class="search-popup__result js-scrollbar">
+                    <div class="loading">
+                        <div class="loading__ico"></div>
+                    </div>
+                    <div class="search-popup__not-found">
+                        <div class="search-popup__icon">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
+                        </div>
+                        <p>Ничего не&nbsp;найдено,
+                            <br/>попробуйте изменить запрос</p>
+                    </div>
+                    <div class="search-popup__trainers">
+                        <ul class="trainers-list trainers-list_search">
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_1.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_7.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1490&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Милана</span>
+                                            <span class="trainer__surname">Шнайдер</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_3.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_3.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1590&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Михаил</span>
+                                            <span class="trainer__surname">Волков</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_2.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_1.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1550&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Влад</span>
+                                            <span class="trainer__surname">Дронов</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_4.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_4.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1800&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Кристина</span>
+                                            <span class="trainer__surname">Дружинина</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_5.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_2.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1890&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Глеб</span>
+                                            <span class="trainer__surname">Корявцев</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_6.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_6.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">2500&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Валерия</span>
+                                            <span class="trainer__surname">Дорожная</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_7.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_5.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1750&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Александр</span>
+                                            <span class="trainer__surname">Святозар</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__info">
+                    <p>Нажмите ENTER для поиска или ESC для закрытия</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/ResizeSensor.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
