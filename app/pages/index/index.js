@@ -63,6 +63,7 @@ export default function loadContent() {
           $('#main-content').load(linkToLoad, '', () => {
             $('#main-content').show(300, () => {
               const valveMoveOut = anime.timeline();
+              $('.page-title__text').text($(self).find('.link__text').text());
               valveMoveOut.add({
                 targets: '.valve',
                 opacity: 0,
@@ -71,7 +72,7 @@ export default function loadContent() {
                 duration: 300,
                 complete() {
                   $('.header').removeClass('js-z601');
-                  $('.title-imitation').fadeOut(150);
+                  $('.title-imitation').fadeOut(0);
                   unfreeze();
                 },
               });
