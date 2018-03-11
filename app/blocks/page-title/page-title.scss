@@ -5,10 +5,26 @@
 
   @include screen('tablet', max) {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
     min-height: 138px;
+
+    .container {
+      min-height: 138px;
+    }
+
+    .grid {
+      min-height: 138px;
+    }
+
+    .grid__col {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      min-height: 138px;
+    }
   }
 
   @include screen('tablet') {
@@ -30,12 +46,19 @@
     justify-content: flex-start;
     align-items: flex-end;
     @include heading-1;
+
+    @include screen('tablet', max) {
+      box-sizing: border-box;
+      padding-right: 50px;
+    }
   }
 
   &__addition {
     @include screen('tablet', max) {
       order: 1;
       margin-bottom: 6px;
+      display: inline-block;
+      margin-top: auto;
     }
 
     @include screen('tablet') {

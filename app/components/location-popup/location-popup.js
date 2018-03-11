@@ -1,4 +1,4 @@
-import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
+// import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 
 const $ = window.$;
 
@@ -28,12 +28,12 @@ export default function locationPopup() {
     if (!$(self).hasClass('is-open')) {
       $(self).addClass('is-open');
       $('.location-popup').addClass('is-active').slideDown();
-      freeze();
+      // freeze();
     } else {
       $('.location-popup').slideUp(() => {
         $('.location-popup').removeClass('is-active');
         $(self).removeClass('is-open');
-        unfreeze();
+        // unfreeze();
       });
     }
   });
@@ -42,7 +42,7 @@ export default function locationPopup() {
     $('.location-popup').slideUp(() => {
       $('.location-popup').removeClass('is-active');
       $('.js-location').removeClass('is-open');
-      unfreeze();
+      // unfreeze();
     });
   });
 }

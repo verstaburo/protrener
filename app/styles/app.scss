@@ -76,6 +76,7 @@
     height: 100vh;
     overflow: auto;
     box-sizing: border-box;
+    z-index: 1;
 
 
     @include screen('tablet') {
