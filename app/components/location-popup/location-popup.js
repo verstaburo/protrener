@@ -7,7 +7,6 @@ export default function locationPopup() {
     const wW = $(window).innerWidth();
     const tW = $('.js-location').width();
     const tX = $('.js-location').offset().left;
-    console.log('i here');
 
     if (wW >= 1024) {
       $('.location-popup__angle').css({ left: `${(((tW * 0.5) + tX) - 36)}px` });

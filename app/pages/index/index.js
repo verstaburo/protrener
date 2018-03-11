@@ -15,7 +15,7 @@ export default function loadContent() {
     valveMoveIn.add({
       targets: '.valve',
       opacity: [0, 1],
-      width: [0, '100%'],
+      translateX: ['-100%', 0],
       easing: 'easeOutExpo',
       duration: 250,
     });
@@ -31,7 +31,7 @@ export default function loadContent() {
           valveMoveOut.add({
             targets: '.valve',
             opacity: [1, 0],
-            width: ['100%', 0],
+            translateX: [0, '100%'],
             easing: 'easeOutExpo',
             duration: 250,
           });
