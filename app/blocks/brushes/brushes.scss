@@ -17,7 +17,7 @@
       background-size: contain contain;
       z-index: -1;
 
-      @include screen('tablet-small') {
+      @include screen('tablet') {
         width: 64%;
         background-position: 100% 0;
         background-size: 100% contain;
@@ -38,7 +38,7 @@
       background: url('../images/red_brush.svg') (1/16)*100vw 0 no-repeat;
       background-size: contain contain;
 
-      @include screen('tablet-small') {
+      @include screen('tablet') {
         width: 68%;
         background-position: 0 0;
         background-size: 100% contain;
@@ -46,6 +46,57 @@
 
       @include screen(desktop) {
         background-size: 100% auto;
+      }
+    }
+  }
+
+  &_animate {
+
+    .brushes {
+
+      &__item {
+
+        &_bottom {
+          background: none;
+          overflow: hidden;
+
+          .brushes__icon {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: (1/16)*100vw;
+            width: 921px;
+            height: 203px;
+
+            @include screen('tablet') {
+              right: 0;
+              min-height: 203px;
+              height: auto;
+              min-width: 100%;
+            }
+          }
+        }
+
+        &_top {
+          background: none;
+          overflow: hidden;
+
+          .brushes__icon {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: (1/16)*100vw;
+            width: 979px;
+            height: 104px;
+
+            @include screen('tablet') {
+              left: 0;
+              min-height: 104px;
+              height: auto;
+              min-width: 100%;
+            }
+          }
+        }
       }
     }
   }

@@ -15,12 +15,47 @@ export default function mainPageAnimation() {
         duration: 250,
       })
       .add({
+        targets: '.header',
+        translateY: ['-100%', 0],
+        easing: 'easeOutExpo',
+        duration: 1000,
+        offset: 250,
+      })
+      .add({
+        targets: '#path-gray-brush',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeOutExpo',
+        duration: 4000,
+        offset: 600,
+      })
+      .add({
+        targets: '#path-red-brush',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeOutExpo',
+        duration: 4000,
+        offset: 600,
+      })
+      .add({
+        targets: '.banner',
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 700,
+        offset: 600,
+      })
+      .add({
+        targets: '.contacts',
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 700,
+        offset: 600,
+      })
+      .add({
         targets: '.link-list__item',
         translateX: ['-40px', 0],
         opacity: [0, 1],
         easing: 'easeOutExpo',
         duration: 500,
-        offset: 3500,
+        offset: 800,
         delay(el, i, l) {
           return i * 150;
         },
@@ -30,72 +65,10 @@ export default function mainPageAnimation() {
       })
       .add({
         targets: '.sport-navigation__title',
-        translateY: ['-100px', '30px', '-30px', 0],
         opacity: [0, 1],
         easing: 'easeOutExpo',
-        duration: 500,
-        offset: 3000,
-      })
-      .add({
-        targets: '.social',
-        scale: [0, 1],
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 250,
-        offset: 750,
-        delay(el, i, l) {
-          return i * 150;
-        },
-      })
-      .add({
-        targets: '.banner',
-        rotate: ['185deg', 0],
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 500,
-        offset: 2000,
-      })
-      .add({
-        targets: '.contacts',
-        translateY: ['100%', 0],
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 2000,
-        offset: 2500,
-      })
-      .add({
-        targets: '.brushes__item_bottom',
-        translateX: ['-100%', 0],
-        easing: 'easeOutExpo',
-        duration: 2000,
-        offset: 1000,
-      })
-      .add({
-        targets: '.brushes__item_top',
-        translateX: ['100%', 0],
-        easing: 'easeOutExpo',
-        duration: 2000,
-        offset: 1000,
-      })
-      .add({
-        targets: '.header__search, .header__news',
-        translateY: ['-150px', 0],
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 1000,
-        delay(el, i, l) {
-          return i * 250;
-        },
-        offset: 250,
-      })
-      .add({
-        targets: '.logo__image',
-        scale: [2, 1],
-        opacity: [0, 1],
-        rotate: '2turn',
-        easing: 'easeOutExpo',
-        duration: 2000,
-        offset: 1000,
+        duration: 700,
+        offset: 800,
       });
     $('.valve').addClass('no-animate');
   } else {

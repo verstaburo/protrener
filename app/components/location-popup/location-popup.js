@@ -45,4 +45,17 @@ export default function locationPopup() {
       // unfreeze();
     });
   });
+
+  $(document).on('click', '.js-location-select', (evt) => {
+    evt.preventDefault();
+    const self = $(evt.target).hasClass('.js-location-select') ? $(evt.target) : $(evt.target).closest('.js-location-select');
+    const locationName = $(self).attr('data-value').split(',')[0];
+    const trainersCount = $(self).attr('data-value').split(',')[1];
+
+    $('.location-popup__selected .location-link__text').text(locationName);
+    $('.location-popup__selected .location-link__number').text(trainersCount);
+    $('.category-describe__count').text(trainersCount);
+    $('.stylized-select__text').text(locationName);
+    $('.js-location').click();
+  });
 }

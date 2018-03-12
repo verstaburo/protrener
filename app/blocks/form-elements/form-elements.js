@@ -54,6 +54,12 @@ export function inputmask() {
     mask: '***{1,20}@***{1,20}.aa{1,6}',
     showMaskOnHover: false,
   }).mask('input[data-type="email"]');
+
+  Inputmask({
+    mask: '9{1,20}',
+    placeholder: ' ',
+    showMaskOnHover: false,
+  }).mask('input[data-type="number"]');
 }
 
 export function numberinput() {
