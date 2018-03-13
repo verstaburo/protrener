@@ -24,15 +24,15 @@ export default function mainPageAnimation() {
       .add({
         targets: '#path-gray-brush',
         strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeOutExpo',
-        duration: 4000,
+        easing: 'easeInQuad',
+        duration: 2000,
         offset: 600,
       })
       .add({
         targets: '#path-red-brush',
         strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeOutExpo',
-        duration: 4000,
+        easing: 'easeInQuad',
+        duration: 2000,
         offset: 600,
       })
       .add({
