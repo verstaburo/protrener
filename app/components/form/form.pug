@@ -61,7 +61,7 @@ mixin form()
         +e.SPAN.text Стоимость
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required data-type="number")
+          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required).js-numberbox-input
           +e.mark
             +icon('rub').icon
           +e.label_mobile

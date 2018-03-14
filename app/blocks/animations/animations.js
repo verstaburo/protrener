@@ -25,29 +25,29 @@ export default function mainPageAnimation() {
         targets: '#path-gray-brush',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInQuad',
-        duration: 2000,
-        offset: 600,
+        duration: 1300,
+        offset: 0,
       })
       .add({
         targets: '#path-red-brush',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInQuad',
-        duration: 2000,
-        offset: 600,
+        duration: 1200,
+        offset: 1100,
       })
       .add({
         targets: '.banner',
         opacity: [0, 1],
         easing: 'easeOutExpo',
-        duration: 700,
-        offset: 600,
+        duration: 500,
+        offset: 1700,
       })
       .add({
         targets: '.contacts',
         opacity: [0, 1],
         easing: 'easeOutExpo',
-        duration: 700,
-        offset: 600,
+        duration: 500,
+        offset: 800,
       })
       .add({
         targets: '.link-list__item',
