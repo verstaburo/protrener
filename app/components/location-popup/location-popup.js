@@ -52,8 +52,6 @@ export default function locationPopup() {
     const locationName = $(self).attr('data-value').split(',')[0];
     const trainersCount = $(self).attr('data-value').split(',')[1];
 
-    $('.location-popup__selected .location-link__text').text(locationName);
-    $('.location-popup__selected .location-link__number').text(trainersCount);
     $('.category-describe__count').text(trainersCount);
     $('.stylized-select__text').text(locationName);
     $('.js-location').click();

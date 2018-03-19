@@ -8,13 +8,13 @@
   "section8": {
     "name" : "Йога",
     "link" : "catalog.html",
-    "count" : "290",
+    "count" : "291",
     "class" : " "
   },
   "section2": {
     "name" : "Единоборства",
     "link" : "catalog.html",
-    "count" : "5",
+    "count" : "3",
     "class" : " "
 
   },
@@ -27,7 +27,7 @@
   "section4": {
     "name" : "Бокс",
     "link" : "catalog.html",
-    "count" : "50",
+    "count" : "54",
     "class" : " "
   },
   "section5": {
@@ -45,7 +45,7 @@
   "section7": {
     "name" : "Пилатес",
     "link" : "catalog.html",
-    "count" : "48",
+    "count" : "5",
     "class" : " "
   },
   "section9": {
