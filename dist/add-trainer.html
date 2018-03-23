@@ -85,7 +85,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="text" placeholder="Иванов" required="required" data-type="char" />
+                                                <input class="input" type="text" name="surname" placeholder="Иванов" required="required" data-type="char" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Фамилия</span>
                                                 </div>
@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="text" placeholder="Иван" required="required" data-type="char" />
+                                                <input class="input" type="text" name="name" placeholder="Иван" required="required" data-type="char" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">имя</span>
                                                 </div>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <select class="select js-select" placeholder="Выберите вид спорта" required="required">
+                                                <select class="select js-select" placeholder="Выберите вид спорта" required="required" name="sport">
                                                     <option placeholder="placeholder"> Выберите вид спорта</option>
                                                     <option value="1">Йога</option>
                                                     <option value="2">Единоборства</option>
@@ -138,7 +138,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <select class="select js-select" placeholder="Выберите район">
+                                                <select class="select js-select" placeholder="Выберите район" name="location">
                                                     <option placeholder="placeholder"> Выберите район</option>
                                                     <option value="1">САО</option>
                                                     <option value="2">ЮАО</option>
@@ -150,7 +150,7 @@
                                                 </div>
                                             </div>
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Предпочтения (Пример: Удобнее всего на Динамо)"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Предпочтения (Пример: Удобнее всего на Динамо)" name="prefer-location"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Предпочтения (Пример: Удобнее всего на Динамо)</span>
                                                 </div>
@@ -163,7 +163,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <input class="input js-numberbox-input" type="text" placeholder="Стоимость 1-ого занятия в час" required="required" />
+                                                <input class="input js-numberbox-input" type="text" placeholder="Стоимость 1-ого занятия в час" name="price" required="required" />
                                                 <div class="form__mark">
                                                     <svg class="form__icon"><use xlink:href="assets/images/icon.svg#icon_rub"></use></svg>
                                                 </div>
@@ -179,7 +179,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Опишите свои регалии"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свои регалии" name="regalia"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Регалии</span>
                                                 </div>
@@ -192,7 +192,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Опишите свои достижениях" required="required"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свои достижениях" name="achievments" required="required"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">достижения</span>
                                                 </div>
@@ -205,7 +205,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Опишите свой опыт работы тренером" required="required"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свой опыт работы тренером" name="experience" required="required"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Опыт работы</span>
                                                 </div>
@@ -218,7 +218,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Расскажите о своих воспитанниках"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Расскажите о своих воспитанниках" name="pupils"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Воспитанники</span>
                                                 </div>
@@ -231,7 +231,7 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <textarea class="textarea" rows="1" placeholder="Ваше образование"></textarea>
+                                                <textarea class="textarea" rows="1" placeholder="Ваше образование" name="education"></textarea>
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Образование</span>
                                                 </div>
@@ -244,31 +244,31 @@
                                         </div>
                                         <div class="form__wrapper">
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="tel" data-type="tel" placeholder="Телефон" required="required" />
+                                                <input class="input" type="tel" data-type="tel" placeholder="Телефон" name="phone" required="required" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Телефон</span>
                                                 </div>
                                             </div>
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="text" placeholder="E-mail" data-type="email" required="required" />
+                                                <input class="input" type="text" placeholder="E-mail" data-type="email" name="email" required="required" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">E-mail</span>
                                                 </div>
                                             </div>
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="url" placeholder="Ссылка на профиль Vkontakte" />
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Vkontakte" name="vk-link" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Ссылка на профиль Vkontakte</span>
                                                 </div>
                                             </div>
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="url" placeholder="Ссылка на профиль Facebook" />
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Facebook" name="fb-link" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Ссылка на профиль Facebook</span>
                                                 </div>
                                             </div>
                                             <div class="form__field js-floating-label">
-                                                <input class="input" type="url" placeholder="Ссылка на профиль Instagram" />
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Instagram" name="inst-link" />
                                                 <div class="form__label form__label_mobile">
                                                     <span class="form__text">Ссылка на профиль Instagram</span>
                                                 </div>
@@ -285,7 +285,7 @@
                                                     <span class="upload__mark">
                                                         <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
                                                     </span>
-                                                    <input class="input" type="file" name="file[]" />
+                                                    <input class="input" type="file" name="file1[]" />
                                                     <img class="upload__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
                                                 </label>
                                                 <div class="upload__conditions">
@@ -306,7 +306,7 @@
                                                     <span class="upload__mark">
                                                         <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
                                                     </span>
-                                                    <input class="input" type="file" name="file[]" />
+                                                    <input class="input" type="file" name="file2[]" />
                                                     <img class="upload__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
                                                 </label>
                                                 <div class="upload__conditions">

@@ -1,85 +1,69 @@
 const $ = window.$;
 
 export default function mixContent() {
-  function targertColumn(sw) {
-    let res;
-    const ar1 = $('[data-move="nomix"] .news-card').length;
-    const ar2 = $('[data-move="mix480"] .news-card').length;
-    const ar3 = $('[data-move="mix1024"] .news-card').length;
-    switch (sw) {
-      case 1:
-        res = (ar1 <= ar2) ? 1 : 2;
-        break;
-      case 2:
-        if (ar1 <= ar2) {
-          res = (ar1 <= ar3) ? 1 : 3;
-        } else {
-          res = (ar2 <= ar3) ? 2 : 3;
-        }
-        break;
-      default:
-        break;
+  function NewsCards() {
+    this.grid = $('.js-mix');
+    this.orderId = 'order-id';
+    this.orderIdIsSet = false;
+  }
+
+  NewsCards.prototype.getLowestColumn = function (columns) {
+    const sortedColumns = columns.sort((a, b) => {
+      const res = $(a).outerHeight() - $(b).outerHeight();
+      return res;
+    });
+    return sortedColumns[0];
+  };
+
+  NewsCards.prototype.sortBlocks = function (blocks) {
+    const self = this;
+    return blocks.sort((a, b) => {
+      const res = Number($(a).data(self.orderId)) - Number($(b).data(self.orderId));
+      return res;
+    });
+  };
+
+  NewsCards.prototype.setOrderId = function (blocks) {
+    const self = this;
+
+    blocks.each(function () {
+      const block = $(this);
+
+      if (block.data(self.orderId)) {
+        return;
+      }
+
+      block.data(self.orderId, block.index());
+    });
+  };
+
+  NewsCards.prototype.sort = function () {
+    const self = this;
+
+    if (!self.grid.length) {
+      return;
     }
-    return res;
-  }
 
-  function mixsher() {
-    const items = [];
-    const wW = $(window).innerWidth();
+    const columns = self.grid.find('.grid-list__item:visible');
+    const blocks = self.grid.find('.news-card:not(:first)');
 
-    if (wW < 480) {
-      $.merge(items, $('[data-move="mix480"] .news-card'));
-      $.merge(items, $('[data-move="mix1024"] .news-card'));
-      $.merge(items, $('[data-move="mix1440"]  .news-card'));
-      $(items).each((i, el) => {
-        $('[data-move="nomix"]').append($(el));
-      });
-    } else if (wW >= 480 && wW < 1024) {
-      $('[data-parent="mix480"]').each((i, el) => {
-        $('[data-move="mix480"]').append($(el));
-      });
-      $.merge(items, $('[data-move="mix1024"] .news-card'));
-      $.merge(items, $('[data-move="mix1440"]  .news-card'));
-      $(items).each((i, el) => {
-        if (targertColumn(1) === 2) {
-          $('[data-move="mix480"]').append($(el));
-        } else {
-          $('[data-move="nomix"]').append($(el));
-        }
-      });
-    } else if (wW >= 1024 && wW < 1440) {
-      $('[data-parent="mix480"]').each((i, el) => {
-        $('[data-move="mix480"]').append($(el));
-      });
-      $('[data-parent="mix1024"]').each((i, el) => {
-        $('[data-move="mix1024"]').append($(el));
-      });
-      $.merge(items, $('[data-move="mix1440"] .news-card'));
-      $(items).each((i, el) => {
-        if (targertColumn(2) === 3) {
-          $('[data-move="mix1024"]').append($(el));
-        } else if (targertColumn(2) === 2) {
-          $('[data-move="mix480"]').append($(el));
-        } else {
-          $('[data-move="nomix"]').append($(el));
-        }
-      });
-    } else if (wW >= 1440) {
-      $('[data-parent="mix480"]').each((i, el) => {
-        $('[data-move="mix480"]').append($(el));
-      });
-      $('[data-parent="mix1024"]').each((i, el) => {
-        $('[data-move="mix1024"]').append($(el));
-      });
-      $('[data-parent="mix1440"]').each((i, el) => {
-        $('[data-move="mix1440"]').append($(el));
-      });
+    if (!self.orderIdIsSet) {
+      self.setOrderId(blocks);
     }
-  }
 
-  if ($('.js-mix').length > 0) {
-    mixsher();
+    const sortedBlocks = self.sortBlocks(blocks);
 
-    $(window).on('resize', mixsher);
-  }
+    sortedBlocks
+      .appendTo(columns.eq(0))
+      .each(function () {
+        $(this).appendTo(self.getLowestColumn(columns));
+      });
+  };
+
+  const certificates = new NewsCards();
+  certificates.sort();
+
+  $(window).on('resize', () => {
+    certificates.sort();
+  });
 }

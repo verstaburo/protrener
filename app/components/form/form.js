@@ -127,9 +127,12 @@ export function validation() {
       }
     });
 
+    console.log($(`#${activeform}`));
+
     if (formerrors === 0) {
       $('.error-banner').removeClass('active');
-      $(`#${activeform}`)[0].reset();
+      console.log($(`#${activeform}`));
+      $(`#${activeform}`).submit().reset();
       $.fancybox.open({
         src: '#success-popup',
         afterLoad: freeze,

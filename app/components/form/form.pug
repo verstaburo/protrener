@@ -5,7 +5,7 @@ mixin form()
         +e.SPAN.text Фамилия
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Иванов" required data-type="char")
+          +input(type="text" name="surname" placeholder="Иванов" required data-type="char")
           +e.label_mobile
             +e.SPAN.text Фамилия
     +e.row
@@ -13,7 +13,7 @@ mixin form()
         +e.SPAN.text имя
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Иван" required data-type="char")
+          +input(type="text" name="name" placeholder="Иван" required data-type="char")
           +e.label_mobile
             +e.SPAN.text имя
     +e.row
@@ -21,7 +21,7 @@ mixin form()
         +e.SPAN.text Вид спорта
       +e.wrapper
         +e.field.js-floating-label
-          +select(placeholder="Выберите вид спорта" required)
+          +select(placeholder="Выберите вид спорта" required name="sport")
             +e.OPTION(placeholder)  Выберите вид спорта
             +e.OPTION(value="1") Йога
             +e.OPTION(value="2") Единоборства
@@ -44,7 +44,7 @@ mixin form()
           | занятий
       +e.wrapper
         +e.field.js-floating-label
-          +select(placeholder="Выберите район")
+          +select(placeholder="Выберите район" name="location")
             +e.OPTION(placeholder)  Выберите район
             +e.OPTION(value="1") САО
             +e.OPTION(value="2") ЮАО
@@ -53,7 +53,7 @@ mixin form()
           +e.label_mobile
             +e.SPAN.text Место проведения занятий
         +e.field.js-floating-label
-          +textarea(placeholder="Предпочтения (Пример: Удобнее всего на Динамо)")
+          +textarea(placeholder="Предпочтения (Пример: Удобнее всего на Динамо)" name="prefer-location")
           +e.label_mobile
             +e.SPAN.text Предпочтения (Пример: Удобнее всего на Динамо)
     +e.row
@@ -61,7 +61,7 @@ mixin form()
         +e.SPAN.text Стоимость
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="text" placeholder="Стоимость 1-ого занятия в час" required).js-numberbox-input
+          +input(type="text" placeholder="Стоимость 1-ого занятия в час" name="price" required).js-numberbox-input
           +e.mark
             +icon('rub').icon
           +e.label_mobile
@@ -71,7 +71,7 @@ mixin form()
         +e.SPAN.text Регалии
       +e.wrapper
         +e.field.js-floating-label
-          +textarea(placeholder="Опишите свои регалии")
+          +textarea(placeholder="Опишите свои регалии" name="regalia")
           +e.label_mobile
             +e.SPAN.text Регалии
     +e.row
@@ -79,7 +79,7 @@ mixin form()
         +e.SPAN.text достижения
       +e.wrapper
         +e.field.js-floating-label
-          +textarea(placeholder="Опишите свои достижениях" required)
+          +textarea(placeholder="Опишите свои достижениях" name="achievments" required)
           +e.label_mobile
             +e.SPAN.text достижения
     +e.row
@@ -87,7 +87,7 @@ mixin form()
         +e.SPAN.text Опыт работы
       +e.wrapper
         +e.field.js-floating-label
-          +textarea(placeholder="Опишите свой опыт работы тренером" required)
+          +textarea(placeholder="Опишите свой опыт работы тренером" name="experience" required)
           +e.label_mobile
             +e.SPAN.text Опыт работы
     +e.row
@@ -95,7 +95,7 @@ mixin form()
         +e.SPAN.text Воспитанники
       +e.wrapper
         +e.field.js-floating-label
-          +textarea(placeholder="Расскажите о своих воспитанниках")
+          +textarea(placeholder="Расскажите о своих воспитанниках" name="pupils")
           +e.label_mobile
             +e.SPAN.text Воспитанники
     +e.row
@@ -103,7 +103,7 @@ mixin form()
         +e.SPAN.text Образование
       +e.wrapper
         +e.field.js-floating-label
-          +textarea(placeholder="Ваше образование")
+          +textarea(placeholder="Ваше образование" name="education")
           +e.label_mobile
             +e.SPAN.text Образование
     +e.row
@@ -111,30 +111,30 @@ mixin form()
         +e.SPAN.text Контакты
       +e.wrapper
         +e.field.js-floating-label
-          +input(type="tel" data-type="tel" placeholder="Телефон" required)
+          +input(type="tel" data-type="tel" placeholder="Телефон" name="phone" required)
           +e.label_mobile
             +e.SPAN.text Телефон
         +e.field.js-floating-label
-          +input(type="text" placeholder="E-mail" data-type="email" required)
+          +input(type="text" placeholder="E-mail" data-type="email" name="email" required)
           +e.label_mobile
             +e.SPAN.text E-mail
         +e.field.js-floating-label
-          +input(type="url" placeholder="Ссылка на профиль Vkontakte")
+          +input(type="url" placeholder="Ссылка на профиль Vkontakte" name="vk-link")
           +e.label_mobile
             +e.SPAN.text Ссылка на профиль Vkontakte
         +e.field.js-floating-label
-          +input(type="url" placeholder="Ссылка на профиль Facebook")
+          +input(type="url" placeholder="Ссылка на профиль Facebook" name="fb-link")
           +e.label_mobile
             +e.SPAN.text Ссылка на профиль Facebook
         +e.field.js-floating-label
-          +input(type="url" placeholder="Ссылка на профиль Instagram")
+          +input(type="url" placeholder="Ссылка на профиль Instagram" name="inst-link")
           +e.label_mobile
             +e.SPAN.text Ссылка на профиль Instagram
     +e.row
       +e.label_desktop._nohide
         +e.SPAN.text Аватар
       +e.wrapper
-        +upload('4000000', '240x240')._round
+        +upload('4000000', '240x240', 'file1[]')._round
           +e.SPAN(data-error="resolution") Разрешение не меньше 240х240 px
           +e.SPAN(data-error="filesize") Размер не больше 500 кб
           +e.SPAN.hidden(data-error="noimage") Файл не является изображением
@@ -142,7 +142,7 @@ mixin form()
       +e.label_desktop._nohide
         +e.SPAN.text Брендволл
       +e.wrapper
-        +upload('4000000', '1440x690')
+        +upload('4000000', '1440x690', 'file2[]')
           +e.SPAN(data-error="resolution") Разрешение не меньше 1440х690 px
           +e.SPAN(data-error="filesize") Размер не больше 500 кб
           +e.SPAN.hidden(data-error="noimage") Файл не является изображением

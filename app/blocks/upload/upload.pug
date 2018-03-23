@@ -1,9 +1,9 @@
-mixin upload(size, resolution)
+mixin upload(size, resolution, name)
   +b.upload(data-correct-size=size data-correct-resolution=resolution)&attributes(attributes)
     +e.LABEL.dropzone
       +e.mark
         +icon('upload').icon
-      +input(type="file" name="file[]")
+      +input(type="file" name=name)
       +e.IMG(src="").image
     +e.conditions
       block

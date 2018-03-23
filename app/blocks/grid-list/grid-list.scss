@@ -46,20 +46,20 @@
 
       @include screen('phone', max) {
         &:not(:first-child) {
-          @include visual-hide;
+          display: none;
         }
       }
 
       @include screen('tablet', max) {
         &:nth-child(3),
         &:nth-child(4) {
-          @include visual-hide;
+          display: none;
         }
       }
 
       @include screen('desktop', max) {
         &:nth-child(4) {
-          @include visual-hide;
+          display: none;
         }
       }
     }
