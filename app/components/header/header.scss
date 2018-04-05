@@ -45,10 +45,43 @@
 
   &__news {
     pointer-events: all;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include screen('tablet') {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
 
     @include screen('tablet', max) {
       text-align: right;
       width: 10 * $grid-col-width;
+    }
+
+    .navigation-link {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 0;
+
+      @include screen('tablet') {
+        display: inline-block;
+        width: auto;
+        margin-right: 0;
+      }
+
+      &:not(:first-child) {
+        @include screen('tablet') {
+          margin-left: 45px;
+        }
+
+        @include screen('desktop-small') {
+          margin-left: 96px;
+        }
+      }
     }
   }
 

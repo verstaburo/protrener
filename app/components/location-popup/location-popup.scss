@@ -25,9 +25,9 @@
     position: relative;
     margin: 10px 10px 0;
     width: calc(100% - 20px);
-    height: calc(100vh - 70px);
-    padding: 20px 30px;
-    max-height: 558px;
+    //height: calc(100vh - 70px);
+    padding: 20px 30px 88px;
+    //max-height: 558px;
     background: $color-red;
     z-index: 2;
     box-sizing: border-box;
@@ -35,13 +35,13 @@
     @include screen('tablet') {
       margin: 36px 36px 0;
       width: calc(100% - 72px);
-      padding: 25px calc(12.5vw - 36px);
-      max-height: none;
-      height: 428px;
+      padding: 25px calc(12.5vw - 36px) 136px;
+      //max-height: none;
+      //height: 428px;
     }
 
     @include screen('desktop') {
-      height: 356px;
+      //height: 356px;
     }
 
     .grid-inner {
@@ -50,7 +50,7 @@
   }
 
   &__wrapper {
-    max-height: 50vh !important;
+    /*max-height: 50vh !important;
 
     @include screen('tablet-small') {
       max-height: 370px !important;
@@ -58,7 +58,7 @@
 
     @include screen('tablet') {
       max-height: 150px !important;
-    }
+    }*/
   }
 
   &__selected, &__regions {

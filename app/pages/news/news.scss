@@ -1,6 +1,10 @@
 .news {
   display: block;
 
+  .container__inner {
+    position: relative;
+  }
+
   &:not(:first-child) {
     @include screen('tablet', max) {
       padding-top: 36px;
@@ -14,4 +18,8 @@
       margin-bottom: 122px;
     }
   }
+}
+
+.allnews {
+  @include visual-hide;
 }

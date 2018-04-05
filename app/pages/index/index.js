@@ -74,7 +74,7 @@ export default function loadContent() {
                 easing: 'easeOutExpo',
                 duration: 300,
                 complete() {
-                  $('.header').removeClass('js-z601');
+                  $('.header').removeClass('js-z601').addClass('header_mobile-logo');
                   $('.title-imitation').fadeOut(0);
                   unfreeze();
                 },
@@ -105,6 +105,20 @@ export default function loadContent() {
         });
       },
     });
+
+    if (document.documentElement.clientWidth < 1024) {
+      valveMoveIn
+        .add({
+          targets: '.header__socials',
+          opacity: 0,
+          easing: 'easeOutExpo',
+          duration: 300,
+          offset: '-=300',
+          complete() {
+            $('.header').addClass('header_mobile-logo');
+          },
+        });
+    }
   });
 }
 /* eslint-enable no-unused-vars */
