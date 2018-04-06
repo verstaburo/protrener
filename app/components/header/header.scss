@@ -113,9 +113,8 @@
   .socials {
     @include screen('tablet', max) {
       position: absolute;
-      top: 54px;
+      top: calc(100% + 29px);
       right: 0;
-      margin-top: 0;
     }
 
     margin-top: -4px;
