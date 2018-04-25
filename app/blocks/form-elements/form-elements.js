@@ -53,7 +53,7 @@ export function inputmask() {
   }).mask('input[data-type="tel"]');
 
   Inputmask({
-    mask: '***{1,20}@***{1,20}.aa{1,6}',
+    mask: '**{1,40}@**{1,40}.aa{1,6}',
     showMaskOnHover: false,
   }).mask('input[data-type="email"]');
 
