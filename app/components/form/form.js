@@ -129,6 +129,7 @@ export function validation() {
 
     if (formerrors === 0) {
       $('.error-banner').removeClass('active');
+      document.getElementById(`${activeform}`).submit();
       $.fancybox.open({
         src: '#success-popup',
         afterLoad: freeze,
