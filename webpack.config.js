@@ -8,7 +8,7 @@ module.exports = (watch = false) => ({
   output: {
     publicPath: '/assets/scripts/',
     filename: 'app.min.js',
-    path: path.resolve('./dist/assets/scripts/'),
+    path: path.resolve('./dist1/assets/scripts/'),
   },
   watch,
   devtool: isDebug ? 'cheap-module-inline-source-map' : false,

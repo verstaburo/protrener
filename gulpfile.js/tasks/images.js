@@ -7,7 +7,7 @@ const changed = require('gulp-changed');
 module.exports = () => (
   gulp.src('app/static/images/**/*')
   .pipe(plumber({ errorHandler: errorHandler('Error in icons task') }))
-  .pipe(changed('dist/assets/images'))
+  .pipe(changed('dist1/assets/images'))
   .pipe(imagemin())
-  .pipe(gulp.dest('dist/assets/images'))
+  .pipe(gulp.dest('dist1/assets/images'))
 );

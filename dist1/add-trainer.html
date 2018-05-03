@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Protrener - Стать тренером</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header header_mobile-logo header_abs">
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col grid__col_one container__padding"></div>
+                    <div class="grid__col grid__col_seven header__logo">
+                        <a class="logo" href="index.html">
+                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_eight header__search">
+                        <a class="search-button js-fancybox" href="#search" data-src="#search">
+                            <span class="search-button__text">Поиск</span>
+                            <svg class="search-button__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_eight header__news">
+                        <a class="link link_white navigation-link" href="news.html">
+                            <span class="link__text">НОВОСТИ</span>
+                        </a>
+                        <a class="link link_white navigation-link" href="news.html">
+                            <span class="link__text">Статьи</span>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_seven header__socials">
+                        <ul class="socials socials_vertical">
+                            <li class="socials__item">
+                                <a class="social" href="https://www.vk.com" title="ВКонтакте">
+                                    <svg class="social__icon social__icon_vk"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social" href="https://www.facebook.com" title="Facebook">
+                                    <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social" href="https://www.instagramm.com" title="Instagramm">
+                                    <svg class="social__icon social__icon_instagramm"><use xlink:href="assets/images/icon.svg#icon_instagramm"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social" href="https://www.telegram.com" title="Telegram">
+                                    <svg class="social__icon social__icon_telegram"><use xlink:href="assets/images/icon.svg#icon_telegram"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_one contaner__padding"></div>
+                </div>
+            </div>
+        </div>
+        <main class="page-content" id="content">
+            <section class="page-title">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_two container__padding"></div>
+                        <div class="grid__col grid__col_twenty-eight container__inner">
+                            <h1 class="page-title__text">Стать тренером</h1>
+                        </div>
+                        <div class="grid__col grid__col_two contaner__padding"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section add-trainer">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_four container__padding"></div>
+                        <div class="grid__col grid__col_twenty-four container__inner">
+                            <section class="add-trainer__request">
+                                <h3 class="add-trainer__title">Заполните
+                                    <br/>анкету</h3>
+                                <form class="form" id="reg-form">
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Фамилия</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="text" name="surname" placeholder="Иванов" required="required" data-type="char" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Фамилия</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">имя</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="text" name="name" placeholder="Иван" required="required" data-type="char" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">имя</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Вид спорта</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <select class="select js-select" placeholder="Выберите вид спорта" required="required" name="sport">
+                                                    <option placeholder="placeholder"> Выберите вид спорта</option>
+                                                    <option value="1">Йога</option>
+                                                    <option value="2">Единоборства</option>
+                                                    <option value="3">Фитнес</option>
+                                                    <option value="4">Бокс</option>
+                                                    <option value="5">Танцы</option>
+                                                    <option value="6">Кроссфит</option>
+                                                    <option value="7">Пилатес</option>
+                                                    <option value="8">Теннис</option>
+                                                    <option value="9">Микс-файт</option>
+                                                    <option value="10">Плавание</option>
+                                                </select>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Вид спорта</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Место
+                                                <br/>проведения
+                                                <br/>занятий</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <select class="select js-select" placeholder="Выберите район" name="location">
+                                                    <option placeholder="placeholder"> Выберите район</option>
+                                                    <option value="1">САО</option>
+                                                    <option value="2">ЮАО</option>
+                                                    <option value="3">ВАО</option>
+                                                    <option value="4">ЗАО</option>
+                                                </select>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Место проведения занятий</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Предпочтения (Пример: Удобнее всего на Динамо)" name="prefer-location"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Предпочтения (Пример: Удобнее всего на Динамо)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Стоимость</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <input class="input js-numberbox-input" type="text" placeholder="Стоимость 1-ого занятия в час" name="price" required="required" />
+                                                <div class="form__mark">
+                                                    <svg class="form__icon"><use xlink:href="assets/images/icon.svg#icon_rub"></use></svg>
+                                                </div>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Стоимость</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Регалии</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свои регалии" name="regalia"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Регалии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">достижения</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свои достижениях" name="achievments" required="required"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">достижения</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Опыт работы</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Опишите свой опыт работы тренером" name="experience" required="required"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Опыт работы</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Воспитанники</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Расскажите о своих воспитанниках" name="pupils"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Воспитанники</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Образование</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <textarea class="textarea" rows="1" placeholder="Ваше образование" name="education"></textarea>
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Образование</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop">
+                                            <span class="form__text">Контакты</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="tel" data-type="tel" placeholder="Телефон" name="phone" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Телефон</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="text" placeholder="E-mail" data-type="email" name="email" required="required" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">E-mail</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Vkontakte" name="vk-link" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Vkontakte</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Facebook" name="fb-link" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Facebook</span>
+                                                </div>
+                                            </div>
+                                            <div class="form__field js-floating-label">
+                                                <input class="input" type="url" placeholder="Ссылка на профиль Instagram" name="inst-link" />
+                                                <div class="form__label form__label_mobile">
+                                                    <span class="form__text">Ссылка на профиль Instagram</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop form__label_nohide">
+                                            <span class="form__text">Аватар</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="upload upload_round" data-correct-size="4000000" data-correct-resolution="240x240">
+                                                <label class="upload__dropzone">
+                                                    <span class="upload__mark">
+                                                        <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                                    </span>
+                                                    <input class="input" type="file" name="file1[]" />
+                                                    <img class="upload__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
+                                                </label>
+                                                <div class="upload__conditions">
+                                                    <span data-error="resolution">Разрешение не меньше 240х240 px</span>
+                                                    <span data-error="filesize">Размер не больше 500 кб</span>
+                                                    <span class="upload__hidden" data-error="noimage">Файл не является изображением</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop form__label_nohide">
+                                            <span class="form__text">Брендволл</span>
+                                        </div>
+                                        <div class="form__wrapper">
+                                            <div class="upload" data-correct-size="4000000" data-correct-resolution="1440x690">
+                                                <label class="upload__dropzone">
+                                                    <span class="upload__mark">
+                                                        <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                                    </span>
+                                                    <input class="input" type="file" name="file2[]" />
+                                                    <img class="upload__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
+                                                </label>
+                                                <div class="upload__conditions">
+                                                    <span data-error="resolution">Разрешение не меньше 1440х690 px</span>
+                                                    <span data-error="filesize">Размер не больше 500 кб</span>
+                                                    <span class="upload__hidden" data-error="noimage">Файл не является изображением</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__label form__label_desktop"></div>
+                                        <div class="form__wrapper">
+                                            <button class="button form__button js-validate" type="submit">отправить анкету</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <section class="add-trainer__conditions">
+                                <h3 class="add-trainer__title">Условия
+                                    <br/>размещения</h3>
+                                <div class="content-zone">
+                                    <p>Вы&nbsp;платите один раз в&nbsp;месяц абонентскую плату: Первый месяц&nbsp;&mdash; 1&nbsp;рубль, последующие месяцы&nbsp;&mdash; 2000 рублей</p>
+                                    <p>Ваша анкета будет размещена в&nbsp;течение 1-3 дней после оплаты (перед оплатой с&nbsp;вами свяжется наш менеджер)</p>
+                                    <p>Если не&nbsp;получается заполнить анкету автоматически&nbsp;Вы можете отправить информацию о&nbsp;себе вместе с&nbsp;фото и&nbsp;др. материалами на
+                                        <a href="mailto:hello@protrener.net">hello@protrener.net</a>
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="grid__col grid__col_four contaner__padding"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="error-banner">
+                <div class="error-banner__text">Пожалуйста заполните поля выделенные красным</div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="brushes">
+                <div class="brushes__item brushes__item_bottom"></div>
+                <div class="brushes__item brushes__item_top"></div>
+            </div>
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col grid__col_one container__padding"></div>
+                    <div class="grid__col grid__col_seven footer__contacts">
+                        <div class="contacts">
+                            <div class="contacts__text">Связь &mdash;</div>
+                            <a class="link link_white contacts__link" href="mailto:Hello@protrener.net">
+                                <span class="link__text">Hello@protrener.net</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_twelve footer__logo">
+                        <a class="logo logo_footer" href="index.html">
+                            <img class="logo__image" src="assets/images/logo_protrener.svg" alt="" role="presentation" />
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_four footer__addus">
+                        <a class="link link_white navigation-link" href="add-trainer.html">
+                            <span class="link__text">Стать трейнером</span>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_seven footer__copyright">
+                        <div class="copyright">
+                            <div class="copyright__text">&copy;&nbsp;2018&nbsp;ProTrener.</div>
+                            <div class="copyright__text copyright__text_mhidden">Все права защищены.</div>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_one contaner__padding"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popup search-popup" id="search">
+            <div class="popup__content">
+                <form class="search search-popup__form">
+                    <input class="input search__input" placeholder="поиск по тренерам" type="search" />
+                </form>
+                <div class="search-popup__result js-scrollbar">
+                    <div class="loading">
+                        <div class="loading__ico"></div>
+                    </div>
+                    <div class="search-popup__not-found">
+                        <div class="search-popup__icon">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_search"></use></svg>
+                        </div>
+                        <p>Ничего не&nbsp;найдено,
+                            <br/>попробуйте изменить запрос</p>
+                    </div>
+                    <div class="search-popup__trainers">
+                        <ul class="trainers-list trainers-list_search">
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_1.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_7.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1490&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Милана</span>
+                                            <span class="trainer__surname">Шнайдер</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_3.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_3.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1590&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Михаил</span>
+                                            <span class="trainer__surname">Волков</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_2.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_1.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1550&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Влад</span>
+                                            <span class="trainer__surname">Дронов</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_4.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_4.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1800&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Кристина</span>
+                                            <span class="trainer__surname">Дружинина</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_5.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_2.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1890&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Глеб</span>
+                                            <span class="trainer__surname">Корявцев</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_6.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_6.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">2500&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Валерия</span>
+                                            <span class="trainer__surname">Дорожная</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="trainers-list__item">
+                                <a class="trainer" href="user.html">
+                                    <div class="trainer__wall">
+                                        <div class="trainer__brand">
+                                            <img class="trainer__image" src="assets/images/brand_wall_7.jpg" alt="" role="presentation" />
+                                        </div>
+                                    </div>
+                                    <div class="trainer__describe">
+                                        <div class="avatar trainer__avatar">
+                                            <img class="avatar__image" src="assets/images/avatar_5.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="trainer__price">1750&nbsp;Р</div>
+                                        <div class="trainer__fullname">
+                                            <span class="trainer__name">Александр</span>
+                                            <span class="trainer__surname">Святозар</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__info">
+                    <p>Нажмите ENTER для поиска или ESC для закрытия</p>
+                </div>
+            </div>
+        </div>
+        <div class="popup success-popup" id="success-popup">
+            <div class="popup__content">
+                <div class="success-popup__message">
+                    <div class="success-popup__decoration">
+                        <img class="success-popup__image" src="assets/images/brush.svg" alt="" role="presentation" />
+                        <p class="success-popup__text">Ваша анкета отправлена. В ближайшее время с вами свяжется наш менеджер</p>
+                    </div>
+                    <div class="success-popup__contacts">
+                        <p class="success-popup__text">Остались вопросы? Пиши на
+                            <a class="link" href="mailto:hello@protrener.net">
+                                <span class="link__text">hello@protrener.net</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="popup__info">
+                    <p>Нажмите ESC для закрытия</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/ResizeSensor.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

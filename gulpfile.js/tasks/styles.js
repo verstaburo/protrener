@@ -28,7 +28,7 @@ exports.build = () => (
     .pipe(cssnano({ zIndex: false }))
     .pipe(gulpIf(isDebug, sourcemaps.write()))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/assets/styles'))
+    .pipe(gulp.dest('dist1/assets/styles'))
 );
 
 exports.lint = () => (

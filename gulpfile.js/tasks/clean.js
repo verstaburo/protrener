@@ -1,3 +1,3 @@
 const del = require('del');
 
-module.exports = () => del('dist');
+module.exports = () => del('dist1');

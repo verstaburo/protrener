@@ -31,5 +31,5 @@ module.exports = () => (
       }),
     ]))
     .pipe(rename('icon.svg'))
-    .pipe(gulp.dest('dist/assets/images/'))
+    .pipe(gulp.dest('dist1/assets/images/'))
 );

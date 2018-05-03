@@ -1,5 +1,5 @@
 import autosize from 'autosize';
-import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
+// import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 
 const $ = window.$;
 
@@ -129,24 +129,24 @@ export function validation() {
 
     if (formerrors === 0) {
       $('.error-banner').removeClass('active');
-      document.getElementById(`${activeform}`).submit();
-      $.fancybox.open({
-        src: '#success-popup',
-        afterLoad: freeze,
-        afterClose: unfreeze,
-        animationDuration: 500,
-        afterShow: () => {
-          $('.popup').addClass('is-open');
-        },
-        beforeClose: () => {
-          $('.popup').removeClass('is-open');
-          document.getElementById(`${activeform}`).reset();
-          $(`#${activeform}`).find('.js-floating-label').removeClass('is-top');
-        },
-        btnTpl: {
-          smallBtn: '<button data-fancybox-close class="fancybox-close-small" title="{{CLOSE}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.41 17.41"><path d="M8.71,7.29,16,0l1.41,1.41-7.29,7.3L17.41,16,16,17.41,8.71,10.12l-7.3,7.29L0,16,7.29,8.71,0,1.41,1.41,0Z"/></svg></button>',
-        },
-      });
+      // document.getElementById(`${activeform}`).submit();
+      // $.fancybox.open({
+      //   src: '#success-popup',
+      //   afterLoad: freeze,
+      //   afterClose: unfreeze,
+      //   animationDuration: 500,
+      //   afterShow: () => {
+      //     $('.popup').addClass('is-open');
+      //   },
+      //   beforeClose: () => {
+      //     $('.popup').removeClass('is-open');
+      //     document.getElementById(`${activeform}`).reset();
+      //     $(`#${activeform}`).find('.js-floating-label').removeClass('is-top');
+      //   },
+      //   btnTpl: {
+      //     smallBtn: '<button data-fancybox-close class="fancybox-close-small" title="{{CLOSE}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.41 17.41"><path d="M8.71,7.29,16,0l1.41,1.41-7.29,7.3L17.41,16,16,17.41,8.71,10.12l-7.3,7.29L0,16,7.29,8.71,0,1.41,1.41,0Z"/></svg></button>',
+      //   },
+      // });
     } else {
       $('.error-banner').addClass('active');
       setTimeout(() => {
@@ -155,13 +155,22 @@ export function validation() {
         }
       }, 10000);
     }
+    return formerrors;
   }
-  $(document).on('click', '.js-validate', (evt) => {
-    const self = evt.target;
+  // $(document).on('click', '.js-validate', (evt) => {
+  //   const self = evt.target;
+  //   activeform = $(self).parents('form').attr('id');
+  //   evt.preventDefault();
+  //   checkinputs();
+  //   checkselects();
+  //   checkandsubmit();
+  // });
+
+  window.validate = function validate(trigger) {
+    const self = trigger;
     activeform = $(self).parents('form').attr('id');
-    evt.preventDefault();
     checkinputs();
     checkselects();
-    checkandsubmit();
-  });
+    return checkandsubmit();
+  };
 }

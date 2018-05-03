@@ -24,6 +24,5 @@ module.exports = () => (
       unformatted: ['use'],
     }))
     .pipe(rename({ dirname: '.' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist1'))
 );
-

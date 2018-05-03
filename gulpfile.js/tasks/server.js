@@ -6,7 +6,7 @@ module.exports = () => {
     open: true,
     reloadOnRestart: true,
     reloadDebounce: 100,
-    port: 3000,
+    port: 3002,
     snippetOptions: {
       rules: {
         match: /<\/body>/i,
@@ -14,12 +14,12 @@ module.exports = () => {
     },
     server: {
       baseDir: [
-        './dist',
+        './dist1',
       ],
     },
     directory: false,
     middleware: [debuga()],
   });
 
-  browserSync.watch('dist/**/*').on('change', browserSync.reload);
+  browserSync.watch('dist1/**/*').on('change', browserSync.reload);
 };
