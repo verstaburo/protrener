@@ -40,13 +40,13 @@ export function validation() {
 
   function isURL(input) {
     /* eslint-disable no-useless-escape */
-    const regex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+    const regex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-zа-яё0-9]+([\-\.]{1}[a-zа-яё0-9]+)*\.[a-zа-яё]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
     return regex.test(input);
     /* eslint-enable no-useless-escape */
   }
 
   function isEmail(email) {
-    const regex = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9])+$/;
+    const regex = /^([a-zA-Zа-яА-ЯЁё0-9_.+-])+@(([a-zA-Zа-яА-ЯЁё0-9-])+\.)+([a-zA-Zа-яА-ЯЁё0-9])+$/;
     return regex.test(email);
   }
   function isTel(tel) {

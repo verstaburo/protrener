@@ -6,7 +6,7 @@ module.exports = () => {
     open: true,
     reloadOnRestart: true,
     reloadDebounce: 100,
-    port: 3002,
+    port: 3004,
     snippetOptions: {
       rules: {
         match: /<\/body>/i,

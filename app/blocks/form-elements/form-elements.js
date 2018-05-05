@@ -53,8 +53,16 @@ export function inputmask() {
   }).mask('input[data-type="tel"]');
 
   Inputmask({
-    mask: '**{1,40}@**{1,40}.aa{1,6}',
-    showMaskOnHover: false,
+    mask: '**{1,63}@--{1,63}',
+    definitions: {
+      '*': {
+        validator: "[0-9\uFF11-\uFF19а-яА-ЯЁёA-Za-z\u0410-\u044F\u0401\u0451\u00C0-\u00FF\u00B5!#$%&'*+./=?^_`{|}~-]",
+      },
+      '-': {
+        validator: '[0-9A-Za-zа-яА-ЯЁё.-]',
+      },
+    },
+    // regex: '([a-zA-Zа-яА-ЯЁё0-9_.+-])+@(([a-zA-Zа-яА-ЯЁё0-9-])+.)+([a-zA-Zа-яА-ЯЁё0-9])',
   }).mask('input[data-type="email"]');
 
   Inputmask({
